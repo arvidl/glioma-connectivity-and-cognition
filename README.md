@@ -64,25 +64,27 @@ Primary sensorimotor FC range [−0.2064,−0.0170] is negative, but a previous 
 
 ## Notebook guide
 
-| Notebook | Topic |
-|---|---|
-| 00 | Data, anatomy, registration and evidence boundaries |
-| 01 | AP/PA topup/eddy, diffusion models and tractography |
-| 02 | BOLD correction, motion, anatomical nuisance regression and FC |
-| 03 | Longitudinal graphs, networks and SC–FC coupling |
-| 04 | Complete CANTAB and lived-experience fields |
-| 05 | Hypothetical growth, injury and graph dynamics |
-| 06 | PC refitting mechanism and anatomical denoising comparisons |
-| 07 | Censoring, duration/FD/run-half matching |
-| 08 | Edge/support/network accounting of historical reversal |
-| 09 | Repeated tractography and edge reliability |
-| 10 | Joint SC/FC bootstrap and matched sampling sensitivities |
-| 11 | Frozen/coefficient/full nuisance bootstrap refits |
-| 12 | Clinical/context ledger with current primary network ranges |
-| 13 | PC training, multiplicity and nonreplacement controls |
-| **14** | **Recommended primary FC stability, sensitivities and clinical integration** |
+Each notebook number opens the file on GitHub; **nbviewer** renders the committed notebook and its saved outputs from `main` without running code. For outputs from a particular runtime-validation run, see [Download executed notebooks](#download-executed-notebooks).
 
-Live controls initialize with Run All in Jupyter; saved outputs contain offline Plotly JavaScript. No synthetic fallback replaces missing patient data. Simulated growth/injury/dynamics are labelled hypothetical.
+| Notebook (GitHub) | Topic | Executed outputs |
+|---|---|---|
+| [00](notebooks/00_data_anatomy_and_design.ipynb) | Data, anatomy, registration and evidence boundaries | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/00_data_anatomy_and_design.ipynb) |
+| [01](notebooks/01_diffusion_structural_connectivity.ipynb) | AP/PA topup/eddy, diffusion models and tractography | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/01_diffusion_structural_connectivity.ipynb) |
+| [02](notebooks/02_bold_functional_connectivity.ipynb) | BOLD correction, motion, anatomical nuisance regression and FC | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/02_bold_functional_connectivity.ipynb) |
+| [03](notebooks/03_longitudinal_graphs_and_networks.ipynb) | Longitudinal graphs, networks and SC–FC coupling | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/03_longitudinal_graphs_and_networks.ipynb) |
+| [04](notebooks/04_cognition_and_lived_experience.ipynb) | Complete CANTAB and lived-experience fields | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/04_cognition_and_lived_experience.ipynb) |
+| [05](notebooks/05_simulations_growth_surgery_and_dynamics.ipynb) | Hypothetical growth, injury and graph dynamics | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/05_simulations_growth_surgery_and_dynamics.ipynb) |
+| [06](notebooks/06_nuisance_refitting_and_anatomical_denoising.ipynb) | PC refitting mechanism and anatomical denoising comparisons | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/06_nuisance_refitting_and_anatomical_denoising.ipynb) |
+| [07](notebooks/07_censoring_motion_duration_and_coupling.ipynb) | Censoring, duration/FD/run-half matching | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/07_censoring_motion_duration_and_coupling.ipynb) |
+| [08](notebooks/08_edges_networks_and_coupling_reversal.ipynb) | Edge/support/network accounting of historical reversal | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/08_edges_networks_and_coupling_reversal.ipynb) |
+| [09](notebooks/09_structural_edge_reliability.ipynb) | Repeated tractography and edge reliability | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/09_structural_edge_reliability.ipynb) |
+| [10](notebooks/10_joint_sampling_uncertainty.ipynb) | Joint SC/FC bootstrap and matched sampling sensitivities | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/10_joint_sampling_uncertainty.ipynb) |
+| [11](notebooks/11_full_run_nuisance_refit.ipynb) | Frozen/coefficient/full nuisance bootstrap refits | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/11_full_run_nuisance_refit.ipynb) |
+| [12](notebooks/12_connectivity_cognition_context.ipynb) | Clinical/context ledger with current primary network ranges | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/12_connectivity_cognition_context.ipynb) |
+| [13](notebooks/13_pc_sampling_mechanisms.ipynb) | PC training, multiplicity and nonreplacement controls | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/13_pc_sampling_mechanisms.ipynb) |
+| **[14](notebooks/14_primary_fc_resampling.ipynb)** | **Recommended primary FC stability, sensitivities and clinical integration** | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/14_primary_fc_resampling.ipynb) |
+
+Live controls initialize with Run All in local Jupyter; nbviewer does not provide a Python kernel. Saved outputs contain offline Plotly JavaScript. No synthetic fallback replaces missing patient data. Simulated growth/injury/dynamics are labelled hypothetical.
 
 ## Reuse and citation
 
