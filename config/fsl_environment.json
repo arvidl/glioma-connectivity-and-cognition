@@ -1,0 +1,49 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "FSLDIR_recorded": "~/fsl",
+  "fsl_version": "6.0.7.19",
+  "packages": [
+    {
+      "name": "fsl-topup",
+      "version": "2203.5",
+      "build": "h7b4ac05_4",
+      "subdir": "osx-arm64"
+    },
+    {
+      "name": "fsl-eddy",
+      "version": "2401.2",
+      "build": "h940f26e_5",
+      "subdir": "osx-arm64"
+    },
+    {
+      "name": "fsl-base",
+      "version": "2508.1",
+      "build": "py_0",
+      "subdir": "noarch"
+    }
+  ],
+  "note": "External scientific dependency, not installed by uv. FSL package metadata and hashes record the tested installation; command arrays record execution options.",
+  "launchers": [
+    {
+      "name": "topup",
+      "sha256": "274e97665513d482a86292411efaaf5e15f049e54d78aea0d2620e39fdb0d32d"
+    },
+    {
+      "name": "eddy_cpu",
+      "sha256": "cb728a9bbbaac0db4c678e1b04e8e9e67f265527dad90a84c2135a10ee972368"
+    }
+  ],
+  "binaries": [
+    {
+      "name": "topup",
+      "relative_install_path": "bin/topup",
+      "sha256": "b65278d103f1f2d62e30130c262a6d3534bb34532a32f859cb9700bdfd989843"
+    },
+    {
+      "name": "eddy_cpu",
+      "relative_install_path": "bin/eddy_cpu",
+      "sha256": "a215b74858999d92a184a7e52028523bc303c75ee3a30794e51b18b76b618fbb"
+    }
+  ],
+  "binary_build_id": "2412.6-dirty"
+}

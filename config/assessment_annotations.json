@@ -1,0 +1,425 @@
+{
+  "stai": {
+    "definition": "State-Trait Anxiety Inventory: supplied total index of anxiety.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "raw anxiety score",
+    "direction_text": "Higher generally indicates more anxiety.",
+    "caveat": "State versus trait subscale, form and scoring are unspecified. Standard Form Y has separate 20-item state and trait scales; no clinical cutoff or reliable change is applied."
+  },
+  "pswq": {
+    "definition": "Penn State Worry Questionnaire: dispositional tendency toward persistent worry.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "raw worry score",
+    "direction_text": "Higher generally indicates more worry.",
+    "caveat": "The original PSWQ has 16 items; the case dictionary does not document language/version or item scoring. Do not infer a diagnosis from this total."
+  },
+  "erq_reappraisal": {
+    "definition": "ERQ cognitive reappraisal: habitual reinterpretation of a situation to alter emotional impact.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "supplied subscale score",
+    "direction_text": "Higher generally indicates greater use of reappraisal, not universally better regulation.",
+    "caveat": "Standard ERQ distinguishes reappraisal and suppression. Source aggregation, translation and item-level scoring are unavailable; reported values are retained as supplied."
+  },
+  "erq_suppression": {
+    "definition": "ERQ expressive suppression: habitual inhibition of outward emotional expression.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "supplied subscale score",
+    "direction_text": "Higher generally indicates greater use of suppression; effects depend on context.",
+    "caveat": "Not a global emotion-regulation or mental-health score; source aggregation and item scoring are not documented."
+  },
+  "erq_processing": {
+    "definition": "Emotion Regulation Questionnaire \u2014 processing subscale (source label).",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "undocumented score",
+    "direction_text": "Unknown; no favourable direction assigned.",
+    "caveat": "These are not the two standard Gross-John ERQ subscale names. Items, scoring and relationship to the standard ERQ are unknown; preserve the labels without asserting construct validity."
+  },
+  "erq_expression": {
+    "definition": "Emotion Regulation Questionnaire \u2014 expression subscale (source label).",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "undocumented score",
+    "direction_text": "Unknown; no favourable direction assigned.",
+    "caveat": "These are not the two standard Gross-John ERQ subscale names. Items, scoring and relationship to the standard ERQ are unknown; preserve the labels without asserting construct validity."
+  },
+  "loneliness": {
+    "definition": "UCLA Loneliness Scale: subjective perceived social disconnection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "raw loneliness score",
+    "direction_text": "Higher generally indicates more loneliness.",
+    "caveat": "Scale version and language are unspecified. Loneliness differs from objective social isolation or relationship status and is not a dedicated health-related QoL measure."
+  },
+  "marital_status": {
+    "definition": "Self-reported relationship/living-partner status at assessment.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "category",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Cohabiting does not quantify relationship quality, support or household composition."
+  },
+  "education_level": {
+    "definition": "Source-coded education attainment level.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "ordinal code (1-9)",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "The 1-9 level-to-qualification mapping is absent; code 3 is not interpreted as years of schooling or a named qualification."
+  },
+  "employment": {
+    "definition": "Reported work status at assessment.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "category",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Sick leave may reflect treatment, recovery, job demands or policy; it is not a direct disability, cognition or QoL score."
+  },
+  "sport_freq_per_week": {
+    "definition": "Reported absolute sport frequency; JSON labels this as a preoperative value.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "sessions/week",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "The TSV contains 0 in both sessions. The postoperative 0 is displayed as supplied; the explicit sport_vs_preop field separately records Same. Duration/intensity are unknown."
+  },
+  "smoking": {
+    "definition": "Preoperative smoking category.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "Yes/No/Quitted",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Postoperative absolute status is missing by design; smoking_vs_preop contains a relative category, not dose or cessation verification."
+  },
+  "caffeine_index": {
+    "definition": "Caffeine consumption index at pre-op.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "undocumented index",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Formula, units and recall window are not supplied. Do not translate the index into cups, mg caffeine, drinks, alcohol units or a risk threshold. Missing values remain missing."
+  },
+  "alcohol_index_current": {
+    "definition": "Current alcohol consumption index at pre-op.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "undocumented index",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Formula, units and recall window are not supplied. Do not translate the index into cups, mg caffeine, drinks, alcohol units or a risk threshold. Missing values remain missing."
+  },
+  "alcohol_index_lifetime": {
+    "definition": "Lifetime alcohol consumption index at pre-op.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "undocumented index",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Formula, units and recall window are not supplied. Do not translate the index into cups, mg caffeine, drinks, alcohol units or a risk threshold. Missing values remain missing."
+  },
+  "sport_vs_preop": {
+    "definition": "Postoperative self-report of sport use/frequency relative to the preoperative state.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "Same / More / Less",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Postoperative-only ordinal comparison. Same does not supply an absolute exposure, intensity or duration; preoperative missingness is structural, not zero."
+  },
+  "smoking_vs_preop": {
+    "definition": "Postoperative self-report of smoking use/frequency relative to the preoperative state.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "Same / More / Less",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Postoperative-only ordinal comparison. Same does not supply an absolute exposure, intensity or duration; preoperative missingness is structural, not zero."
+  },
+  "caffeine_vs_preop": {
+    "definition": "Postoperative self-report of caffeine use/frequency relative to the preoperative state.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "Same / More / Less",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Postoperative-only ordinal comparison. Same does not supply an absolute exposure, intensity or duration; preoperative missingness is structural, not zero."
+  },
+  "alcohol_vs_preop": {
+    "definition": "Postoperative self-report of alcohol use/frequency relative to the preoperative state.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "Context",
+    "domain": "Psychosocial and context",
+    "units": "Same / More / Less",
+    "direction_text": "Descriptive context; no universal favourable direction.",
+    "caveat": "Postoperative-only ordinal comparison. Same does not supply an absolute exposure, intensity or duration; preoperative missingness is structural, not zero."
+  },
+  "mot_latency_mean": {
+    "definition": "Motor Screening - mean latency",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "MOT",
+    "domain": "Sensorimotor screening",
+    "units": "ms",
+    "caveat": "Screening performance combines comprehension, vision, reaching and touchscreen familiarity; it cannot isolate a motor deficit.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "mot_latency_md": {
+    "definition": "Motor Screening - median latency",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "MOT",
+    "domain": "Sensorimotor screening",
+    "units": "ms",
+    "caveat": "Screening performance combines comprehension, vision, reaching and touchscreen familiarity; it cannot isolate a motor deficit.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "mot_error_mean": {
+    "definition": "Mean spatial distance between the touch response and target; an accuracy measure rather than an incorrect-trial count.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "MOT",
+    "domain": "Sensorimotor screening",
+    "units": "pixels",
+    "caveat": "Screening performance combines comprehension, vision, reaching and touchscreen familiarity; it cannot isolate a motor deficit.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_simple_accuracy": {
+    "definition": "Reaction Time - simple: number of correct responses (max 9)",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "correct responses",
+    "caveat": "Source maxima are 9 for simple and 8 for five-choice; both sessions reach those maxima. These are source-specific ceilings, not universal CANTAB trial counts.",
+    "direction_text": "Higher is nominally better task performance."
+  },
+  "rti_simple_rt_mean": {
+    "definition": "Reaction Time - simple: mean reaction time; target onset to release of the held response button.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_simple_rt_md": {
+    "definition": "Reaction Time - simple: median reaction time; target onset to release of the held response button.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_simple_rt_sd": {
+    "definition": "Reaction Time - simple: reaction time standard deviation",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Trial-to-trial variability is distinct from mean speed; trial counts and distributions are unavailable.",
+    "direction_text": "No prespecified favourable direction for variability."
+  },
+  "rti_simple_mt_mean": {
+    "definition": "Reaction Time - simple: mean movement time; response-button release to target selection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_simple_mt_md": {
+    "definition": "Reaction Time - simple: median movement time; response-button release to target selection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_simple_mt_sd": {
+    "definition": "Reaction Time - simple: movement time standard deviation",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Trial-to-trial variability is distinct from mean speed; trial counts and distributions are unavailable.",
+    "direction_text": "No prespecified favourable direction for variability."
+  },
+  "rti_five_accuracy": {
+    "definition": "Reaction Time - five-choice: number of correct responses (max 8)",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "correct responses",
+    "caveat": "Source maxima are 9 for simple and 8 for five-choice; both sessions reach those maxima. These are source-specific ceilings, not universal CANTAB trial counts.",
+    "direction_text": "Higher is nominally better task performance."
+  },
+  "rti_five_mt": {
+    "definition": "Reaction Time - five-choice: movement time; response-button release to target selection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "The source does not identify this unqualified aggregate as mean or median. Retained separately from explicitly named aggregates; do not silently merge fields.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_five_rt": {
+    "definition": "Reaction Time - five-choice: reaction time; target onset to release of the held response button.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "The source does not identify this unqualified aggregate as mean or median. Retained separately from explicitly named aggregates; do not silently merge fields.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_five_rt_sd": {
+    "definition": "Reaction Time - five-choice: reaction time standard deviation",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Trial-to-trial variability is distinct from mean speed; trial counts and distributions are unavailable.",
+    "direction_text": "No prespecified favourable direction for variability."
+  },
+  "rti_five_mt_mean": {
+    "definition": "Reaction Time - five-choice: mean movement time; response-button release to target selection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_five_mt_md": {
+    "definition": "Reaction Time - five-choice: median movement time; response-button release to target selection.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rti_five_mt_sd": {
+    "definition": "Reaction Time - five-choice: movement time standard deviation",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RTI",
+    "domain": "Attention and psychomotor speed",
+    "units": "ms",
+    "caveat": "Trial-to-trial variability is distinct from mean speed; trial counts and distributions are unavailable.",
+    "direction_text": "No prespecified favourable direction for variability."
+  },
+  "rvp_a": {
+    "definition": "Nonparametric signal-detection sensitivity A-prime, combining target detection and false-positive behaviour; distinct from percent correct.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RVP",
+    "domain": "Sustained visual attention",
+    "units": "unitless (0-1)",
+    "caveat": "Interpret together with latency and false alarms. Target/non-target denominators and trial-level data are unavailable; A-prime is not reconstructed here.",
+    "direction_text": "Higher is nominally better task performance."
+  },
+  "rvp_prob_hit": {
+    "definition": "Proportion of target sequences successfully detected.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RVP",
+    "domain": "Sustained visual attention",
+    "units": "unitless (0-1)",
+    "caveat": "Interpret together with latency and false alarms. Target/non-target denominators and trial-level data are unavailable; A-prime is not reconstructed here.",
+    "direction_text": "Higher is nominally better task performance."
+  },
+  "rvp_false_alarms": {
+    "definition": "Rapid Visual Processing - number of false alarms",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RVP",
+    "domain": "Sustained visual attention",
+    "units": "false responses",
+    "caveat": "A count, not a false-alarm probability; the number of non-target opportunities is not supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rvp_latency_mean": {
+    "definition": "Rapid Visual Processing - mean response latency",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RVP",
+    "domain": "Sustained visual attention",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "rvp_latency_md": {
+    "definition": "Rapid Visual Processing - median response latency",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "RVP",
+    "domain": "Sustained visual attention",
+    "units": "ms",
+    "caveat": "Raw score; no age-adjusted norm, individual reliable-change threshold or practice-effect adjustment is supplied.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "soc_prob_min_moves": {
+    "definition": "Stockings of Cambridge - problems solved in minimum moves (max 12)",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SOC",
+    "domain": "Spatial planning",
+    "units": "problems (max 12)",
+    "caveat": "Despite the source field name containing prob, its JSON defines a problem count, not a probability. 8 means 8 of a source maximum of 12.",
+    "direction_text": "Higher is nominally better task performance."
+  },
+  "soc_mean_moves_2": {
+    "definition": "Mean moves used on problems whose minimum solution requires 2 moves; reflects planning efficiency at this difficulty.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SOC",
+    "domain": "Spatial planning",
+    "units": "moves/problem",
+    "caveat": "Compare within difficulty. No thinking-time measures or trial-level strategies are supplied; easy-problem floors can mask change.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "soc_mean_moves_3": {
+    "definition": "Mean moves used on problems whose minimum solution requires 3 moves; reflects planning efficiency at this difficulty.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SOC",
+    "domain": "Spatial planning",
+    "units": "moves/problem",
+    "caveat": "Compare within difficulty. No thinking-time measures or trial-level strategies are supplied; easy-problem floors can mask change.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "soc_mean_moves_4": {
+    "definition": "Mean moves used on problems whose minimum solution requires 4 moves; reflects planning efficiency at this difficulty.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SOC",
+    "domain": "Spatial planning",
+    "units": "moves/problem",
+    "caveat": "Compare within difficulty. No thinking-time measures or trial-level strategies are supplied; easy-problem floors can mask change.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "soc_mean_moves_5": {
+    "definition": "Mean moves used on problems whose minimum solution requires 5 moves; reflects planning efficiency at this difficulty.",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SOC",
+    "domain": "Spatial planning",
+    "units": "moves/problem",
+    "caveat": "Compare within difficulty. No thinking-time measures or trial-level strategies are supplied; easy-problem floors can mask change.",
+    "direction_text": "Lower is nominally faster, more precise or more efficient; consider accuracy."
+  },
+  "ssp_span_length": {
+    "definition": "Spatial Span - maximum span length achieved",
+    "source_basis": "Supplied session JSON; explanatory annotations distinguish standard task concepts from missing protocol details.",
+    "task": "SSP",
+    "domain": "Visuospatial span",
+    "units": "locations/items",
+    "caveat": "Longest correctly reproduced spatial sequence. Forward/backward variant, error rules and trial-level results are not specified; one extra item is not a normative effect size.",
+    "direction_text": "Higher is nominally better task performance."
+  }
+}

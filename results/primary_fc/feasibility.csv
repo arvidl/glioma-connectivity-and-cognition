@@ -1,0 +1,10 @@
+protocol,requested,paired_eligible,summary_available
+half_block5,200,200,True
+two_thirds_block5,200,200,True
+four_fifths_block5,200,200,True
+half_block10,200,200,True
+two_thirds_block10,200,200,True
+four_fifths_block10,200,200,True
+half_block20,200,200,True
+two_thirds_block20,200,200,True
+four_fifths_block20,200,200,True

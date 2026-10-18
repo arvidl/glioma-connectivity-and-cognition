@@ -1,0 +1,343 @@
+{
+  "subject": "sub-PAT16",
+  "analysis_date": "2026-10-18",
+  "sources": {
+    "preop": "https://openneuro.org/datasets/ds001226/versions/5.0.0",
+    "postop": "https://openneuro.org/datasets/ds002080/versions/4.0.0",
+    "local_release": "glioma-brain-digital-twin-public-2026/data/BIDS_preop_postop; complete copied subset",
+    "atlas": "ThomasYeoLab/CBIG tag v0.14.3-Update_Yeo2011_Schaefer2018_labelname; Schaefer100/7-network FSLMNI152 2mm",
+    "template": "FSL MNI152 2mm local distribution; see data/atlas/NOTICE.md"
+  },
+  "python": "3.12.14 (main, Sep 24 2026, 17:46:32) [Clang 22.1.3 ]",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "2.3.3",
+    "nibabel": "5.4.2",
+    "dipy": "1.12.1",
+    "SimpleITK": "2.5.6",
+    "nilearn": "0.14.1",
+    "networkx": "3.7",
+    "matplotlib": "3.11.2",
+    "plotly": "6.9.0",
+    "nbclient": "0.11.0"
+  },
+  "files": [
+    {
+      "path": "data/atlas/CBIG_LICENSE.md",
+      "bytes": 1084,
+      "sha256": "0e38f0e8b304f13de2ce2911320faaa08ced178e031d3bbebc3e4769762e5f50"
+    },
+    {
+      "path": "data/atlas/MNI152_T1_2mm.nii.gz",
+      "bytes": 1406977,
+      "sha256": "0585cd056bf5ccfb8bf97a5f6a66082d4e7caad525718fc11e40d80a827fcb92"
+    },
+    {
+      "path": "data/atlas/MNI152_T1_2mm_brain.nii.gz",
+      "bytes": 414185,
+      "sha256": "09c925ad165dfbe6b41b572876d67e9bbf8c5e26517e7817f9b43a8256227f53"
+    },
+    {
+      "path": "data/atlas/MNI152_T1_2mm_brain_mask.nii.gz",
+      "bytes": 12480,
+      "sha256": "b71a9f2015bd10262c37e51b4d17a655d0eb0a0dec4ba48322fb5af55c86b97c"
+    },
+    {
+      "path": "data/atlas/NOTICE.md",
+      "bytes": 1112,
+      "sha256": "e2b5e75e00e6a80eb31ed8b4a4b83dd90f8bcf4283310a402b3d1cd1295cee9d"
+    },
+    {
+      "path": "data/atlas/schaefer100.nii.gz",
+      "bytes": 52328,
+      "sha256": "101cb2e643531826e5d52d35751f3cf7134c394b08b8ce0affa259a224350f67"
+    },
+    {
+      "path": "data/atlas/schaefer100_labels.txt",
+      "bytes": 4169,
+      "sha256": "ca212790d0103949c8cfa0f7689f5935cad0d1fbfc06506f1fdf7986bee72786"
+    },
+    {
+      "path": "data/bids/CHANGES",
+      "bytes": 395,
+      "sha256": "8da3e395a8e2a2b68819213310c344a51353197d8dd7765e8936392ce17ecf7c"
+    },
+    {
+      "path": "data/bids/README",
+      "bytes": 1443,
+      "sha256": "553065cf4856f6148868c40bfac689c547bb19b2692204914e574f89ae02aaf7"
+    },
+    {
+      "path": "data/bids/dataset_description.json",
+      "bytes": 1991,
+      "sha256": "8140041cc3b8bc3ebcba5fa8351ec50beeb1aae20e1d3d09a5b93aa58f8fad65"
+    },
+    {
+      "path": "data/bids/derivatives/TVB/sub-PAT16/ses-preop/FC.mat",
+      "bytes": 399448,
+      "sha256": "130573fb049c1863096b76e060de16846efb0ec0cf0547493ea5d572288e1767"
+    },
+    {
+      "path": "data/bids/derivatives/TVB/sub-PAT16/ses-preop/HRF.csv",
+      "bytes": 28973091,
+      "sha256": "9bf5e1c8da3f67a0dc42d70fd7dd5dbc10226156670cc30b2f9266e59c488384"
+    },
+    {
+      "path": "data/bids/derivatives/TVB/sub-PAT16/ses-preop/ROIts.dat",
+      "bytes": 239940,
+      "sha256": "506815d6a9e185f227f1c9e28034e847373bd5661455c78da1fe4923ddc088a2"
+    },
+    {
+      "path": "data/bids/derivatives/TVB/sub-PAT16/ses-preop/SC.zip",
+      "bytes": 11625,
+      "sha256": "a8160ef9e1012dec90f1839742064f802fc0ed5cbc02fad900d9516558f5f5bc"
+    },
+    {
+      "path": "data/bids/derivatives/TVB/sub-PAT16/ses-preop/SCthrAn.mat",
+      "bytes": 11559,
+      "sha256": "d7d035727ea7b0f8149b4892cfb8d0a0e6436ebc21097c83072210c9836b60d4"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-postop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_FWHM.nii.gz",
+      "bytes": 84870,
+      "sha256": "d7fd01f0436d086d6834eb01c1758d4424d9a0d2b4869e0b9482020c3bed6b9e"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-postop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_Height.nii.gz",
+      "bytes": 565511,
+      "sha256": "0e902e2096f8f67f777568f966a8b80d988a66535a4bc9dea2dc6695f9c32f5c"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-postop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_Time2peak.nii.gz",
+      "bytes": 91653,
+      "sha256": "b0c7f6591bb27b110fe00d9f4f8cf8c23b5c50e57681d1bc0a035f13b90d2a49"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-preop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_FWHM.nii.gz",
+      "bytes": 85677,
+      "sha256": "442fa33a11a527c0b624459ffdccc33c5b8baa6261b7c12fbf3459ab901ca757"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-preop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_Height.nii.gz",
+      "bytes": 575237,
+      "sha256": "00a40c6ce113a02ac1e041f34b59085bfff90a1f2b0000d90a7118303856e89b"
+    },
+    {
+      "path": "data/bids/derivatives/rsHRF/sub-PAT16/sub-PAT16_ses-preop_task-rest_space-MNI152NLin2009cAsym_desc-preproc_bold_Time2peak.nii.gz",
+      "bytes": 93643,
+      "sha256": "866f71d2e811ad17bcc4e873c8b3d61702dfade8b71cb93cb4bc5c5110b5be2c"
+    },
+    {
+      "path": "data/bids/derivatives/tumor_masks/sub-PAT16/anat/sub-PAT16_space_MNI_label-tumor.nii.gz",
+      "bytes": 681671,
+      "sha256": "1882dab0380d85d4a61682c0e909411f1b30d201322a96d8b185f856e1c13e45"
+    },
+    {
+      "path": "data/bids/derivatives/tumor_masks/sub-PAT16/anat/sub-PAT16_space_MNI_label-tumor_binary.nii.gz",
+      "bytes": 14551,
+      "sha256": "d3eac108f16c45f4e79382ece49ef8e631e16f2c8fd69d8f7bbd0e8840cb5ab2"
+    },
+    {
+      "path": "data/bids/derivatives/tumor_masks/sub-PAT16/anat/sub-PAT16_space_T1_label-tumor.nii.gz",
+      "bytes": 54313,
+      "sha256": "29305846ad9966ce805089dbf067d76ba08813016272e3276e0f17f88ba29d5e"
+    },
+    {
+      "path": "data/bids/derivatives/tumor_masks/sub-PAT16/anat/sub-PAT16_space_T1_label-tumor_binary.nii.gz",
+      "bytes": 57499,
+      "sha256": "1b79684c5f3eb1b3ad59aa01cf2b2fe1f2df6045ca504ca13bcbcea43717aae9"
+    },
+    {
+      "path": "data/bids/participants.json",
+      "bytes": 1150,
+      "sha256": "d5f7204e9e59f5eaf6c96bc7fac57b61fb79667c4da970bc733aa1643b94ad7a"
+    },
+    {
+      "path": "data/bids/participants.tsv",
+      "bytes": 197,
+      "sha256": "704bed4fbc8a182099c49bf8a7d917c78dd99cc57468a7dd46fda88603cd5882"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/anat/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/anat/sub-PAT16_ses-postop_T1w.json",
+      "bytes": 907,
+      "sha256": "e6262f910829c8079436b07af3179f1c2f390d45701790ce714e17e7af377e18"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/anat/sub-PAT16_ses-postop_T1w.nii.gz",
+      "bytes": 8053984,
+      "sha256": "efed4644008adb7f5fbd83579c080aa42208b6d73293bceb5d0b89c81f78078b"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.bval",
+      "bytes": 476,
+      "sha256": "a678931600142ebf20236adba60c52b41e85b9aa241b78dc69c6385c089576c2"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.bvec",
+      "bytes": 2752,
+      "sha256": "88e97858fc9dc3344c56fc5900f4278948368a022b7cbbce2eb5837928fcaa3a"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.json",
+      "bytes": 1627,
+      "sha256": "343d82d44f36bb9a8a536a15eed9986bfb2f7ffa737209b71c95926fcb93d3c3"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.nii.gz",
+      "bytes": 48113681,
+      "sha256": "c84d34d7e8b2037e1fea05aa446d32914947a43b5953cafbbeef3caabc5fa7bf"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.bval",
+      "bytes": 4,
+      "sha256": "0ccdb5a77ba5bf7687f2565a8ed97dfb9c1af45503c496fb646312239fab5101"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.bvec",
+      "bytes": 14,
+      "sha256": "14ab2d39ac920b2894b30de6bef0073d1d3e7f06d4eab702b3c3d6be61963de8"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.json",
+      "bytes": 1050,
+      "sha256": "da48fa6c12295bafbf27fec09c8924c0003f33cfc4090d5bf6b3be7d496bcf9a"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.nii.gz",
+      "bytes": 1175115,
+      "sha256": "853d03df37562fd4fb98c0a149369f875d89ffc89e1afd0648a2645f0ed6fb9c"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/func/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/func/sub-PAT16_ses-postop_task-rest_bold.json",
+      "bytes": 1465,
+      "sha256": "910cb2d1aa759ec0cb683cb7e933480b004ecacf8349e1f5eef978fa04f1a9eb"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-postop/func/sub-PAT16_ses-postop_task-rest_bold.nii.gz",
+      "bytes": 40247395,
+      "sha256": "a139ca1a6926951a29f11d9e42a98543bc67a8639a49c13fed5499342f55efb5"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/anat/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/anat/sub-PAT16_ses-preop_T1w.json",
+      "bytes": 923,
+      "sha256": "562f4dab35bb77988d6b66adb69dc76303c2991a2ec57d1dcdd5a8cd523ebc9d"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/anat/sub-PAT16_ses-preop_T1w.nii.gz",
+      "bytes": 7708650,
+      "sha256": "709b3ea19596ff6a0cb963ebeaeede247b0ddd6c605f12aa350df2cb04500c3e"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.bval",
+      "bytes": 476,
+      "sha256": "a678931600142ebf20236adba60c52b41e85b9aa241b78dc69c6385c089576c2"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.bvec",
+      "bytes": 2773,
+      "sha256": "79aef7283c3ec6c1889c2d3090ca8c971d50db41ba768b3ccbea9c66a76443b4"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.json",
+      "bytes": 1644,
+      "sha256": "3f3b5b5f3a485f9e70501c7e23d5c48711e85282b9d60f9452963c9b1ab2099d"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.nii.gz",
+      "bytes": 46711430,
+      "sha256": "403d630772a6203dd67cc498235846a57a82ff62a5dfd2b33b689dbfac366c36"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.bval",
+      "bytes": 4,
+      "sha256": "0ccdb5a77ba5bf7687f2565a8ed97dfb9c1af45503c496fb646312239fab5101"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.bvec",
+      "bytes": 12,
+      "sha256": "1097c9882126db5f7d6f7a4856ec9d3db40cc1dd03515d68ac46f454a9bf1ae4"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.json",
+      "bytes": 1066,
+      "sha256": "336a04320f8086c9de3ddc8cc82e4a3a515e9c5ea6feec7cc33a1be2ad220ceb"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.nii.gz",
+      "bytes": 1137510,
+      "sha256": "1d9f24f816c04c3676ecb19aeddfc1c3163e11203addc7dc2311eea9690ddcf8"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/func/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/func/sub-PAT16_ses-preop_task-rest_bold.json",
+      "bytes": 1480,
+      "sha256": "eb14a387623f58793a3008706228f829e599ba114ebe1857afae0dbff511e085"
+    },
+    {
+      "path": "data/bids/sub-PAT16/ses-preop/func/sub-PAT16_ses-preop_task-rest_bold.nii.gz",
+      "bytes": 38868014,
+      "sha256": "feb12bb06c3fc967988d63c552d03e4776bdcdbbc48081a4ac44de80743a92e3"
+    },
+    {
+      "path": "data/bids/sub-PAT16/sub-PAT16_sessions.json",
+      "bytes": 6446,
+      "sha256": "91df4ef3862fbb0f16430858eb0adc92196d09e0c575e38ab1c167d3ae82445f"
+    },
+    {
+      "path": "data/bids/sub-PAT16/sub-PAT16_sessions.tsv",
+      "bytes": 1274,
+      "sha256": "cec1bcb937c6a3ff4af9139d481791006f2972c2e43ff418061d0c6a833144a8"
+    },
+    {
+      "path": "data/source_context/AI-assisted-glioma-research-dev.txt",
+      "bytes": 13394,
+      "sha256": "450080a47d2d268f64bd8fcc2d455a8d42d071b8f7c79f9dedb5ca292dec477d"
+    },
+    {
+      "path": "data/source_context/Finse-2026.txt",
+      "bytes": 38039,
+      "sha256": "ce2de26217776996d5629019aa4a40d2ab34deb341d37de866c2196c54caeebc"
+    },
+    {
+      "path": "data/source_context/LICENSE",
+      "bytes": 1073,
+      "sha256": "10320b04be03af89015b1faec45fe48f232ad5583db86fbe000a494445e961c1"
+    },
+    {
+      "path": "data/source_context/LICENSE-CONTENT.md",
+      "bytes": 1391,
+      "sha256": "1c02aa23ae158269fc0a874f24c9f4b9810408aea55399a320d652b15afa8b17"
+    }
+  ]
+}

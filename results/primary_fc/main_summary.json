@@ -1,0 +1,61 @@
+{
+  "policy": {
+    "version": "fixed-duration-nonreplacement-refit-v1",
+    "primary_protocol": "two_thirds_block10",
+    "primary_mode": "full_refit",
+    "primary_support": "fixed",
+    "eligible_frames": [
+      146,
+      150
+    ],
+    "targets": {
+      "half": 73,
+      "two_thirds": 97,
+      "four_fifths": 116
+    },
+    "primary_distinct_frames": 97,
+    "primary_retained_minutes": 3.88,
+    "primary_block_frames": 10,
+    "block_seconds": 24,
+    "SC_draws": 500,
+    "FC_draws": 200,
+    "source_sha256": "ad7fc6e4c5a59a0fc04f631dbdfd6c0860ebf506a28cfb2356aa11389995132a",
+    "config_sha256": "058e9940acd5c4b5650e5d5ebe0738611f28576e556434c59d855f6bb382933d",
+    "decision": "Post hoc methodological recommendation; no independent optimality or calibration validation",
+    "selection_uses_new_contrast_or_clinical_sign": false,
+    "range_label": "conditional subset stability range; not a full-run confidence interval",
+    "observed_coupling": {
+      "preop": 0.18821585409685307,
+      "postop": 0.14648812690454752,
+      "delta": -0.04172772719230555
+    }
+  },
+  "primary_joint_coupling": {
+    "protocol": "two_thirds_block10",
+    "mode": "full_refit",
+    "support": "fixed",
+    "role": "primary",
+    "SC_draws": 500,
+    "FC_draws": 200,
+    "q025": -0.1026110644050368,
+    "median": -0.0469379850545441,
+    "q975": 0.0083163507001199,
+    "sd": 0.0274774586754579,
+    "positive_fraction": 0.04236,
+    "SC_variance": 8.933251827779428e-06,
+    "FC_variance": 0.0007423733452794,
+    "interaction_variance": 3.70413815422328e-06,
+    "total_variance": 0.0007550107352614,
+    "SC_share": 0.0118319533889612,
+    "FC_share": 0.9832619731193284,
+    "interaction_share": 0.0049060734917104
+  },
+  "primary_networks": "primary_fc/network_uncertainty.csv; role=primary",
+  "clinical_evidence": "primary_fc/clinical_evidence_ledger.csv",
+  "preserved_observed_tables": [
+    "summary.json",
+    "network_summary.csv",
+    "assessments_all.csv"
+  ],
+  "interpretation": "Observed full-run points separate from subset distributions; clinical/context evidence remains descriptive."
+}

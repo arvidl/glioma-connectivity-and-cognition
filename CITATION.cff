@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the original datasets and methods listed in the paper and THIRD_PARTY.md."
+title: "Glioma connectivity and cognition: an exploratory longitudinal PAT16 case study"
+type: software
+authors:
+  - family-names: Lundervold
+    given-names: Arvid
+repository-code: "https://github.com/arvidl/glioma-connectivity-and-cognition"
+license: MIT
+version: "0.1.0"
+keywords:
+  - glioma
+  - structural connectivity
+  - functional connectivity
+  - cognition
+  - CANTAB
+  - reproducible research
+references:
+  - type: article
+    authors:
+      - family-names: Aerts
+        given-names: Hannelore
+      - family-names: Marinazzo
+        given-names: Daniele
+    title: "Pre- and post-surgery brain tumor multimodal magnetic resonance imaging data optimized for large scale computational modelling"
+    journal: "Scientific Data"
+    year: 2022
+    doi: "10.1038/s41597-022-01806-4"

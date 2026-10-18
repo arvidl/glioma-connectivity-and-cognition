@@ -1,0 +1,746 @@
+{
+  "subject": "sub-PAT16",
+  "analysis_date": "2026-10-18",
+  "primary_sc_policy": "repeat80-mean-seed-rate-common-coupling-v1",
+  "primary_sc_decision": "Post hoc methodological recommendation; config/PRIMARY_SC.md",
+  "primary_denoising_model": "anatomical5",
+  "primary_denoising_decision": "Post hoc methodological recommendation; config/PRIMARY_DENOISING.md",
+  "evidence_level": "exploratory paired single case; no inference of surgery effects",
+  "common_fc_nodes": 100,
+  "sessions": {
+    "preop": {
+      "sc_qc": {
+        "status": "exploratory patient-derived",
+        "method_version": "shell-specific-v2",
+        "preprocessing": "corrected",
+        "excluded_anatomical_mask_voxels_invalid_jacobian": 0,
+        "model": "b=2800 single-tissue CSD, SH order 6; deterministic tracking",
+        "tensor_bvalues_s_mm2": [
+          0.0,
+          700.0,
+          1200.0
+        ],
+        "csd_bvalues_s_mm2": [
+          0.0,
+          2800.0
+        ],
+        "csd_volumes": 56,
+        "seeds": 30000,
+        "random_seed": 160,
+        "length_filtered_streamlines": 26488,
+        "assigned_interparcel_streamlines": 16258,
+        "response_voxels": 1568,
+        "response_eigenvalues_mm2_s": [
+          0.0010393055033553857,
+          0.0002969389615689336,
+          0.00019071258796539772
+        ],
+        "median_wm_fa": 0.40906763076782227,
+        "tracking_step_mm": 0.75,
+        "FA_stop": 0.1,
+        "max_angle_deg": 35,
+        "min_length_mm": 20,
+        "max_length_mm": 250,
+        "endpoint_radius_mm": 6,
+        "seconds": 20.10636305809021,
+        "limitations": [
+          "no ACT or SIFT2",
+          "counts are not axon counts",
+          "affine atlas plus rigid longitudinal registration",
+          "no subcortical or cerebellar nodes"
+        ]
+      },
+      "fc_qc": {
+        "status": "exploratory patient-derived",
+        "method_version": "static-topup-transfer-v1",
+        "denoising_version": "retained-anatomical5-primary-v1",
+        "denoising_model": "anatomical5",
+        "denoising_inputs": {
+          "results/preop/func_sdc.nii.gz": "299c890fafc428ae2213094f540c1d8394892fa3ab48545dcfe8637ca9cc27e5",
+          "results/preop/roi_timeseries_raw.npy": "d25a06c3c9d47e809ef7a459354b36338f1579cabc3a1208254ff5714cec2f34",
+          "results/preop/func_motion.tsv": "e326bc2d06254bb2f9214a71b57b9c077f3379e0977383fdd0e0a31430897edf",
+          "results/preop/t1_to_func_pull.tfm": "f7d86ab7268ff5516a9f247f8415180f6289971998c7c2bb8196b5fd4ccf21aa",
+          "results/preop/brain_mask_func.nii.gz": "668e88eeb64fce7b9ec0b688e23a54608580bcedb720be9e5e3037e888df3928",
+          "results/preop/preop_lesion_footprint_func.nii.gz": "b1d90cd2ca931a20bae866ac80e7d4f17f2a15873cf2599c36ba8205dc24d486",
+          "results/preop/bold_valid_mask.nii.gz": "05cdc2fcd4a8b5e7923d0d4b18c777f194f5776070f0b401570055b3577c010c",
+          "results/nuisance_investigation/preop/tissue_pve_0.nii.gz": "3f4ae0b3374101c737ee0cacc26d55029f26536c3df8f60927085ccb880abaab",
+          "results/nuisance_investigation/preop/tissue_pve_1.nii.gz": "144616aaa632392cae08d7e4c6b347c0da17f347ff4472164b46805f7771c0be",
+          "results/nuisance_investigation/preop/tissue_pve_2.nii.gz": "f76a062881da09caa1d149660b095e60b9a789aaff848221fdbf69061ff857b4"
+        },
+        "preprocessing": "corrected",
+        "image_sha256": "299c890fafc428ae2213094f540c1d8394892fa3ab48545dcfe8637ca9cc27e5",
+        "analyses": [
+          {
+            "retained_frames": 146,
+            "retained_minutes": 5.84,
+            "design_rank": 39,
+            "residual_df": 107,
+            "mean_fd_mm": 0.3278793129108586,
+            "max_fd_mm": 0.7318571700326317,
+            "fd_threshold_mm": 0.5,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "primary",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 146
+          },
+          {
+            "retained_frames": 68,
+            "retained_minutes": 2.7199999999999998,
+            "design_rank": 39,
+            "residual_df": 29,
+            "mean_fd_mm": 0.3278793129108586,
+            "max_fd_mm": 0.7318571700326317,
+            "fd_threshold_mm": 0.3,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "fd03",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 68
+          },
+          {
+            "retained_frames": 176,
+            "retained_minutes": 7.04,
+            "design_rank": 39,
+            "residual_df": 137,
+            "mean_fd_mm": 0.3278793129108586,
+            "max_fd_mm": 0.7318571700326317,
+            "fd_threshold_mm": 1.0,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "fd10",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 176
+          },
+          {
+            "retained_frames": 146,
+            "retained_minutes": 5.84,
+            "design_rank": 40,
+            "residual_df": 106,
+            "mean_fd_mm": 0.3278793129108586,
+            "max_fd_mm": 0.7318571700326317,
+            "fd_threshold_mm": 0.5,
+            "valid_rois": 100,
+            "global_signal_regression": true,
+            "analysis": "gsr",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 146
+          },
+          {
+            "analysis": "bandpass",
+            "status": "Insufficient FC data: retained=146, residual df=14"
+          }
+        ],
+        "seconds": 2.5997159481048584,
+        "TR_seconds": 2.4,
+        "first_frames_dropped": 4,
+        "passband_Hz": [
+          0.01,
+          null
+        ],
+        "nuisance": "24 motion + 5 combined anatomical WM/CSF PCs (retained-frame temporal preprocessing/scaling/PCA) + trend/DCT",
+        "tissue_masks": {
+          "PVE_threshold": 0.95,
+          "WM_voxels": 10016,
+          "CSF_voxels": 1460
+        },
+        "selection": "Post hoc methodological recommendation; see config/PRIMARY_DENOISING.md",
+        "limitations": [
+          "Automatic T1 segmentation lacks independent expert validation",
+          "Five-PC budget is pragmatic; component-count sensitivity remains",
+          "Substantial shared cortical variance removal can include neural signal",
+          "No physiological recordings",
+          "Static cross-acquisition susceptibility correction is conditional",
+          "No slice timing correction",
+          "Approximate Euler-based FD at 50 mm",
+          "Neurovascular uncoupling may affect BOLD"
+        ]
+      },
+      "dwi_correction": {
+        "method": "FSL topup + eddy_cpu",
+        "fsl_version": "6.0.7.19",
+        "binary_id": "2412.6-dirty",
+        "seconds": {
+          "topup": 332.51385712623596,
+          "eddy": 3628.056438922882
+        },
+        "frames": 102,
+        "b0_indices": {
+          "AP": [
+            0,
+            1,
+            26,
+            51,
+            76,
+            101
+          ],
+          "PA": [
+            0,
+            1
+          ]
+        },
+        "shells_s_mm2": {
+          "0": 6,
+          "700": 16,
+          "1200": 30,
+          "2800": 50
+        },
+        "phase_encoding": {
+          "AP": "j-",
+          "PA": "j"
+        },
+        "total_readout_seconds": {
+          "AP": 0.0266003,
+          "PA": 0.0266003
+        },
+        "grid_handling": "AP header; AP then PA voxel arrays stacked without pre-registration or interpolation (fslmerge convention)",
+        "AP_PA_prescription_angle_deg": 0.0,
+        "AP_PA_origin_difference_mm": [
+          -3.814697265625e-05,
+          -1.52587890625e-05,
+          0.0001678466796875
+        ],
+        "topup_config_sha256": "9833bcbaa60c1550457dd7149a15b88040562afecd1e05aae908af1517a8dcb9",
+        "field_Hz_brain_percentiles_1_50_99": [
+          -86.90299247741699,
+          -4.112926483154297,
+          146.60422546386718
+        ],
+        "AP_displacement_vox_brain_percentiles_1_50_99": [
+          -3.8997163786065063,
+          0.10940507832984925,
+          2.3116456707970348
+        ],
+        "b0_AP_PA_correlation_before": 0.7364656653269225,
+        "b0_AP_PA_correlation_after": 0.9878095171029637,
+        "mean_absolute_movement_rms_mm": 1.0746228952281374,
+        "max_absolute_movement_rms_mm": 1.653462668,
+        "outlier_slices": 6,
+        "outlier_slice_entries": 6120,
+        "outlier_slice_fraction": 0.000980392156862745,
+        "registration": {
+          "metric": -0.5488606000214642,
+          "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 13 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+        },
+        "gradient_source": "eddy_rotated_bvecs, used directly; no second rigid rotation",
+        "corrections": [
+          "susceptibility (topup)",
+          "eddy currents (quadratic)",
+          "volume-to-volume motion",
+          "slice outlier replacement"
+        ],
+        "not_performed": [
+          "slice-to-volume motion",
+          "susceptibility-by-motion",
+          "BOLD susceptibility correction"
+        ],
+        "limitations": [
+          "Small AP/PA prescription differences approximated by topup rigid motion in common voxel grid; review QC",
+          "AP/PA agreement is an internal fit check, not independent anatomical validation"
+        ],
+        "readout_metadata_audit": {
+          "AP": {
+            "supplied_seconds": 0.0266003,
+            "echo_spacing_times_phase_lines_minus_one_seconds": 0.036100379999999994,
+            "consistent": false,
+            "decision": "Use supplied same TRT consistently in topup/eddy; displacement identifiable, physical Hz scale unverified; no BOLD transfer"
+          },
+          "PA": {
+            "supplied_seconds": 0.0266003,
+            "echo_spacing_times_phase_lines_minus_one_seconds": 0.036100379999999994,
+            "consistent": false,
+            "decision": "Use supplied same TRT consistently in topup/eddy; displacement identifiable, physical Hz scale unverified; no BOLD transfer"
+          }
+        },
+        "absolute_displacement_vox_brain_percentiles_50_95_99": [
+          0.33323858551988605,
+          2.0688672926349634,
+          3.9202097877721247
+        ],
+        "displacement_definition": "Forward phase-encoding displacement = field Hz * supplied readout seconds * PE sign (AP j-), in voxel units",
+        "AP_nonpositive_jacobian_brain_voxels": 2,
+        "AP_jacobian_brain_percentiles_0_1_50_99_100": [
+          -0.07708858698606491,
+          0.5347408133745194,
+          0.9976678490638733,
+          1.4785565757751464,
+          1.8867064714431763
+        ],
+        "PA_nonpositive_jacobian_brain_voxels": 0,
+        "PA_jacobian_brain_percentiles_0_1_50_99_100": [
+          0.11329347640275955,
+          0.5214434009790421,
+          1.002332091331482,
+          1.4652591502666472,
+          2.0770885944366455
+        ]
+      },
+      "bold_correction": {
+        "method_version": "static-topup-transfer-v1",
+        "method": "Rigidly transferred topup field; static PE pull + motion; cubic single interpolation",
+        "frames": 180,
+        "phase_encoding": "j-",
+        "BOLD_total_readout_seconds": 0.01464,
+        "DWI_total_readout_seconds": 0.0266003,
+        "timing_alternative": {
+          "DWI_echo_spacing_times_lines_minus_one": 0.036100379999999994,
+          "BOLD_echo_spacing_times_lines_minus_one": 0.015120063,
+          "displacement_scale_relative_to_primary": 0.7610046058271592,
+          "registration": "Held fixed to isolate timing amplitude"
+        },
+        "field_registration_iterations": [
+          {
+            "metric": -0.30948477994014867,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 47 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          },
+          {
+            "metric": -0.3094099048329858,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 14 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          },
+          {
+            "metric": -0.31370014897531445,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 70 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          }
+        ],
+        "variants": {
+          "corrected": {
+            "field_scale": 1.0,
+            "registration": {
+              "metric": -0.5985000387137221,
+              "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 13 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+            },
+            "valid_voxels": 59503,
+            "reference_brain_covered_fraction": 0.9620618481377975,
+            "nonpositive_min_jacobian_in_reference_brain": 0,
+            "signed_shift_vox_brain_percentiles_1_50_99": [
+              -1.67313654609375,
+              0.050822772789001464,
+              1.1504238303955066
+            ]
+          },
+          "readout_alternative": {
+            "field_scale": 0.7610046058271592,
+            "registration": {
+              "metric": -0.6009268079950117,
+              "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 13 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+            },
+            "valid_voxels": 59503,
+            "reference_brain_covered_fraction": 0.9620618481377975,
+            "nonpositive_min_jacobian_in_reference_brain": 0,
+            "signed_shift_vox_brain_percentiles_1_50_99": [
+              -1.273264617755089,
+              0.038676364173337335,
+              0.8754778335843032
+            ]
+          }
+        },
+        "source_field_sha256": "eabfb27df06cf029b1ff8840f75d09bdda698394173d008f7d77719dd2170c89",
+        "raw_BOLD_sha256": "feb12bb06c3fc967988d63c552d03e4776bdcdbbc48081a4ac44de80743a92e3",
+        "motion_parameters_sha256": "e326bc2d06254bb2f9214a71b57b9c077f3379e0977383fdd0e0a31430897edf",
+        "SC_counts_sha256": "2bdf92fcddb558460adf52a070d8f0ff7a83263da9dc41713517c89ce997c45f",
+        "coordinates": "SITK LPS physical pulls; BIDS signed voxel j; motion first, then raw PE-axis displacement",
+        "jacobian": "Exact rank-one determinant of composed affine-motion + PE pull; nonpositive values excluded",
+        "readout_decision": "Primary uses supplied TRT ratio; alternative uses echo-spacing/phase-lines ratio. Hz scale is conditional.",
+        "limitations": [
+          "No BOLD-specific reverse-PE scan or shim settings; cross-acquisition static field assumption",
+          "BOLD precedes DWI by about 9-10 minutes; possible shim/field drift",
+          "No susceptibility-by-motion, slice-to-volume or slice-timing correction",
+          "GE-EPI signal dropout and neurovascular uncoupling cannot be recovered",
+          "Rigid field transfer and timing sensitivity are research approximations, not independent validation"
+        ],
+        "seconds": 19.808813095092773
+      },
+      "sc_support": {
+        "consensus_edges": 1160,
+        "common_edges": 823,
+        "session_specific_consensus_edges": 337,
+        "retained_mean_assignments_per_30000_seeds": 15782.4
+      },
+      "sc_fc_support": "common 16/20 consensus",
+      "sc_weight_units": "assigned streamlines per 10000 attempted seeds",
+      "sc_fc_spearman": 0.1882158540968531
+    },
+    "postop": {
+      "sc_qc": {
+        "status": "exploratory patient-derived",
+        "method_version": "shell-specific-v2",
+        "preprocessing": "corrected",
+        "excluded_anatomical_mask_voxels_invalid_jacobian": 0,
+        "model": "b=2800 single-tissue CSD, SH order 6; deterministic tracking",
+        "tensor_bvalues_s_mm2": [
+          0.0,
+          700.0,
+          1200.0
+        ],
+        "csd_bvalues_s_mm2": [
+          0.0,
+          2800.0
+        ],
+        "csd_volumes": 56,
+        "seeds": 30000,
+        "random_seed": 160,
+        "length_filtered_streamlines": 26421,
+        "assigned_interparcel_streamlines": 15889,
+        "response_voxels": 2070,
+        "response_eigenvalues_mm2_s": [
+          0.001018728519121949,
+          0.0002864396451498824,
+          0.00018034306404158512
+        ],
+        "median_wm_fa": 0.4125640392303467,
+        "tracking_step_mm": 0.75,
+        "FA_stop": 0.1,
+        "max_angle_deg": 35,
+        "min_length_mm": 20,
+        "max_length_mm": 250,
+        "endpoint_radius_mm": 6,
+        "seconds": 20.718278884887695,
+        "limitations": [
+          "no ACT or SIFT2",
+          "counts are not axon counts",
+          "affine atlas plus rigid longitudinal registration",
+          "no subcortical or cerebellar nodes"
+        ]
+      },
+      "fc_qc": {
+        "status": "exploratory patient-derived",
+        "method_version": "static-topup-transfer-v1",
+        "denoising_version": "retained-anatomical5-primary-v1",
+        "denoising_model": "anatomical5",
+        "denoising_inputs": {
+          "results/postop/func_sdc.nii.gz": "7a33eeed7beec74845fcc36b61c1408a35755843bd9ce40e1ee4c7ffca481322",
+          "results/postop/roi_timeseries_raw.npy": "24c0f01e8b915ec9aad9b77944d12df952d3380660e016a8aca2fbde596e69fb",
+          "results/postop/func_motion.tsv": "f375f2b89fede0f9ec3327c1be1b49759be48c502159affc310f8298bf74c15f",
+          "results/postop/t1_to_func_pull.tfm": "d1181c7d0d34e3c236cdabb8f29007c54dab1da25ac5ccc00bcf55ae701a0656",
+          "results/postop/brain_mask_func.nii.gz": "89a995c368cba9cef4b8402b0150b118debd3a764b3de080932bde27acddafc4",
+          "results/postop/preop_lesion_footprint_func.nii.gz": "5c0256e1458159bb5f9a39ce17aa2db441670f4e78aae9042ae68edddb3d313c",
+          "results/postop/bold_valid_mask.nii.gz": "b29292150dc533007b6aed4fc09472dd731074f31f0bf854b469710e57cbde14",
+          "results/nuisance_investigation/postop/tissue_pve_0.nii.gz": "60f7e25b49c324848cdd9c00a1118fe5ef9c8eb000dbd59257012ad7f4a810c0",
+          "results/nuisance_investigation/postop/tissue_pve_1.nii.gz": "ca0f94e2dc90fe357a7a0e892483bb1dde757cf70fa0e80282751da93dc3a320",
+          "results/nuisance_investigation/postop/tissue_pve_2.nii.gz": "7bcbce2126294fcf19564adad95550347cb86c496a011bf352e8326d4dfce752"
+        },
+        "preprocessing": "corrected",
+        "image_sha256": "7a33eeed7beec74845fcc36b61c1408a35755843bd9ce40e1ee4c7ffca481322",
+        "analyses": [
+          {
+            "retained_frames": 150,
+            "retained_minutes": 6.0,
+            "design_rank": 39,
+            "residual_df": 111,
+            "mean_fd_mm": 0.2871225209833833,
+            "max_fd_mm": 0.7526227780688094,
+            "fd_threshold_mm": 0.5,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "primary",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 150
+          },
+          {
+            "retained_frames": 96,
+            "retained_minutes": 3.8399999999999994,
+            "design_rank": 39,
+            "residual_df": 57,
+            "mean_fd_mm": 0.2871225209833833,
+            "max_fd_mm": 0.7526227780688094,
+            "fd_threshold_mm": 0.3,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "fd03",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 96
+          },
+          {
+            "retained_frames": 176,
+            "retained_minutes": 7.04,
+            "design_rank": 39,
+            "residual_df": 137,
+            "mean_fd_mm": 0.2871225209833833,
+            "max_fd_mm": 0.7526227780688094,
+            "fd_threshold_mm": 1.0,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "fd10",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 176
+          },
+          {
+            "retained_frames": 150,
+            "retained_minutes": 6.0,
+            "design_rank": 40,
+            "residual_df": 110,
+            "mean_fd_mm": 0.2871225209833833,
+            "max_fd_mm": 0.7526227780688094,
+            "fd_threshold_mm": 0.5,
+            "valid_rois": 100,
+            "global_signal_regression": true,
+            "analysis": "gsr",
+            "low_pass_Hz": null,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 150
+          },
+          {
+            "retained_frames": 150,
+            "retained_minutes": 6.0,
+            "design_rank": 132,
+            "residual_df": 18,
+            "mean_fd_mm": 0.2871225209833833,
+            "max_fd_mm": 0.7526227780688094,
+            "fd_threshold_mm": 0.5,
+            "valid_rois": 100,
+            "global_signal_regression": false,
+            "analysis": "bandpass",
+            "low_pass_Hz": 0.1,
+            "denoising_model": "anatomical5",
+            "PCA_fit_frames": 150
+          }
+        ],
+        "seconds": 2.5825319290161133,
+        "TR_seconds": 2.4,
+        "first_frames_dropped": 4,
+        "passband_Hz": [
+          0.01,
+          null
+        ],
+        "nuisance": "24 motion + 5 combined anatomical WM/CSF PCs (retained-frame temporal preprocessing/scaling/PCA) + trend/DCT",
+        "tissue_masks": {
+          "PVE_threshold": 0.95,
+          "WM_voxels": 9586,
+          "CSF_voxels": 1738
+        },
+        "selection": "Post hoc methodological recommendation; see config/PRIMARY_DENOISING.md",
+        "limitations": [
+          "Automatic T1 segmentation lacks independent expert validation",
+          "Five-PC budget is pragmatic; component-count sensitivity remains",
+          "Substantial shared cortical variance removal can include neural signal",
+          "No physiological recordings",
+          "Static cross-acquisition susceptibility correction is conditional",
+          "No slice timing correction",
+          "Approximate Euler-based FD at 50 mm",
+          "Neurovascular uncoupling may affect BOLD"
+        ]
+      },
+      "dwi_correction": {
+        "method": "FSL topup + eddy_cpu",
+        "fsl_version": "6.0.7.19",
+        "binary_id": "2412.6-dirty",
+        "seconds": {
+          "topup": 352.86811900138855,
+          "eddy": 2862.5812039375305
+        },
+        "frames": 102,
+        "b0_indices": {
+          "AP": [
+            0,
+            1,
+            26,
+            51,
+            76,
+            101
+          ],
+          "PA": [
+            0,
+            1
+          ]
+        },
+        "shells_s_mm2": {
+          "0": 6,
+          "700": 16,
+          "1200": 30,
+          "2800": 50
+        },
+        "phase_encoding": {
+          "AP": "j-",
+          "PA": "j"
+        },
+        "total_readout_seconds": {
+          "AP": 0.0266003,
+          "PA": 0.0266003
+        },
+        "grid_handling": "AP header; AP then PA voxel arrays stacked without pre-registration or interpolation (fslmerge convention)",
+        "AP_PA_prescription_angle_deg": 0.8000014877371601,
+        "AP_PA_origin_difference_mm": [
+          -1.628875732421875,
+          -1.6615447998046875,
+          -0.29204559326171875
+        ],
+        "topup_config_sha256": "9833bcbaa60c1550457dd7149a15b88040562afecd1e05aae908af1517a8dcb9",
+        "field_Hz_brain_percentiles_1_50_99": [
+          -87.25570220947266,
+          -2.2398695945739746,
+          136.33941040039085
+        ],
+        "AP_displacement_vox_brain_percentiles_1_50_99": [
+          -3.626669218473511,
+          0.059581203176546096,
+          2.3210278554826367
+        ],
+        "b0_AP_PA_correlation_before": 0.7798629012320399,
+        "b0_AP_PA_correlation_after": 0.9879065654899037,
+        "mean_absolute_movement_rms_mm": 0.6086261544335294,
+        "max_absolute_movement_rms_mm": 0.861644871,
+        "outlier_slices": 0,
+        "outlier_slice_entries": 6120,
+        "outlier_slice_fraction": 0.0,
+        "registration": {
+          "metric": -0.48762124609106133,
+          "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 17 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+        },
+        "gradient_source": "eddy_rotated_bvecs, used directly; no second rigid rotation",
+        "corrections": [
+          "susceptibility (topup)",
+          "eddy currents (quadratic)",
+          "volume-to-volume motion",
+          "slice outlier replacement"
+        ],
+        "not_performed": [
+          "slice-to-volume motion",
+          "susceptibility-by-motion",
+          "BOLD susceptibility correction"
+        ],
+        "limitations": [
+          "Small AP/PA prescription differences approximated by topup rigid motion in common voxel grid; review QC",
+          "AP/PA agreement is an internal fit check, not independent anatomical validation"
+        ],
+        "readout_metadata_audit": {
+          "AP": {
+            "supplied_seconds": 0.0266003,
+            "echo_spacing_times_phase_lines_minus_one_seconds": 0.036100379999999994,
+            "consistent": false,
+            "decision": "Use supplied same TRT consistently in topup/eddy; displacement identifiable, physical Hz scale unverified; no BOLD transfer"
+          },
+          "PA": {
+            "supplied_seconds": 0.0266003,
+            "echo_spacing_times_phase_lines_minus_one_seconds": 0.036100379999999994,
+            "consistent": false,
+            "decision": "Use supplied same TRT consistently in topup/eddy; displacement identifiable, physical Hz scale unverified; no BOLD transfer"
+          }
+        },
+        "absolute_displacement_vox_brain_percentiles_50_95_99": [
+          0.33342293494243624,
+          2.00882189269104,
+          3.695360182689059
+        ],
+        "displacement_definition": "Forward phase-encoding displacement = field Hz * supplied readout seconds * PE sign (AP j-), in voxel units",
+        "AP_nonpositive_jacobian_brain_voxels": 3,
+        "AP_jacobian_brain_percentiles_0_1_50_99_100": [
+          -0.03604111820459366,
+          0.5547726631164551,
+          0.9995734989643097,
+          1.4633836448192603,
+          1.863961935043335
+        ],
+        "PA_nonpositive_jacobian_brain_voxels": 0,
+        "PA_jacobian_brain_percentiles_0_1_50_99_100": [
+          0.13603810966014862,
+          0.5366162985563279,
+          1.000426471233368,
+          1.4452272832393647,
+          2.036041021347046
+        ]
+      },
+      "bold_correction": {
+        "method_version": "static-topup-transfer-v1",
+        "method": "Rigidly transferred topup field; static PE pull + motion; cubic single interpolation",
+        "frames": 180,
+        "phase_encoding": "j-",
+        "BOLD_total_readout_seconds": 0.01464,
+        "DWI_total_readout_seconds": 0.0266003,
+        "timing_alternative": {
+          "DWI_echo_spacing_times_lines_minus_one": 0.036100379999999994,
+          "BOLD_echo_spacing_times_lines_minus_one": 0.015120063,
+          "displacement_scale_relative_to_primary": 0.7610046058271592,
+          "registration": "Held fixed to isolate timing amplitude"
+        },
+        "field_registration_iterations": [
+          {
+            "metric": -0.36892154026737695,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 46 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          },
+          {
+            "metric": -0.3806078120442985,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 34 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          },
+          {
+            "metric": -0.3791891667363956,
+            "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 20 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+          }
+        ],
+        "variants": {
+          "corrected": {
+            "field_scale": 1.0,
+            "registration": {
+              "metric": -0.57795487013873,
+              "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 15 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+            },
+            "valid_voxels": 58899,
+            "reference_brain_covered_fraction": 0.9516031789531378,
+            "nonpositive_min_jacobian_in_reference_brain": 0,
+            "signed_shift_vox_brain_percentiles_1_50_99": [
+              -1.491707010900879,
+              0.024941550278663634,
+              1.1496945535034175
+            ]
+          },
+          "readout_alternative": {
+            "field_scale": 0.7610046058271592,
+            "registration": {
+              "metric": -0.581372152968462,
+              "stop": "RegularStepGradientDescentOptimizerv4: Step too small after 15 iterations. Current step (0.00195312) is less than minimum step (0.002)."
+            },
+            "valid_voxels": 58899,
+            "reference_brain_covered_fraction": 0.9516031789531378,
+            "nonpositive_min_jacobian_in_reference_brain": 0,
+            "signed_shift_vox_brain_percentiles_1_50_99": [
+              -1.1351959058402334,
+              0.018980634638532695,
+              0.8749228505105
+            ]
+          }
+        },
+        "source_field_sha256": "915158ed4e31760de948fe3ce662360aaaf47479f725089736cfc0d2680ec1db",
+        "raw_BOLD_sha256": "a139ca1a6926951a29f11d9e42a98543bc67a8639a49c13fed5499342f55efb5",
+        "motion_parameters_sha256": "f375f2b89fede0f9ec3327c1be1b49759be48c502159affc310f8298bf74c15f",
+        "SC_counts_sha256": "dcda61a64b4905b0d2ed9f8ede1f9177c7688faf54ed603e1ce24f6b65ec5fd6",
+        "coordinates": "SITK LPS physical pulls; BIDS signed voxel j; motion first, then raw PE-axis displacement",
+        "jacobian": "Exact rank-one determinant of composed affine-motion + PE pull; nonpositive values excluded",
+        "readout_decision": "Primary uses supplied TRT ratio; alternative uses echo-spacing/phase-lines ratio. Hz scale is conditional.",
+        "limitations": [
+          "No BOLD-specific reverse-PE scan or shim settings; cross-acquisition static field assumption",
+          "BOLD precedes DWI by about 9-10 minutes; possible shim/field drift",
+          "No susceptibility-by-motion, slice-to-volume or slice-timing correction",
+          "GE-EPI signal dropout and neurovascular uncoupling cannot be recovered",
+          "Rigid field transfer and timing sensitivity are research approximations, not independent validation"
+        ],
+        "seconds": 20.532774925231934
+      },
+      "sc_support": {
+        "consensus_edges": 1163,
+        "common_edges": 823,
+        "session_specific_consensus_edges": 340,
+        "retained_mean_assignments_per_30000_seeds": 15290.4
+      },
+      "sc_fc_support": "common 16/20 consensus",
+      "sc_weight_units": "assigned streamlines per 10000 attempted seeds",
+      "sc_fc_spearman": 0.14648812690454752
+    }
+  },
+  "limitations": [
+    "BOLD static cross-acquisition field assumption; uncertain readout and shim compatibility",
+    "slice timing uncorrected",
+    "FC depends on the recommended anatomical nuisance model; segmentation and neural specificity lack independent validation",
+    "affine template and rigid longitudinal registration",
+    "no normative cognition or retest data",
+    "no direct QoL scale",
+    "no surgical/treatment interval or medication details in bundled tables"
+  ],
+  "lesion_volume_ml": 45.43109972159255,
+  "reported_tumor_volume_ml": 50.24
+}

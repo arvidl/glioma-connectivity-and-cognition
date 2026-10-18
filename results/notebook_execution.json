@@ -1,0 +1,92 @@
+[
+  {
+    "notebook": "00_data_anatomy_and_design.ipynb",
+    "seconds": 2.13,
+    "code_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "01_diffusion_structural_connectivity.ipynb",
+    "seconds": 2.36,
+    "code_cells": 6,
+    "errors": 0
+  },
+  {
+    "notebook": "02_bold_functional_connectivity.ipynb",
+    "seconds": 2.2,
+    "code_cells": 6,
+    "errors": 0
+  },
+  {
+    "notebook": "03_longitudinal_graphs_and_networks.ipynb",
+    "seconds": 2.02,
+    "code_cells": 6,
+    "errors": 0
+  },
+  {
+    "notebook": "04_cognition_and_lived_experience.ipynb",
+    "seconds": 1.9,
+    "code_cells": 5,
+    "errors": 0
+  },
+  {
+    "notebook": "05_simulations_growth_surgery_and_dynamics.ipynb",
+    "seconds": 2.05,
+    "code_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "06_nuisance_refitting_and_anatomical_denoising.ipynb",
+    "seconds": 2.41,
+    "code_cells": 7,
+    "errors": 0
+  },
+  {
+    "notebook": "07_censoring_motion_duration_and_coupling.ipynb",
+    "seconds": 2.07,
+    "code_cells": 7,
+    "errors": 0
+  },
+  {
+    "notebook": "08_edges_networks_and_coupling_reversal.ipynb",
+    "seconds": 2.07,
+    "code_cells": 9,
+    "errors": 0
+  },
+  {
+    "notebook": "09_structural_edge_reliability.ipynb",
+    "seconds": 2.12,
+    "code_cells": 8,
+    "errors": 0
+  },
+  {
+    "notebook": "10_joint_sampling_uncertainty.ipynb",
+    "seconds": 2.13,
+    "code_cells": 6,
+    "errors": 0
+  },
+  {
+    "notebook": "11_full_run_nuisance_refit.ipynb",
+    "seconds": 1.92,
+    "code_cells": 5,
+    "errors": 0
+  },
+  {
+    "notebook": "12_connectivity_cognition_context.ipynb",
+    "seconds": 1.98,
+    "code_cells": 5,
+    "errors": 0
+  },
+  {
+    "notebook": "13_pc_sampling_mechanisms.ipynb",
+    "seconds": 2.35,
+    "code_cells": 7,
+    "errors": 0
+  },
+  {
+    "notebook": "14_primary_fc_resampling.ipynb",
+    "seconds": 2.08,
+    "code_cells": 5,
+    "errors": 0
+  }
+]

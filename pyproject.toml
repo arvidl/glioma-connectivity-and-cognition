@@ -1,0 +1,34 @@
+[project]
+name = "pat16-connectivity-case"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dipy>=1.11,<2",
+    "ipykernel>=6,<8",
+    "ipywidgets>=8,<9",
+    "jupyterlab>=4,<5",
+    "matplotlib>=3.9,<4",
+    "nbclient>=0.10,<1",
+    "nbformat>=5,<6",
+    "networkx>=3.4,<4",
+    "nibabel>=5.3,<6",
+    "nilearn>=0.12,<1",
+    "numpy>=2,<3",
+    "pandas>=2.2,<3",
+    "plotly>=6,<7",
+    "pypdf>=5,<7",
+    "pytest>=8,<10",
+    "scipy>=1.14,<2",
+    "simpleitk>=2.4,<3",
+    "threadpoolctl>=3.5,<4",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pat16"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
