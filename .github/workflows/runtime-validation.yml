@@ -1,0 +1,110 @@
+name: Full runtime validation (manual)
+
+# Large public downloads and notebook execution are opt-in; ci.yml stays source-only.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runtime-validation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      MPLBACKEND: Agg
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: '0.13.1'
+          enable-cache: true
+      - name: Install locked Python environment
+        run: |
+          mkdir -p tmp/runtime-ci
+          uv sync --frozen 2>&1 | tee tmp/runtime-ci/setup.log
+      - name: Download and restore public runtime assets
+        id: download
+        # No asset cache or GitHub token: exercise the public release on every run.
+        run: python3 scripts/fetch_data.py 2>&1 | tee tmp/runtime-ci/download.log
+      - name: Verify every restored member and raw input
+        id: verify
+        run: |
+          make verify 2>&1 | tee tmp/runtime-ci/verify.log
+          # Extraction is complete; reclaim ~4.9 GiB before tests/notebooks.
+          rm -rf .cache/assets
+      - name: Run all tests
+        id: tests
+        run: uv run pytest -q --junitxml=tmp/runtime-ci/pytest.xml 2>&1 | tee tmp/runtime-ci/tests.log
+      - name: Execute every notebook
+        id: notebooks
+        run: |
+          # Do not mistake the restored historical execution record for this run.
+          rm -f results/notebook_execution.json
+          make notebooks 2>&1 | tee tmp/runtime-ci/notebooks.log
+          cp results/notebook_execution.json tmp/runtime-ci/notebook_execution.json
+          mkdir -p tmp/runtime-ci/notebooks
+          cp notebooks/*.ipynb tmp/runtime-ci/notebooks/
+      - name: Summarize validation
+        if: always()
+        env:
+          DOWNLOAD_OUTCOME: ${{ steps.download.outcome }}
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          TESTS_OUTCOME: ${{ steps.tests.outcome }}
+          NOTEBOOKS_OUTCOME: ${{ steps.notebooks.outcome }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          lines = ['## Full runtime validation', f"Commit: `{os.environ['GITHUB_SHA']}`", '']
+          manifest = json.loads(Path('reproducibility/assets.json').read_text())
+          bundles = list(manifest['bundles'].values())
+          parts = [part for bundle in bundles for part in bundle['parts']]
+          lines.append(f"Release: `{manifest['release']}`; {len(parts)} parts, "
+                       f"{sum(p['bytes'] for p in parts):,} bytes; "
+                       f"{sum(len(b['members']) for b in bundles):,} checksummed members.")
+          for label in ['download', 'verify', 'tests', 'notebooks']:
+              lines.append(f"- {label}: **{os.environ[label.upper() + '_OUTCOME']}**")
+          junit = Path('tmp/runtime-ci/pytest.xml')
+          if junit.exists():
+              suites = ET.parse(junit).getroot().iter('testsuite')
+              totals = {key: 0 for key in ['tests', 'failures', 'errors', 'skipped']}
+              for suite in suites:
+                  for key in totals:
+                      totals[key] += int(suite.get(key, 0))
+              lines.append('\nPytest: ' + ', '.join(f'{v} {k}' for k, v in totals.items()) + '.')
+          record = Path('tmp/runtime-ci/notebook_execution.json')
+          if record.exists():
+              records = json.loads(record.read_text())
+              lines.append(f"\nExecuted {len(records)} notebooks / "
+                           f"{sum(r['code_cells'] for r in records)} code cells; "
+                           f"{sum(r['errors'] for r in records)} cell errors.")
+          lines.append('\nLogs, JUnit results and successful executed notebooks are retained for 7 days. '
+                       'This checks saved runtime checkpoints. Raw FSL reconstruction is outside '
+                       'this check; regular CI compiles the paper (see the reproduction guide).')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
+              output.write('\n'.join(lines) + '\n')
+          PY
+      - name: Upload logs, test results and executed notebooks
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: runtime-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: tmp/runtime-ci/
+          if-no-files-found: warn
+          retention-days: 7

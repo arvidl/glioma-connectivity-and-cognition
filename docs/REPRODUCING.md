@@ -19,7 +19,13 @@ git ls-files --error-unmatch report/main.pdf
 
 The paper PDF is an ordinary tracked Git blob, not an LFS pointer. All report figures, generated tables, TeX and bibliography are tracked, so `make paper` needs neither MRI assets nor Python. Do not delete `report/generated` or `report/figures` for this route. PDF bytes can vary with TeX metadata/version; compare scientific content rather than assuming universal binary identity.
 
-The CI workflow runs portable scientific/extraction contracts and source-only TeX compilation. It does **not** claim to run raw MRI or full data-dependent tests in CI. Local full validation is recorded separately below.
+Regular push/pull-request CI runs portable scientific/extraction contracts and source-only TeX compilation, without runtime downloads. The separate [Full runtime validation (manual) workflow](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) is opt-in: choose **Run workflow** in GitHub Actions, or use the GitHub CLI:
+
+```sh
+gh workflow run runtime-validation.yml --ref main
+```
+
+Each manual run installs the frozen uv environment, downloads all seven public release parts (about 4.9 GiB, without an asset cache or download token), verifies part and extracted-member SHA256 checksums plus the raw-input manifest, runs **all pytest tests**, and executes **all 15 notebooks** from the saved runtime checkpoints. It uses an Ubuntu runner with a 60-minute limit; only Python dependencies are cached. The run summary records the commit, release, step outcomes and test/notebook counts. Logs, JUnit XML and successfully executed notebooks are downloadable as a workflow artifact for seven days (GitHub sign-in is required for Actions artifact downloads); failures retain the available diagnostic logs. Executed notebooks are uploaded only after the whole notebook batch succeeds, and the historical execution record is removed before starting that batch. Neither workflow reruns raw FSL preprocessing; paper compilation remains in regular CI. The scientific release snapshot, tracked paper and local validation records are unchanged by a manual run.
 
 ## 2. Restore exact runtime assets
 

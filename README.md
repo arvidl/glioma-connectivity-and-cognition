@@ -34,6 +34,8 @@ uv run jupyter lab notebooks/
 
 A fresh clone must restore the runtime assets before running all tests/notebooks. [Complete reproduction instructions](docs/REPRODUCING.md) distinguish portable checks, saved-analysis replay and raw reconstruction; they cover FSL, TeX, disk use, checksums and public-clone verification. TeX is external to uv. FSL topup/eddy_cpu/FAST are required for raw reconstruction or new tissue segmentation, and are not redistributed.
 
+Regular CI runs portable tests and compiles the paper without downloading runtime assets. Use [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) → **Run workflow** to download/verify the public assets, run all tests and execute all 15 notebooks on Ubuntu. Logs, test results and executed notebooks are retained as a downloadable Actions artifact for seven days; see the [workflow instructions](docs/REPRODUCING.md#1-source-only-clone-portable-tests-and-paper).
+
 ## Clinical interpretation
 
 All **28 CANTAB and 19 psychosocial/context fields** retain original values, units, missingness and coding caveats. MOT becomes slower, RTI faster and SSP span 6→7; SOC/RVP are mixed. Anxiety falls, worry/loneliness rise and employment changes to sick leave. There is no supplied dedicated QoL instrument, retest norm, reliable-change estimate or dated treatment/assessment timeline.
