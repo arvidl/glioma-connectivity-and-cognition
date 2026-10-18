@@ -148,3 +148,23 @@ def test_image_probe_waits_for_reply_and_idle_and_ignores_other_messages(image_p
 def test_image_probe_propagates_execution_errors(image_probe, kind):
     with pytest.raises(RuntimeError, match='AssertionError.*download check failed'):
         image_probe.run_code(KernelSocket(failure=kind), 'probe')
+
+
+def test_image_probe_retries_container_startup_connection_reset(image_probe, monkeypatch):
+    calls = []
+    monkeypatch.setattr(image_probe.time, 'sleep', lambda _: None)
+    def api(path):
+        calls.append(path)
+        if len(calls) == 1:
+            raise ConnectionResetError('Jupyter has not started yet')
+        return {'kernelspecs': {}}
+    assert image_probe.wait_for_server(api) == {'kernelspecs': {}}
+    assert calls == ['api/kernelspecs', 'api/kernelspecs']
+
+
+def test_image_probe_does_not_retry_authentication_errors(image_probe):
+    from urllib.error import HTTPError
+    def api(_):
+        raise HTTPError('http://localhost/api/kernelspecs', 401, 'Unauthorized', {}, None)
+    with pytest.raises(HTTPError, match='401'):
+        image_probe.wait_for_server(api)

@@ -126,6 +126,20 @@ def run_code(ws, code, timeout=600):
     return json.loads(ast.literal_eval(result['data']['text/plain']))
 
 
+def wait_for_server(api, timeout=120, pause=2):
+    """Docker's published port can reset connections until Jupyter is ready."""
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            return api('api/kernelspecs')
+        except (urllib.error.URLError, ConnectionError, TimeoutError) as error:
+            if isinstance(error, urllib.error.HTTPError) and error.code not in (502, 503, 504):
+                raise  # authentication/path errors are not startup readiness
+            if time.monotonic() >= deadline:
+                raise
+            time.sleep(pause)
+
+
 def main():
     import websocket
     parser = argparse.ArgumentParser(description=__doc__)
@@ -150,15 +164,7 @@ def main():
     kernel = None
     ws = None
     try:
-        deadline = time.monotonic() + 120
-        while True:
-            try:
-                specs = api('api/kernelspecs')
-                break
-            except (urllib.error.URLError, TimeoutError):
-                if time.monotonic() >= deadline:
-                    raise
-                time.sleep(2)
+        specs = wait_for_server(api)
         spec = specs['kernelspecs']['python3']['spec']
         if not Path(spec['argv'][0]).is_absolute() or Path(spec['argv'][0]).parent.parent.name != '.venv':
             raise AssertionError(f'Generic or unexpected python3 kernel: {spec}')
