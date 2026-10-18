@@ -2,6 +2,7 @@
 
 [![Regular CI](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml)
 [![Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml)
+[![Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml)
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/v0.1.2-binder?urlpath=lab/tree/binder/launch.ipynb)
 
 A didactic, exploratory paired case study of glioma, structural/functional connectivity, CANTAB and psychosocial context. Python with **uv**, 15 interactive Jupyter notebooks, reproducible analyses and a LaTeX/BibTeX report with **`report/main.pdf` tracked by ordinary Git**. No sibling project, cloud service or GPU is needed after setup and runtime-asset restoration.
@@ -28,7 +29,7 @@ All alternatives remain sensitivities: 73/97/116 common frames, 5/10/20-frame bl
 
 The per-notebook packs contain exact subsets of the original real-data release, with archive and extracted-file SHA256 checks. The launcher shows download sizes; imaging and resampling notebooks need much larger packs and may download slowly. Binder has [limited memory and temporary sessions](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html): shut down previous notebook kernels and download edits you want to keep. Local reproduction below supplies full regression tests, raw FSL processing and paper compilation. See [Binder setup, asset provenance and testing](docs/BINDER.md).
 
-Maintainers can run [Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml) to build the image, test the live Jupyter launcher and public downloads, and execute all 15 notebooks from isolated runtime packs. A notebook-04 smoke option and an optional image-code ref are available. Results, logs and executed notebooks are retained for seven days; see the [workflow instructions](docs/BINDER.md#manual-github-actions-validation). This workflow runs only when dispatched.
+Maintainers can run [Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml) to build the image, test the live Jupyter launcher and public downloads, and execute all 15 notebooks from isolated runtime packs. A notebook-04 smoke option and an optional image-code ref are available. Results, logs and executed notebooks are retained for seven days; see [download instructions](#binder-image-validation) and the [workflow instructions](docs/BINDER.md#manual-github-actions-validation). This workflow runs only when dispatched.
 
 ## Run locally
 
@@ -50,9 +51,11 @@ A fresh clone must restore the runtime assets before running all tests/notebooks
 
 Regular CI runs portable tests and compiles the paper without downloading runtime assets. Use [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) → **Run workflow** to download/verify the public assets, run all tests and execute all 15 notebooks on Ubuntu. Logs, test results and executed notebooks are retained as a downloadable Actions artifact for seven days; see the [workflow instructions](docs/REPRODUCING.md#1-source-only-clone-portable-tests-and-paper).
 
-The CI badges link to their workflows and show results on `main`. The full runtime badge reflects the latest manual run, which can cover an earlier commit; it does not rerun automatically after each push.
+The status badges link to their workflows and show results on `main`. Both manual-validation badges reflect the latest dispatched run and can cover an earlier commit; neither reruns automatically after a push. For Binder, check the run summary for `scope=all` versus the notebook-04 smoke test, and for the exact image and test-harness commits: an optional `binder_ref` can select a different image source, including the versioned launch environment.
 
 ### Download executed notebooks
+
+#### Full runtime validation
 
 1. Open [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) and select a successful run on `main`. Maintainers can choose **Run workflow** to create a fresh one.
 2. In the run summary, scroll to **Artifacts** and download **`runtime-validation-<run-id>-<attempt>`**. GitHub sign-in is required, and artifacts expire after seven days.
@@ -67,6 +70,21 @@ gh run download RUN_ID --repo arvidl/glioma-connectivity-and-cognition --dir dow
 
 The CLI places each artifact in its own directory under `downloaded-runtime/`; the executed notebooks are inside that artifact's `notebooks/` folder. Failed runs retain available diagnostic logs, while executed notebooks are uploaded only after the complete notebook batch succeeds.
 
+#### Binder image validation
+
+1. Open [Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml) and select a successful run on `main`. Check its summary: `scope=all` covers all 15 notebooks; `scope=04` covers only the cognition notebook. Maintainers can choose **Run workflow** with `scope=all` for a fresh complete run.
+2. In the run summary, scroll to **Artifacts** and download **`binder-validation-<run-id>-<attempt>`**. GitHub sign-in is required, and artifacts expire after seven days.
+3. Extract the ZIP and open **`notebooks/`** for the executed `.ipynb` files. **`source.json`** records the exact image and test-harness commits and selected scope; **`launcher.json`**, **`notebooks.json`** and the logs record validation results. Saved outputs are viewable directly; live controls require running the cells in Binder or the local environment.
+
+With the authenticated GitHub CLI, replace `RUN_ID` with the chosen successful run:
+
+```sh
+gh run list --repo arvidl/glioma-connectivity-and-cognition --workflow binder-validation.yml --branch main --event workflow_dispatch --status success --limit 5
+gh run download RUN_ID --repo arvidl/glioma-connectivity-and-cognition --dir downloaded-binder
+```
+
+The CLI places the artifact under `downloaded-binder/`, with executed notebooks in its `notebooks/` folder. Failed Binder runs retain diagnostic logs and any notebooks that completed successfully before the failure. See the [detailed validation procedure](docs/BINDER.md#manual-github-actions-validation).
+
 ## Clinical interpretation
 
 All **28 CANTAB and 19 psychosocial/context fields** retain original values, units, missingness and coding caveats. MOT becomes slower, RTI faster and SSP span 6→7; SOC/RVP are mixed. Anxiety falls, worry/loneliness rise and employment changes to sick leave. There is no supplied dedicated QoL instrument, retest norm, reliable-change estimate or dated treatment/assessment timeline.
@@ -75,7 +93,7 @@ Primary sensorimotor FC range [−0.2064,−0.0170] is negative, but a previous 
 
 ## Notebook guide
 
-Each notebook number opens the file on GitHub; **nbviewer** renders the committed notebook and its saved outputs from `main` without running code. For outputs from a particular runtime-validation run, see [Download executed notebooks](#download-executed-notebooks).
+Each notebook number opens the file on GitHub; **nbviewer** renders the committed notebook and its saved outputs from `main` without running code. For outputs from a particular manual validation run, see [Download executed notebooks](#download-executed-notebooks).
 
 | Notebook (GitHub) | Topic | Executed outputs |
 |---|---|---|
