@@ -2,7 +2,7 @@
 
 [![Regular CI](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml)
 [![Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml)
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/main?urlpath=lab/tree/binder/launch.ipynb)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/v0.1.2-binder?urlpath=lab/tree/binder/launch.ipynb)
 
 A didactic, exploratory paired case study of glioma, structural/functional connectivity, CANTAB and psychosocial context. Python with **uv**, 15 interactive Jupyter notebooks, reproducible analyses and a LaTeX/BibTeX report with **`report/main.pdf` tracked by ordinary Git**. No sibling project, cloud service or GPU is needed after setup and runtime-asset restoration.
 

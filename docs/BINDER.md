@@ -1,10 +1,12 @@
 # Interactive notebooks on Binder
 
-[Launch the setup notebook](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/main?urlpath=lab/tree/binder/launch.ipynb), wait for JupyterLab, and run all cells in `binder/launch.ipynb`. Select a notebook and click **Download and verify selected runtime**. After **Ready**, open the supplied notebook link and run all its cells. Notebook 04 is a small first example. Return to the launcher before switching to a notebook with different data requirements.
+[Launch the setup notebook](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/v0.1.2-binder?urlpath=lab/tree/binder/launch.ipynb), wait for JupyterLab, and run all cells in `binder/launch.ipynb`. Select a notebook and click **Download and verify selected runtime**. After **Ready**, open the supplied notebook link and run all its cells. Notebook 04 is a small first example. Return to the launcher before switching to a notebook with different data requirements.
 
 ## Environment and downloads
 
-`binder/requirements.txt` installs uv 0.13.1 into repo2docker's Jupyter server environment. `binder/postBuild` runs `uv sync --frozen`: `.python-version` selects Python 3.12.14 and `uv.lock` fixes the project dependencies. The `python3` kernel is registered to this project's `.venv`, matching the metadata of all 15 study notebooks. `binder/start` exposes its widget extensions to the server and limits numerical thread counts. The server uses repo2docker's Python 3.12 runtime; the project kernel uses the pinned interpreter.
+The launch link pins the code to the versioned `v0.1.2-binder` tag. Runtime assets are independently pinned to `v0.1.1-notebooks`. Documentation updates on `main` do not change this environment. Maintainers should create and test a new versioned launch target when updating notebook code or dependencies.
+
+`binder/requirements.txt` installs uv 0.13.1 into repo2docker's Jupyter server environment. `binder/postBuild` runs `uv sync --frozen`: `.python-version` selects Python 3.12.14 and `uv.lock` fixes the project dependencies. The `python3` kernel is registered **inside `.venv/share/jupyter` with its absolute interpreter path**, matching the metadata of all 15 study notebooks. `binder/start` exposes that directory's widget extensions and kernel to the server and limits numerical thread counts. Registering only a user kernel is insufficient: the virtual environment's generic `python3` specification can otherwise shadow it through `JUPYTER_PATH`. The server uses repo2docker's Python 3.12 runtime; the project kernel uses the pinned interpreter.
 
 Opening the launcher and displaying its controls cause no runtime-data downloads. Pressing its download button calls `pat16.notebook_assets.ensure_notebook("04")` (or the selected number). The same operation is available in any notebook cell:
 

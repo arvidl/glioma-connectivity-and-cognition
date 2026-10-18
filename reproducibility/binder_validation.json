@@ -10,7 +10,7 @@
   },
   "binder_hooks": {
     "shell_syntax": "passed",
-    "postBuild": "passed locally with isolated Jupyter data directory",
+    "postBuild": "passed locally; kernel registration now uses the virtual-environment prefix to prevent a generic kernelspec shadowing the locked interpreter",
     "start": "passed locally; thread limits and widget extension path verified",
     "container_build": "not run locally: no running Docker daemon"
   },
@@ -112,5 +112,133 @@
         "errors": 0
       }
     ]
+  },
+  "public_assets": {
+    "release": "v0.1.1-notebooks",
+    "release_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/tag/v0.1.1-notebooks",
+    "download_method": "Unauthenticated HTTPS; streamed every complete archive; verified byte count and SHA256 against notebook-assets.json",
+    "archives_verified": 17,
+    "total_bytes": 1354182245,
+    "records": [
+      {
+        "name": "pat16-notebook-00-data.tar.gz",
+        "bytes": 192035094,
+        "sha256": "d5ef23ad726fd6b0a880e28b2481d06ae38afb15a2c74c5f96c2a14ccf6eb601",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-00-results.tar.gz",
+        "bytes": 69632254,
+        "sha256": "ca80f6661097640851cd14e7729f64719def9219d3c3769d25c3545436eeff77",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-01-results.tar.gz",
+        "bytes": 102181385,
+        "sha256": "544c04fadf5e2b4c372e156e82065bd2d8fa46bbea169ccedda2b318287d4cf4",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-02-results.tar.gz",
+        "bytes": 229476129,
+        "sha256": "262afb2d1aa1d205bb18a1cf167c14958dc94527b8bb6ed72af2fc05d9b64421",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-03-results.tar.gz",
+        "bytes": 683279,
+        "sha256": "db1aaf521363350727664f85063f2e444e92552f772058f7d3e5c376c4dc653e",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-04-results.tar.gz",
+        "bytes": 177010,
+        "sha256": "11c11d045f18d757bbd0d6206dc7a4deab4ddf217bb72ea3363ecb8053657cef",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-05-results.tar.gz",
+        "bytes": 168611,
+        "sha256": "fb7d65e64e31fd7bf0ade9faf578f041848092db96a727b8d6477d58f505e6ea",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-06-data.tar.gz",
+        "bytes": 15719913,
+        "sha256": "741123673d175ceb2f4d6e7b9314b831ec04d14a45ded0fd1dc291c93628da93",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-06-results.tar.gz",
+        "bytes": 1774861,
+        "sha256": "e0a7a130a49ea8c8f863258698932af9245ce7055b436f4a9afc1a36050972bf",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-07-results.tar.gz",
+        "bytes": 15214784,
+        "sha256": "31977bb68a3f196ac4743a41dffe626d5d4de42491cccb6019e34cbf3ed19475",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-08-results.tar.gz",
+        "bytes": 1048539,
+        "sha256": "4d572feb9cbd64c5c787d9d35731bfd9b2e7d8791748ee011883ff45bff47adf",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-09-results.tar.gz",
+        "bytes": 1251517,
+        "sha256": "c5147ae4b8e8af53747c583afdcab4d0d95814eaa9b1e37850c0282ab3fac28e",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-10-results.tar.gz",
+        "bytes": 238614468,
+        "sha256": "f33c630ce8140f2ef7e4f4eff11728c5dfceea2a887b12d80e651b7d99a0094c",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-11-results.tar.gz",
+        "bytes": 218171768,
+        "sha256": "51e430808e2d61f36f8b3ba78057f0494fc358f205253e1b29a4a40ca5521e4b",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-12-results.tar.gz",
+        "bytes": 132049,
+        "sha256": "fa7471b1ecbbacbb46aa4a3ae1e43b11f9871b49e93335e172f62910eb06b79a",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-13-results.tar.gz",
+        "bytes": 182212718,
+        "sha256": "232b5b306843b16e544050224cd7e1a6d4a5b368b018bd7861c1a7d587071ed8",
+        "verified": true
+      },
+      {
+        "name": "pat16-notebook-14-results.tar.gz",
+        "bytes": 85687866,
+        "sha256": "ebc7e92686807b4b819238e20974eabb68d9cc8d2d7bb84746c573ba0202a80c",
+        "verified": true
+      }
+    ]
+  },
+  "regular_ci": {
+    "commit": "632d520066987a5fd2b1f61f3a74e38eb4915612",
+    "conclusion": "success",
+    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39157059849",
+    "jobs": [
+      "portable-contracts",
+      "paper"
+    ]
+  },
+  "binder_launch_ref": "v0.1.2-binder",
+  "public_binder_initial_check": {
+    "commit": "632d520066987a5fd2b1f61f3a74e38eb4915612",
+    "image_build": "passed",
+    "launch": "passed",
+    "kernel_check": "failed: generic python3 specification shadowed user registration; corrected by registering inside the .venv prefix",
+    "image_bytes": 1209247356
   }
 }
