@@ -1,21 +1,117 @@
 {
-  "status": "release uploaded and server checksums verified; anonymous full-data validation pending",
-  "date": "2026-10-18",
+  "schema": 1,
+  "status": "passed",
+  "recorded_UTC": "2026-10-18T17:16:42.068639+00:00",
   "repository": "https://github.com/arvidl/glioma-connectivity-and-cognition",
-  "release": "v0.1.0-assets",
-  "publication_authorized": true,
-  "repository_visibility": "PUBLIC",
-  "scientific_methods_and_clinical_appendices_unchanged": true,
-  "release_id": 416581704,
-  "uploaded_parts": 7,
-  "GitHub_asset_SHA256_and_sizes_match": true,
-  "source_only_anonymous_clone": true,
-  "source_only_portable_tests_passed": 11,
-  "source_only_paper_build": true,
-  "initial_scientific_CI": {
-    "id": 39147740519,
-    "status": "success",
-    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39147740519"
+  "visibility": "public",
+  "tested_release_commit": "9375e32c43c87fd92f55aa004c5dd748c4278aaa",
+  "release": {
+    "anonymous_API": true,
+    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/tag/v0.1.0-assets",
+    "release_id": 416581704,
+    "tag": "v0.1.0-assets",
+    "source_commit": "9375e32c43c87fd92f55aa004c5dd748c4278aaa",
+    "published_at": "2026-10-18T17:06:48Z",
+    "draft": false,
+    "parts": [
+      {
+        "name": "pat16-analysis.tar.gz.part001",
+        "size": 943718400,
+        "digest": "sha256:3c48370335ab19489a75488df9c1fd4d005ffd880dbab40af7452e05954e1aef",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part001"
+      },
+      {
+        "name": "pat16-analysis.tar.gz.part002",
+        "size": 943718400,
+        "digest": "sha256:b5023005de8b919d2f24a7741bda9d5442bee589a1a869a7d77f36bcd0f0b284",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part002"
+      },
+      {
+        "name": "pat16-analysis.tar.gz.part003",
+        "size": 943718400,
+        "digest": "sha256:1c79415d11418b2c03e4a1fbf7cb92d2fa959491253038e2ba7490571e425f36",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part003"
+      },
+      {
+        "name": "pat16-analysis.tar.gz.part004",
+        "size": 943718400,
+        "digest": "sha256:4501b04ac34308b79de6bed55d647a5f4f4e30c960e7ba986b60ef6789491a48",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part004"
+      },
+      {
+        "name": "pat16-analysis.tar.gz.part005",
+        "size": 943718400,
+        "digest": "sha256:a8feebf595fcae67e6551199c5d9f91585357149bef54a94e91dc37b7385b349",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part005"
+      },
+      {
+        "name": "pat16-analysis.tar.gz.part006",
+        "size": 342573224,
+        "digest": "sha256:bf9bda1b4acfe4b5907e1c5a88e53d45174b71c964bdc0691712941d6fe7cb44",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part006"
+      },
+      {
+        "name": "pat16-inputs.tar.gz.part001",
+        "size": 210306488,
+        "digest": "sha256:fb40bc70bb1d403bd089923ae3d9ba91a8d4a31ef01b14a7f839d9d485fa2b14",
+        "browser_download_url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-inputs.tar.gz.part001"
+      }
+    ]
+  },
+  "anonymous_clone": {
+    "success": true,
+    "git_credentials_disabled": true,
+    "initial_source_commit": "d2a648356d923ec22afc1589013898e49f0a6313",
+    "final_release_commit": "9375e32c43c87fd92f55aa004c5dd748c4278aaa"
+  },
+  "runtime_downloads": {
+    "anonymous": true,
+    "empty_cache_at_start": true,
+    "local_asset_copies_used": false,
+    "parts": 7,
+    "compressed_bytes": 5271471712,
+    "all_part_SHA256_and_sizes_verified": true,
+    "restored_members": 3091,
+    "members_by_bundle": {
+      "inputs": 64,
+      "analysis": 3027
+    },
+    "all_restored_member_checksums_verified_before_replay": true,
+    "assets_manifest_sha256": "545191abc7c1b971f7367b075d6c6a2ef9754f2343cd961ee9361505ab9db9dd"
+  },
+  "fresh_uv_environment": true,
+  "uv_version": "uv 0.13.1 (Homebrew 2026-10-14 aarch64-apple-darwin)",
+  "Python": "Python 3.12.14",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "dependency_lock_sha256": "19070f55c6d86d82c5787ebded49eb28066a19fe4393ccfdfaa37a450532a921",
+  "scientific_provenance_sha256": "98c801646a18226b80211232e2e075f6c40e95c6a986e8de3781eaf64893fa37",
+  "portable_tests": 11,
+  "both_data_and_results_absent_for_source_only_checks": true,
+  "source_only_paper_compilation": true,
+  "full_tests": 77,
+  "complete_cached_pipeline": true,
+  "complete_primary_FC_forced_recomputation": true,
+  "raw_FSL_reconstruction_repeated": false,
+  "comparison": {
+    "scientific_source_files": 104,
+    "scientific_source_hashes_match": true,
+    "report_figures_byte_identical": 43,
+    "primary_summary_networks_policy_byte_identical": true,
+    "primary_FC_design_arrays": 9,
+    "primary_FC_max_absolute_replay_error": 0.0,
+    "notebooks": 15,
+    "code_cells": 90,
+    "notebook_errors": 0,
+    "PDF_pages": 70,
+    "PDF_text_identical": true,
+    "delivered_PDF_sha256": "202433e66ea350c443da7daac92dd7a332d9e55ed7cb30a9a7cee568cf8c5573",
+    "clone_rebuilt_PDF_sha256": "6dae2919c979aefce7b746f52fabccb6d0e55fe159c8124d83b249c00cf65d36"
+  },
+  "PDF_render_comparison": {
+    "all_pages_rendered": 70,
+    "raster_identical_to_reviewed_tracked_PDF": true,
+    "raster_identical_pages": 70,
+    "scale_to_pixels": 650
   },
   "public_PDF": {
     "url": "https://raw.githubusercontent.com/arvidl/glioma-connectivity-and-cognition/main/report/main.pdf",
@@ -23,5 +119,137 @@
     "bytes": 8506837,
     "sha256": "202433e66ea350c443da7daac92dd7a332d9e55ed7cb30a9a7cee568cf8c5573",
     "matches_tracked_PDF": true
-  }
+  },
+  "paper_PDF_tracked_by_ordinary_Git": true,
+  "clinical_appendix_and_four_tables_unchanged": true,
+  "validated_CI_runs": [
+    {
+      "conclusion": "success",
+      "databaseId": 39148073921,
+      "headSha": "9375e32c43c87fd92f55aa004c5dd748c4278aaa",
+      "status": "completed",
+      "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39148073921"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39148054543,
+      "headSha": "9375e32c43c87fd92f55aa004c5dd748c4278aaa",
+      "status": "completed",
+      "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39148054543"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 39147740519,
+      "headSha": "d2a648356d923ec22afc1589013898e49f0a6313",
+      "status": "completed",
+      "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39147740519"
+    }
+  ],
+  "stages": [
+    {
+      "stage": "verify",
+      "exit_code": 0,
+      "seconds": 13.771,
+      "log": "public-clone-verify.log"
+    },
+    {
+      "stage": "raw-manifest",
+      "exit_code": 0,
+      "seconds": 0.207,
+      "log": "public-clone-raw-manifest.log"
+    },
+    {
+      "stage": "full-tests",
+      "exit_code": 0,
+      "seconds": 21.321,
+      "log": "public-clone-full-tests.log"
+    },
+    {
+      "stage": "pipeline",
+      "exit_code": 0,
+      "seconds": 144.842,
+      "log": "public-clone-pipeline.log"
+    },
+    {
+      "stage": "force",
+      "exit_code": 0,
+      "seconds": 91.814,
+      "log": "public-clone-force.log"
+    },
+    {
+      "stage": "comparison",
+      "exit_code": 0,
+      "seconds": 4.302,
+      "log": "public-clone-comparison.log"
+    },
+    {
+      "stage": "record",
+      "exit_code": 0,
+      "seconds": 3.071,
+      "log": "public-clone-record.log"
+    }
+  ],
+  "public_audit_logs": [
+    {
+      "path": "reproducibility/public_logs/source-only.log.gz",
+      "bytes": 6244,
+      "sha256": "b34993236d41e294111aa17886681096b78f0a0cdfcc650f0754f0548979dbf7",
+      "uncompressed_sha256": "3992949e6b19c0b3eb1c2ac493f8a240d308546cc782976787172af31b4cc517"
+    },
+    {
+      "path": "reproducibility/public_logs/download.log.gz",
+      "bytes": 60,
+      "sha256": "ec2df1643672b254ab089136bf4e74a4a4fe40a4457065b5bc56a7c80afa73bd",
+      "uncompressed_sha256": "f70776ae755384855ff472a11392d3b9ddf50ea629ec51cdb2231dbbde55899b"
+    },
+    {
+      "path": "reproducibility/public_logs/verify.log.gz",
+      "bytes": 47,
+      "sha256": "c3f38d1b7826cabe360837b725373806baadce7e68f3b4d9995ae78c01966a8c",
+      "uncompressed_sha256": "a477853b679a73ce331ed0049a6cd6bf5d71ce4ca8761476a3817aa5526cc16c"
+    },
+    {
+      "path": "reproducibility/public_logs/raw-manifest.log.gz",
+      "bytes": 61,
+      "sha256": "88c899f895c3bbb68849163a2b9d10ab1994014d4ff4f0f7b7cea56a341bbdba",
+      "uncompressed_sha256": "cdee370414cc629c9a291d01d24af7f39617f6e2ebba49a10560d08522d10cdc"
+    },
+    {
+      "path": "reproducibility/public_logs/full-tests.log.gz",
+      "bytes": 62,
+      "sha256": "2e098417ea156f19496af4a2c06e29f371f34fef32f473c21d061b4403e9e74d",
+      "uncompressed_sha256": "e4ace92c09bbcecc2c5dd089998ebaaee8cd5ab5c488e81dd4c97b03a22f76ab"
+    },
+    {
+      "path": "reproducibility/public_logs/pipeline.log.gz",
+      "bytes": 3238,
+      "sha256": "144fa36a9857cd27bcdc91840108c7a96a65abf878e3e317ac86f5c7e4c23fa7",
+      "uncompressed_sha256": "4943a50be89c9d1a117ed6d87195ccde34446d5faabf3728e0a7ab49f6852252"
+    },
+    {
+      "path": "reproducibility/public_logs/force.log.gz",
+      "bytes": 161,
+      "sha256": "6194f7131efc412ce32109ebdb2877a41cb2704474b9f290ba3b3abcc4f8e550",
+      "uncompressed_sha256": "f24f6a46d9aac0df7f665c23d1dab1130aa39360712640a4a431ad7174b0d53e"
+    },
+    {
+      "path": "reproducibility/public_logs/comparison.log.gz",
+      "bytes": 335,
+      "sha256": "bbccb9764159b8b5c4627a5deaa28392735033e53e9bb160898daeeb06929214",
+      "uncompressed_sha256": "70970a8ad49aed5e5ad0f19f82e68a88666ab094563a2985e3af2bf9eeae49fa"
+    },
+    {
+      "path": "reproducibility/public_logs/record.log.gz",
+      "bytes": 51,
+      "sha256": "1d18748f97a9e367d85011268547ad6e30768618505370772ac20d6853522b94",
+      "uncompressed_sha256": "1edc3cd206da86c86fbe670d9496bd7a43566308dbbe3b49f8824f9831eef45c"
+    },
+    {
+      "path": "reproducibility/public_logs/render.log.gz",
+      "bytes": 120,
+      "sha256": "38a89b3ee3c100677d5b9488abccc5a0ab759ce18c82f82247e23bcdcb7a05c5",
+      "uncompressed_sha256": "b2cf0661c9767f89caa98910f46cba7ba84f1abec405d222932b3c6cd17b2386"
+    }
+  ],
+  "scope": "Runtime parts were downloaded from the published GitHub release without authentication or local copies. MRI checkpoints were replayed; primary FC resamples were recomputed. Raw FSL reconstruction was not repeated. Validation journal/logs were added after the tagged scientific snapshot; publication-only updates are confined to reproducibility/."
 }
