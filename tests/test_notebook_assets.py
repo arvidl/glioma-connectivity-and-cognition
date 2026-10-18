@@ -1,6 +1,10 @@
 """On-demand packs preserve provenance, local edits and a download-free launcher."""
 import json
+import os
+import shlex
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 import pytest
 from pat16 import ROOT
@@ -71,3 +75,30 @@ def test_launcher_initialization_never_downloads(monkeypatch):
             exec(compile(cell.source, 'binder/launch.ipynb', 'exec'), scope)
     assert scope['selected'].value == '04'
     assert not scope['button'].disabled
+
+
+def test_binder_hooks_override_generic_kernel_with_locked_interpreter(tmp_path):
+    """Reproduce the generic-kernel shadowing seen in the public Binder test.
+
+    Dependencies are already installed by pytest's environment; only uv sync is
+    skipped. Run the actual hooks, real ipykernel installer and spec discovery.
+    """
+    bin_dir = tmp_path/'bin'; bin_dir.mkdir()
+    uv = bin_dir/'uv'; uv.write_text('#!/bin/sh\nexit 0\n'); uv.chmod(0o755)
+    venv_bin = tmp_path/'.venv/bin'; venv_bin.mkdir(parents=True)
+    python = venv_bin/'python'
+    python.write_text(f'#!/bin/sh\nexec {shlex.quote(sys.executable)} "$@"\n')
+    python.chmod(0o755)
+    generic = tmp_path/'.venv/share/jupyter/kernels/python3'
+    generic.mkdir(parents=True)
+    (generic/'kernel.json').write_text(json.dumps(dict(argv=['python', '-m', 'ipykernel_launcher', '-f', '{connection_file}'], display_name='Generic Python', language='python')))
+    env = dict(os.environ, PATH=str(bin_dir)+os.pathsep+os.environ['PATH'],
+               JUPYTER_DATA_DIR=str(tmp_path/'user-jupyter'),
+               JUPYTER_PATH='', IPYTHONDIR=str(tmp_path/'ipython'))
+    subprocess.run(['bash', str(ROOT/'binder/postBuild')], cwd=tmp_path, env=env, check=True, capture_output=True, text=True)
+    probe = 'import json; from jupyter_client.kernelspec import KernelSpecManager; s=KernelSpecManager().get_kernel_spec("python3"); print(json.dumps(dict(argv=s.argv, name=s.display_name, directory=s.resource_dir)))'
+    result = subprocess.run(['bash', str(ROOT/'binder/start'), sys.executable, '-c', probe], cwd=tmp_path, env=env, check=True, capture_output=True, text=True)
+    spec = json.loads(result.stdout)
+    assert spec['argv'][0] == sys.executable
+    assert spec['name'] == 'PAT16 (uv, Python 3.12.14)'
+    assert Path(spec['directory']) == generic

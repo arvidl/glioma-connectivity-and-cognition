@@ -5,8 +5,8 @@
   "source_scientific_commit": "82ae26628f792c3e289817a7dfb3f8bde733bd6f",
   "manifest_sha256": "1821d950bee440d2812c3fed45e0a953640beb1997d05026eb75392b60de967b",
   "full_pytest": {
-    "passed": 81,
-    "seconds": 14.81
+    "passed": 82,
+    "seconds": 15.85
   },
   "binder_hooks": {
     "shell_syntax": "passed",
@@ -225,9 +225,9 @@
     ]
   },
   "regular_ci": {
-    "commit": "632d520066987a5fd2b1f61f3a74e38eb4915612",
+    "commit": "7b86b7ed8251cab67b6411789bed2485f392e7e7",
     "conclusion": "success",
-    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39157059849",
+    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39157546771",
     "jobs": [
       "portable-contracts",
       "paper"
@@ -240,5 +240,26 @@
     "launch": "passed",
     "kernel_check": "failed: generic python3 specification shadowed user registration; corrected by registering inside the .venv prefix",
     "image_bytes": 1209247356
+  },
+  "kernel_regression": {
+    "result": "passed",
+    "coverage": "Actual postBuild/start scripts, real ipykernel installation and Jupyter kernel discovery; only uv sync is skipped because dependencies are already installed in pytest environment.",
+    "previous_registration": "Confirmed failure with --user; prefix registration passes"
+  },
+  "public_binder": {
+    "commit": "7b86b7ed8251cab67b6411789bed2485f392e7e7",
+    "kernel": "PAT16 (uv, Python 3.12.14)",
+    "launcher": "passed",
+    "public_download": "04 passed",
+    "notebook_execution": "04 passed",
+    "server": "public mybinder.org",
+    "launch_ref": "v0.1.2-binder",
+    "host": "gesis.mybinder.org",
+    "image_bytes": 968553832,
+    "image_build": "passed",
+    "server_launch": "passed",
+    "interface": "Jupyter REST and kernel WebSocket APIs; no automated browser frontend check",
+    "session_cleanup": "Kernel deleted and server shutdown requested after successful test",
+    "host_retry": "bids.mybinder.org reported exhausted fsnotify watchers; completed on gesis.mybinder.org"
   }
 }

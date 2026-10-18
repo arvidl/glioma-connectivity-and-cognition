@@ -22,7 +22,7 @@ uv run python -m pat16.notebook_assets --list
 uv run python -m pat16.notebook_assets 04
 ```
 
-The 15 profiles have different compressed sizes, listed in the launcher. Clinical/graph notebooks are small; imaging and saved resampling arrays can require hundreds of MiB. Only the selected profile is restored. Verified existing files are reused when profiles overlap; compressed packs are discarded after successful restoration. Interrupted downloads can be retried. A local modification is preserved and raises an explicit error rather than being overwritten.
+The 15 profiles have different compressed sizes, listed in the launcher. Clinical/graph notebooks are small; imaging and saved resampling arrays can require hundreds of MiB. Only the selected profile is restored. Fully present, verified bundles need no download; partially present bundles are downloaded as a whole while matching existing files are preserved. Compressed packs are discarded after restoration. Interrupted downloads can be retried. A local modification is preserved and raises an explicit error rather than being overwritten.
 
 ## Data identity and scope
 
@@ -53,3 +53,5 @@ The builder checks each source against the original release manifest before pack
 The Binder configuration follows the official [repo2docker configuration](https://repo2docker.readthedocs.io/en/latest/configuration/) and [postBuild/start hook](https://repo2docker.readthedocs.io/en/latest/configuration/actions/) conventions. A full local repo2docker image build additionally requires a running Docker daemon; Python-only checks do not prove that a public Binder launch has completed.
 
 The checked [validation record](../reproducibility/binder_validation.json) records the tested platform, manifest hash, test totals and isolated notebook/control checks, with their scope and memory-measurement limits.
+
+Validation on 2026-10-18: 82 tests passed; all 15 notebooks (90 original code cells) and 551 direct widget callback calls passed in isolated runtime subsets. All 17 complete public archive downloads matched their sizes and SHA256 hashes. The versioned public Binder image built and launched on the GESIS federation host; Jupyter REST/WebSocket checks verified the pinned kernel, launcher download action, public notebook-04 runtime restoration and notebook execution. Browser frontend rendering was not automated. The temporary test kernel and server were shut down.
