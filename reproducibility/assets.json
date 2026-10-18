@@ -2,7 +2,7 @@
   "schema": 1,
   "repository": "https://github.com/arvidl/glioma-connectivity-and-cognition",
   "release": "v0.1.0-assets",
-  "published": false,
+  "published": true,
   "bundles": {
     "inputs": {
       "prefix": "data",
@@ -347,8 +347,8 @@
         },
         {
           "path": "results/analysis_provenance.json",
-          "bytes": 260372,
-          "sha256": "e461e0e92c6173eff3ba20d4e79c15fdc3efa9ab0f5970bfc12d302becfca334"
+          "bytes": 260373,
+          "sha256": "98c801646a18226b80211232e2e075f6c40e95c6a986e8de3781eaf64893fa37"
         },
         {
           "path": "results/anatomy/complete.json",
@@ -8312,8 +8312,8 @@
         },
         {
           "path": "results/notebook_execution.json",
-          "bytes": 1891,
-          "sha256": "6e4fbc9924745a925a52219566c14b72c88d9b63599b710c141bd7a318080723"
+          "bytes": 1887,
+          "sha256": "070f85292b452187cb9a6f8f0b10c356326f53c564756808a30b7f275daab89c"
         },
         {
           "path": "results/notebook_execution.log",
@@ -13117,18 +13117,18 @@
         },
         {
           "path": "results/primary_fc_audit/pipeline.log",
-          "bytes": 8783,
-          "sha256": "6effeb91bbcc486eb8a1522a30843430d46a04fad7b0dff9b8441f6e71b428f3"
+          "bytes": 32432,
+          "sha256": "bc6b08b4077cfd786ec9410fadc12fa0f9eb02f0010ea469e531864500101538"
         },
         {
           "path": "results/primary_fc_audit/render_review.json",
-          "bytes": 411,
-          "sha256": "db87b5532ecf39dfcd11159ec617f08fa3a1e1e56e6c254e2263735f4c39b8a5"
+          "bytes": 690,
+          "sha256": "fd92c0fb6f54813fb6185fb40057760f82b377b7ce453ff29615584f819c6bd3"
         },
         {
           "path": "results/primary_fc_audit/tests.log",
           "bytes": 180,
-          "sha256": "a29ede7cf8ce6a27f2cfe10b8ee3bd80ab4df5cf61528211a65b499ab86639df"
+          "sha256": "30eb1e74083944abc4db2fc48dca986e207b00bd8f2e601c4d537c6a4e664e46"
         },
         {
           "path": "results/primary_fc_run.log",
@@ -13137,8 +13137,8 @@
         },
         {
           "path": "results/primary_fc_validation.json",
-          "bytes": 3274,
-          "sha256": "61f26891207a7f02de600297e3f55dabe7f79fbe1d8c6508cfaf98936829c989"
+          "bytes": 3578,
+          "sha256": "dc0152e3efb3bd7ee3a67bd294a6e51df5e9355b09eb7a23ff2d06c6ea5a6ff2"
         },
         {
           "path": "results/primary_pc_audit.log",
@@ -15480,37 +15480,37 @@
         {
           "name": "pat16-analysis.tar.gz.part001",
           "bytes": 943718400,
-          "sha256": "c0030ea6fd77b3fb43732af52e7e104778d9043e54c7117bb82c4c0ede456e7c",
+          "sha256": "3c48370335ab19489a75488df9c1fd4d005ffd880dbab40af7452e05954e1aef",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part001"
         },
         {
           "name": "pat16-analysis.tar.gz.part002",
           "bytes": 943718400,
-          "sha256": "51162f83fa440f71b48f2cac03415c02561ec8df70d434798728c3c1c56ae095",
+          "sha256": "b5023005de8b919d2f24a7741bda9d5442bee589a1a869a7d77f36bcd0f0b284",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part002"
         },
         {
           "name": "pat16-analysis.tar.gz.part003",
           "bytes": 943718400,
-          "sha256": "a3e6da6d05f8dea298735b561e6eec42d4f2acf9d1599b953701299fd61b9f7a",
+          "sha256": "1c79415d11418b2c03e4a1fbf7cb92d2fa959491253038e2ba7490571e425f36",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part003"
         },
         {
           "name": "pat16-analysis.tar.gz.part004",
           "bytes": 943718400,
-          "sha256": "1becc724b97fc679db6a58f1d2142adceaa95b3423f2da4b6dee55df2e374206",
+          "sha256": "4501b04ac34308b79de6bed55d647a5f4f4e30c960e7ba986b60ef6789491a48",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part004"
         },
         {
           "name": "pat16-analysis.tar.gz.part005",
           "bytes": 943718400,
-          "sha256": "cf273ae7cb9e0cc8869c4ea2b01204882d02be053cc40dd84f67030dbe11a8a2",
+          "sha256": "a8feebf595fcae67e6551199c5d9f91585357149bef54a94e91dc37b7385b349",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part005"
         },
         {
           "name": "pat16-analysis.tar.gz.part006",
-          "bytes": 342569618,
-          "sha256": "3b8ea278fbf7008f5b409671b8cbff7b52f0fb5e76f4c3f16e22072922646ac1",
+          "bytes": 342573224,
+          "sha256": "bf9bda1b4acfe4b5907e1c5a88e53d45174b71c964bdc0691712941d6fe7cb44",
           "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.0-assets/pat16-analysis.tar.gz.part006"
         }
       ]

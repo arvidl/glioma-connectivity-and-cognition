@@ -1,9 +1,27 @@
 {
-  "status": "in progress; public verification not yet complete",
+  "status": "release uploaded and server checksums verified; anonymous full-data validation pending",
   "date": "2026-10-18",
   "repository": "https://github.com/arvidl/glioma-connectivity-and-cognition",
   "release": "v0.1.0-assets",
   "publication_authorized": true,
   "repository_visibility": "PUBLIC",
-  "scientific_methods_and_clinical_appendices_unchanged": true
+  "scientific_methods_and_clinical_appendices_unchanged": true,
+  "release_id": 416581704,
+  "uploaded_parts": 7,
+  "GitHub_asset_SHA256_and_sizes_match": true,
+  "source_only_anonymous_clone": true,
+  "source_only_portable_tests_passed": 11,
+  "source_only_paper_build": true,
+  "initial_scientific_CI": {
+    "id": 39147740519,
+    "status": "success",
+    "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/actions/runs/39147740519"
+  },
+  "public_PDF": {
+    "url": "https://raw.githubusercontent.com/arvidl/glioma-connectivity-and-cognition/main/report/main.pdf",
+    "anonymous": true,
+    "bytes": 8506837,
+    "sha256": "202433e66ea350c443da7daac92dd7a332d9e55ed7cb30a9a7cee568cf8c5573",
+    "matches_tracked_PDF": true
+  }
 }
