@@ -942,7 +942,7 @@ def clinical_primary(measure="rti_simple_rt_mean"):
     display(nr[nr.network.isin(row.candidate_networks.split("; "))])
 widgets.interact(clinical_primary,measure=widgets.Dropdown(options=clinical.measure.tolist(),value="rti_simple_rt_mean"))'''),
 M('''## Reproduce and extend
-`uv run python scripts/recommend_primary_fc.py` verifies hashes and reuses the checkpoint; `--force` recomputes all nine temporal designs and all paired nuisance modes. `scripts/plot_primary_fc.py` redraws figures. `scripts/run_all.py --notebooks --report` rebuilds the complete current package. See `docs/REPRODUCING.md` for clone/setup, runtime assets, external FSL and TeX requirements. The paper PDF is tracked by Git; publication of this locally prepared repository is deferred.
+`uv run python scripts/recommend_primary_fc.py` verifies hashes and reuses the checkpoint; `--force` recomputes all nine temporal designs and all paired nuisance modes. `scripts/plot_primary_fc.py` redraws figures. `scripts/run_all.py --notebooks --report` rebuilds the complete current package. See `docs/REPRODUCING.md` for clone/setup, runtime assets, external FSL and TeX requirements. The public source is https://github.com/arvidl/glioma-connectivity-and-cognition; the paper PDF is tracked by ordinary Git. Seven checksummed runtime parts are provided in release `v0.1.0-assets` and restored with `python3 scripts/fetch_data.py`.
 
 **Exercise:** compare 73, 97 and 116 frames with frozen and full refits. Explain why a narrower negative range at high retention does not validate a biological sign. Then inspect a contextual field with no network assignment and list what future measurements would be needed to test a clinical hypothesis.''')])
 print('Built fifteen notebooks')

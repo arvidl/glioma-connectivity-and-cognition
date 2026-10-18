@@ -2,7 +2,7 @@
 
 A didactic, exploratory paired case study of glioma, structural/functional connectivity, CANTAB and psychosocial context. Python with **uv**, 15 interactive Jupyter notebooks, reproducible analyses and a LaTeX/BibTeX report with **`report/main.pdf` tracked by ordinary Git**. No sibling project, cloud service or GPU is needed after setup and runtime-asset restoration.
 
-**Status:** prepared and tested locally. Publication at `https://github.com/arvidl/glioma-connectivity-and-cognition` is deferred. No remote repository or release has been created by this work. Large inputs/checkpoints are local checksummed assets in `dist/assets/`; `reproducibility/assets.json` explicitly marks them unpublished. A source clone can compile the paper and run portable tests immediately; the full experiments additionally require those assets.
+**Public release:** [source repository](https://github.com/arvidl/glioma-connectivity-and-cognition), [tracked paper PDF](report/main.pdf) and [runtime assets v0.1.0-assets](https://github.com/arvidl/glioma-connectivity-and-cognition/releases/tag/v0.1.0-assets). Large inputs/checkpoints are seven checksummed release parts (about 4.9 GiB); `reproducibility/assets.json` records every part and restored file. A source clone can compile the paper and run portable tests immediately; the full experiments additionally require those assets. Publication verification is recorded in `reproducibility/public_validation.json`; the preceding local validation remains a dated preparation record.
 
 ## Recommended primary analyses
 
@@ -19,19 +19,20 @@ All alternatives remain sensitivities: 73/97/116 common frames, 5/10/20-frame bl
 ## Run locally
 
 ```sh
-cd pat16-connectivity-case
+git clone https://github.com/arvidl/glioma-connectivity-and-cognition.git
+cd glioma-connectivity-and-cognition
 uv sync --frozen
 make unit
 make paper
-# A future public clone must first obtain the asset parts; use their local directory now:
-python3 scripts/fetch_data.py --assets-dir /absolute/path/to/dist/assets
+# Download, checksum and restore the public runtime assets:
+python3 scripts/fetch_data.py
 make verify
 make test
 uv run python scripts/run_all.py --notebooks --report
 uv run jupyter lab notebooks/
 ```
 
-The current working folder already has the inputs and checkpoints. A fresh clone must restore them before running all tests/notebooks. [Complete reproduction instructions](docs/REPRODUCING.md) distinguish portable checks, saved-analysis replay and raw reconstruction; they cover FSL, TeX, disk use, checksums, local-clone testing and future publication. TeX is external to uv. FSL topup/eddy_cpu/FAST are required for raw reconstruction or new tissue segmentation, and are not redistributed.
+A fresh clone must restore the runtime assets before running all tests/notebooks. [Complete reproduction instructions](docs/REPRODUCING.md) distinguish portable checks, saved-analysis replay and raw reconstruction; they cover FSL, TeX, disk use, checksums and public-clone verification. TeX is external to uv. FSL topup/eddy_cpu/FAST are required for raw reconstruction or new tissue segmentation, and are not redistributed.
 
 ## Clinical interpretation
 
