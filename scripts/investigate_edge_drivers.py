@@ -3,6 +3,8 @@ import os
 from threadpoolctl import threadpool_limits
 from pat16 import ROOT
 os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'.cache/matplotlib'))
+import matplotlib
+matplotlib.use('Agg')  # Stable static layout across GUI and headless launches.
 from pat16.edge_drivers import run,plot_results
 with threadpool_limits(limits=1):
     run()

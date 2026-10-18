@@ -3,6 +3,8 @@ import argparse, os
 from threadpoolctl import threadpool_limits
 from pat16 import ROOT
 os.environ.setdefault('MPLCONFIGDIR', str(ROOT/'.cache/matplotlib'))
+import matplotlib
+matplotlib.use('Agg')  # Stable static layout across GUI and headless launches.
 from pat16.censoring import run, plot_results
 p=argparse.ArgumentParser();p.add_argument('--repeats',type=int,default=200)
 a=p.parse_args()

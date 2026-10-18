@@ -1,9 +1,10 @@
 """Validate metadata units, gradient lineage and actual FSL output contracts."""
-import json
+import json,hashlib
+from pathlib import Path
 import nibabel as nib
 import numpy as np
 import pytest
-from pat16 import DATA,RESULTS,SESSIONS
+from pat16 import ROOT,DATA,RESULTS,SESSIONS
 from pat16.dwi import acquisition_row
 
 
@@ -28,7 +29,18 @@ def test_corrected_data_and_gradients_keep_volume_lineage(session):
     assert np.allclose(v,np.loadtxt(out/'dwi_corrected.eddy_rotated_bvecs'))
     assert np.allclose(v[:,b<50],0)
     command=json.loads((folder/'eddy_command.json').read_text())
-    assert f'--imain={stem}.nii.gz' in command and f'--bvecs={stem}.bvec' in command
+    # Logs retain the original execution location after the package is cloned.
+    # Check the complete project-relative identity and gradient sibling lineage,
+    # then verify the relocated bytes against the unchanged input manifest.
+    args=dict(arg.split('=',1) for arg in command[1:] if '=' in arg)
+    original=Path(args['--imain']);relative=Path(str(stem.relative_to(ROOT))+'.nii.gz')
+    assert original.parts[-len(relative.parts):]==relative.parts
+    recorded_stem=str(original).removesuffix('.nii.gz')
+    assert args['--bvecs']==recorded_stem+'.bvec' and args['--bvals']==recorded_stem+'.bval'
+    manifest={r['path']:r['sha256'] for r in json.loads((ROOT/'data/manifest.json').read_text())['files']}
+    for suffix in ['.nii.gz','.bvec','.bval']:
+        current=Path(str(stem)+suffix)
+        assert hashlib.sha256(current.read_bytes()).hexdigest()==manifest[str(current.relative_to(ROOT))]
     fitmask=nib.load(out/'structural_fit_mask.nii.gz').get_fdata()>.5
     ap_jac=nib.load(folder/'jacobian_01.nii.gz').get_fdata()
     pa_jac=nib.load(folder/'jacobian_07.nii.gz').get_fdata()

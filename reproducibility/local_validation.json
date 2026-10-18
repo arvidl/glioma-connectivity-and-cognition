@@ -1,0 +1,47 @@
+{
+  "status": "passed; local only; publication deferred",
+  "validated_scientific_source_files": 104,
+  "validated_scientific_source_digest": "42c60437850222cd317fba313331d0368d0ccef2edd88da56c6cd99616ede4af",
+  "scientific_provenance_sha256": "e461e0e92c6173eff3ba20d4e79c15fdc3efa9ab0f5970bfc12d302becfca334",
+  "assets_manifest_sha256": "73c19a8d1bc2a6117170312af299a30f062f39ecd9325a234aae8919b98c82ea",
+  "initial_clone_source_commit": "9463a17f74247a330cd05f7ddc3887de1d619989",
+  "static_plot_backend": "Agg explicitly selected in historical censoring and edge-driver CLIs; GUI/headless layouts match the archived figures",
+  "portability_fix": "Original eddy logs retain execution paths; tests verify project-relative identity, gradient sibling lineage and unchanged input-manifest checksums. All delivered scientific sources matched in the clone.",
+  "fresh_uv_environment": true,
+  "uv_version": "0.13.1",
+  "Python": "3.12.14",
+  "dependency_lock_sha256": "19070f55c6d86d82c5787ebded49eb28066a19fe4393ccfdfaa37a450532a921",
+  "portable_tests_with_data_and_results_absent": {
+    "tests_passed": 11,
+    "log_sha256": "eb3aff85a60c3d3f549afb2bd70bc0f7550bf0e8773399bbf164570ca4063e57"
+  },
+  "parent_full_tests": {
+    "tests_passed": 77,
+    "log_sha256": "a29ede7cf8ce6a27f2cfe10b8ee3bd80ab4df5cf61528211a65b499ab86639df"
+  },
+  "clone_full_tests": {
+    "tests_passed": 77,
+    "log_sha256": "d31eba9c2593119298b6690753cf4b7f691b19ea355ddf22de2fec389e8caf73"
+  },
+  "asset_restoration_verified": true,
+  "asset_members": 3091,
+  "asset_parts": 7,
+  "source_only_paper_compilation": true,
+  "complete_cached_pipeline": true,
+  "complete_primary_FC_recomputation": true,
+  "primary_FC_all_draws_max_absolute_replay_error": 0.0,
+  "primary_summary_networks_policy_byte_identical": true,
+  "notebooks": 15,
+  "code_cells": 90,
+  "notebook_errors": 0,
+  "PDF_pages": 70,
+  "PDF_text_identical": true,
+  "report_figures_byte_identical": 43,
+  "delivered_PDF_sha256": "b8b04ee4b69d5b057ceade6b8eb140abec5f28889bbbec46f2f42003b5b28bed",
+  "clone_rebuilt_PDF_sha256": "0dcded25e61d436d03849b6c0d6c5b53504f7eb77973c75c6e942911b962c485",
+  "paper_PDF_tracked_by_ordinary_Git": true,
+  "raw_FSL_reconstruction_repeated_in_this_validation": false,
+  "GitHub_CI_executed": false,
+  "remote_publication": false,
+  "final_assets_restoration_verified": true
+}
