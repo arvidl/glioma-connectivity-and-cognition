@@ -2,6 +2,7 @@
 
 [![Regular CI](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml)
 [![Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml)
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arvidl/glioma-connectivity-and-cognition/main?urlpath=lab/tree/binder/launch.ipynb)
 
 A didactic, exploratory paired case study of glioma, structural/functional connectivity, CANTAB and psychosocial context. Python with **uv**, 15 interactive Jupyter notebooks, reproducible analyses and a LaTeX/BibTeX report with **`report/main.pdf` tracked by ordinary Git**. No sibling project, cloud service or GPU is needed after setup and runtime-asset restoration.
 
@@ -18,6 +19,14 @@ Nonreplacement removes repeated-row weighting of PCA; full refitting includes tr
 Observed full-run coupling remains **0.18822 → 0.14649 (Δ −0.04173)**. Primary subset median Δ is **−0.04694**, with raw 2.5/97.5 percentiles **[−0.10261, +0.00832]**. FC accounts for 98.33% of the implemented conditional crossed-grid variance. Overlapping subsets/grid cells are dependent; their positive fraction is not a biological probability or p-value. See `results/primary_fc/main_summary.json`.
 
 All alternatives remain sensitivities: 73/97/116 common frames, 5/10/20-frame blocks, frozen/coefficient-only fits, support reselection, repeated-row bootstrap, exact unit coverage, independently matched bootstrap-distinct counts, original session-specific 80% retention, strict censoring and 68-frame duration/FD/run-half matching. Historical evidence is preserved in immutable analysis assets and [previous analysis notes](docs/PREVIOUS_ANALYSES.md).
+
+## Run interactively on Binder
+
+1. Click **Launch Binder** above. The first build can take several minutes; it opens the [setup notebook](binder/launch.ipynb) in JupyterLab with the locked PAT16 Python kernel.
+2. Choose **Run → Run All Cells** in the setup notebook, select a study notebook, then click **Download and verify selected runtime**. Start with **04 (cognition)**, a download of about 0.17 MiB. Runtime release assets are fetched only when you request them; image building and session startup do not download these packs.
+3. Once **Ready** appears, follow the notebook link and choose **Run All Cells** there to initialize its interactive controls. Return to the setup notebook to request another notebook's assets.
+
+The per-notebook packs contain exact subsets of the original real-data release, with archive and extracted-file SHA256 checks. The launcher shows download sizes; imaging and resampling notebooks need much larger packs and may download slowly. Binder has [limited memory and temporary sessions](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html): shut down previous notebook kernels and download edits you want to keep. Local reproduction below supplies full regression tests, raw FSL processing and paper compilation. See [Binder setup, asset provenance and testing](docs/BINDER.md).
 
 ## Run locally
 
@@ -39,13 +48,13 @@ A fresh clone must restore the runtime assets before running all tests/notebooks
 
 Regular CI runs portable tests and compiles the paper without downloading runtime assets. Use [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) → **Run workflow** to download/verify the public assets, run all tests and execute all 15 notebooks on Ubuntu. Logs, test results and executed notebooks are retained as a downloadable Actions artifact for seven days; see the [workflow instructions](docs/REPRODUCING.md#1-source-only-clone-portable-tests-and-paper).
 
-The badges link to their workflows and show results on `main`. The full runtime badge reflects the latest manual run, which can cover an earlier commit; it does not rerun automatically after each push.
+The CI badges link to their workflows and show results on `main`. The full runtime badge reflects the latest manual run, which can cover an earlier commit; it does not rerun automatically after each push.
 
 ### Download executed notebooks
 
 1. Open [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) and select a successful run on `main`. Maintainers can choose **Run workflow** to create a fresh one.
 2. In the run summary, scroll to **Artifacts** and download **`runtime-validation-<run-id>-<attempt>`**. GitHub sign-in is required, and artifacts expire after seven days.
-3. Extract the ZIP and open its **`notebooks/`** folder for all 15 executed `.ipynb` files. Logs, `pytest.xml` and `notebook_execution.json` are included alongside them. Saved outputs can be viewed directly; rerunning cells or using live controls requires the local environment and runtime assets described above.
+3. Extract the ZIP and open its **`notebooks/`** folder for all 15 executed `.ipynb` files. Logs, `pytest.xml` and `notebook_execution.json` are included alongside them. Saved outputs can be viewed directly; rerunning cells or using live controls requires the local environment and runtime assets described above, or the Binder setup.
 
 With the authenticated [GitHub CLI](https://cli.github.com/), list successful runs, replace `RUN_ID` with the chosen ID, and download its artifacts:
 
@@ -84,7 +93,7 @@ Each notebook number opens the file on GitHub; **nbviewer** renders the committe
 | [13](notebooks/13_pc_sampling_mechanisms.ipynb) | PC training, multiplicity and nonreplacement controls | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/13_pc_sampling_mechanisms.ipynb) |
 | **[14](notebooks/14_primary_fc_resampling.ipynb)** | **Recommended primary FC stability, sensitivities and clinical integration** | [nbviewer](https://nbviewer.org/github/arvidl/glioma-connectivity-and-cognition/blob/main/notebooks/14_primary_fc_resampling.ipynb) |
 
-Live controls initialize with Run All in local Jupyter; nbviewer does not provide a Python kernel. Saved outputs contain offline Plotly JavaScript. No synthetic fallback replaces missing patient data. Simulated growth/injury/dynamics are labelled hypothetical.
+Live controls initialize with Run All in local Jupyter or Binder; nbviewer does not provide a Python kernel. Saved outputs contain offline Plotly JavaScript. No synthetic fallback replaces missing patient data. Simulated growth/injury/dynamics are labelled hypothetical.
 
 ## Reuse and citation
 

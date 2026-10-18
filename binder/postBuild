@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+uv sync --frozen
+.venv/bin/python -m ipykernel install --user --name python3 --display-name 'PAT16 (uv, Python 3.12.14)'
+# Runtime data are fetched only when the reader requests a notebook in the launcher.

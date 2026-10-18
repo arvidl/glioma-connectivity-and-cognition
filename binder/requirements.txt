@@ -1,0 +1,2 @@
+# repo2docker supplies the Jupyter server; the project kernel uses uv.lock.
+uv==0.13.1

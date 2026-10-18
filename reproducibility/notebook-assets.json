@@ -1,0 +1,2544 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/arvidl/glioma-connectivity-and-cognition",
+  "release": "v0.1.1-notebooks",
+  "source_release": "v0.1.0-assets",
+  "notebooks": {
+    "00": {
+      "notebook": "00_data_anatomy_and_design.ipynb",
+      "bundles": [
+        {
+          "prefix": "data",
+          "members": [
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/anat/sub-PAT16_ses-postop_T1w.json",
+              "bytes": 907,
+              "sha256": "e6262f910829c8079436b07af3179f1c2f390d45701790ce714e17e7af377e18"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/anat/sub-PAT16_ses-postop_T1w.nii.gz",
+              "bytes": 8053984,
+              "sha256": "efed4644008adb7f5fbd83579c080aa42208b6d73293bceb5d0b89c81f78078b"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.bval",
+              "bytes": 476,
+              "sha256": "a678931600142ebf20236adba60c52b41e85b9aa241b78dc69c6385c089576c2"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.json",
+              "bytes": 1627,
+              "sha256": "343d82d44f36bb9a8a536a15eed9986bfb2f7ffa737209b71c95926fcb93d3c3"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-AP_dwi.nii.gz",
+              "bytes": 48113681,
+              "sha256": "c84d34d7e8b2037e1fea05aa446d32914947a43b5953cafbbeef3caabc5fa7bf"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.bval",
+              "bytes": 4,
+              "sha256": "0ccdb5a77ba5bf7687f2565a8ed97dfb9c1af45503c496fb646312239fab5101"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.json",
+              "bytes": 1050,
+              "sha256": "da48fa6c12295bafbf27fec09c8924c0003f33cfc4090d5bf6b3be7d496bcf9a"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/dwi/sub-PAT16_ses-postop_acq-PA_dwi.nii.gz",
+              "bytes": 1175115,
+              "sha256": "853d03df37562fd4fb98c0a149369f875d89ffc89e1afd0648a2645f0ed6fb9c"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/func/sub-PAT16_ses-postop_task-rest_bold.json",
+              "bytes": 1465,
+              "sha256": "910cb2d1aa759ec0cb683cb7e933480b004ecacf8349e1f5eef978fa04f1a9eb"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/func/sub-PAT16_ses-postop_task-rest_bold.nii.gz",
+              "bytes": 40247395,
+              "sha256": "a139ca1a6926951a29f11d9e42a98543bc67a8639a49c13fed5499342f55efb5"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/anat/sub-PAT16_ses-preop_T1w.json",
+              "bytes": 923,
+              "sha256": "562f4dab35bb77988d6b66adb69dc76303c2991a2ec57d1dcdd5a8cd523ebc9d"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/anat/sub-PAT16_ses-preop_T1w.nii.gz",
+              "bytes": 7708650,
+              "sha256": "709b3ea19596ff6a0cb963ebeaeede247b0ddd6c605f12aa350df2cb04500c3e"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.bval",
+              "bytes": 476,
+              "sha256": "a678931600142ebf20236adba60c52b41e85b9aa241b78dc69c6385c089576c2"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.json",
+              "bytes": 1644,
+              "sha256": "3f3b5b5f3a485f9e70501c7e23d5c48711e85282b9d60f9452963c9b1ab2099d"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-AP_dwi.nii.gz",
+              "bytes": 46711430,
+              "sha256": "403d630772a6203dd67cc498235846a57a82ff62a5dfd2b33b689dbfac366c36"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.bval",
+              "bytes": 4,
+              "sha256": "0ccdb5a77ba5bf7687f2565a8ed97dfb9c1af45503c496fb646312239fab5101"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.json",
+              "bytes": 1066,
+              "sha256": "336a04320f8086c9de3ddc8cc82e4a3a515e9c5ea6feec7cc33a1be2ad220ceb"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/dwi/sub-PAT16_ses-preop_acq-PA_dwi.nii.gz",
+              "bytes": 1137510,
+              "sha256": "1d9f24f816c04c3676ecb19aeddfc1c3163e11203addc7dc2311eea9690ddcf8"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/func/sub-PAT16_ses-preop_task-rest_bold.json",
+              "bytes": 1480,
+              "sha256": "eb14a387623f58793a3008706228f829e599ba114ebe1857afae0dbff511e085"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/func/sub-PAT16_ses-preop_task-rest_bold.nii.gz",
+              "bytes": 38868014,
+              "sha256": "feb12bb06c3fc967988d63c552d03e4776bdcdbbc48081a4ac44de80743a92e3"
+            },
+            {
+              "path": "data/bids/sub-PAT16/sub-PAT16_sessions.tsv",
+              "bytes": 1274,
+              "sha256": "cec1bcb937c6a3ff4af9139d481791006f2972c2e43ff418061d0c6a833144a8"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-00-data.tar.gz",
+              "bytes": 192035094,
+              "sha256": "d5ef23ad726fd6b0a880e28b2481d06ae38afb15a2c74c5f96c2a14ccf6eb601",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-00-data.tar.gz"
+            }
+          ]
+        },
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/anatomy/complete.json",
+              "bytes": 940,
+              "sha256": "371201b9b99ce90a1e108e650f4e91a6909927d83bfb8eec59d83865a7cb9b4c"
+            },
+            {
+              "path": "results/anatomy/postop_atlas.nii.gz",
+              "bytes": 189492,
+              "sha256": "e04c8369457f3b0e837f90f326d667567f0955e35f8bd26df2024a2e290252f0"
+            },
+            {
+              "path": "results/anatomy/postop_preop_lesion_footprint.nii.gz",
+              "bytes": 48813,
+              "sha256": "eb17064c6b53684de7e69bc4f4f07c49769c4adde1b79fc8638faaddcd995461"
+            },
+            {
+              "path": "results/anatomy/preop_atlas.nii.gz",
+              "bytes": 188823,
+              "sha256": "a513710ad40102753ef22cfe5294c4d1ee96d14ff9f2fa2f5c874e92b09a7f14"
+            },
+            {
+              "path": "results/anatomy/preop_lesion.nii.gz",
+              "bytes": 48660,
+              "sha256": "aaa9362aee9f767c4697774cdcd2d888f06fc9ebdc3974b04bc8d4e25c0bc46f"
+            },
+            {
+              "path": "results/figures/registration_qc.png",
+              "bytes": 1199614,
+              "sha256": "40396c85144e62a74c402f5c1bcb3e5c28e1aa8986239bf45c828452395a7d43"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/dwi_in_t1.nii.gz",
+              "bytes": 20325615,
+              "sha256": "b09c2df2ee116fb0ed426181967b0da10cc5f14ba5c30f8c4fa7e46aa9131818"
+            },
+            {
+              "path": "results/postop/func_in_t1.nii.gz",
+              "bytes": 13785990,
+              "sha256": "e07425d8b54deb338131c305c3ab8540a5c6fedfff0d09b1d824e6c31284bd33"
+            },
+            {
+              "path": "results/preop/dwi_in_t1.nii.gz",
+              "bytes": 20288167,
+              "sha256": "ad72791c31e573147afa80ea6989eb8b1d1606952c53e92a8c4dad3c363a145b"
+            },
+            {
+              "path": "results/preop/func_in_t1.nii.gz",
+              "bytes": 13821905,
+              "sha256": "7f07e65aa88c273fbb9b31c3f1df684aaa3981719ecb0d24556195e57f82d712"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-00-results.tar.gz",
+              "bytes": 69632254,
+              "sha256": "ca80f6661097640851cd14e7729f64719def9219d3c3769d25c3545436eeff77",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-00-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "01": {
+      "notebook": "01_diffusion_structural_connectivity.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/anatomy/preop_lesion.nii.gz",
+              "bytes": 48660,
+              "sha256": "aaa9362aee9f767c4697774cdcd2d888f06fc9ebdc3974b04bc8d4e25c0bc46f"
+            },
+            {
+              "path": "results/correction_comparison.csv",
+              "bytes": 921,
+              "sha256": "2cba459bc65cdb662edf9821a9810a8ef3802132c7fd5282cccc6edf5a1c9eca"
+            },
+            {
+              "path": "results/dwi_correction_qc.csv",
+              "bytes": 474,
+              "sha256": "2e03da5ee36b1318783c5ec7100c1b5204126ac4801b71c9c741bdc95a4a05a0"
+            },
+            {
+              "path": "results/figures/correction_comparison.png",
+              "bytes": 109054,
+              "sha256": "87d73a5b84ac9415892b5764bd7a9dded617b584def0a8947df5fca8b8313e88"
+            },
+            {
+              "path": "results/figures/dwi_motion_outliers.png",
+              "bytes": 220996,
+              "sha256": "5ce76369b9e1685d9d36711a24c31acc3c7201b252236c21ab99f001b9f32bc7"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/correction/b0_AP_PA.nii.gz",
+              "bytes": 5289498,
+              "sha256": "8b18d002feefe07ef95f2e6f423ae840f6949dc8e813508d58e49d55cbf5c3e2"
+            },
+            {
+              "path": "results/postop/correction/b0_unwarped.nii.gz",
+              "bytes": 15394202,
+              "sha256": "aa7d1bf50e203cdde188e859397f07387e35fedb3f56f3266e10e5c2e0c6dbc1"
+            },
+            {
+              "path": "results/postop/correction/brain_mask.nii.gz",
+              "bytes": 16511,
+              "sha256": "ca2cc02f2cdce925da239e6d254854b1bf17a1666fa422f6c645316281ccb4d3"
+            },
+            {
+              "path": "results/postop/correction/field_Hz.nii.gz",
+              "bytes": 2047393,
+              "sha256": "915158ed4e31760de948fe3ce662360aaaf47479f725089736cfc0d2680ec1db"
+            },
+            {
+              "path": "results/postop/sc_counts.npy",
+              "bytes": 80128,
+              "sha256": "dcda61a64b4905b0d2ed9f8ede1f9177c7688faf54ed603e1ce24f6b65ec5fd6"
+            },
+            {
+              "path": "results/postop/sc_qc.json",
+              "bytes": 1049,
+              "sha256": "0bb6e751bf4976f7fd8c14c165bf2b59816fe38f4f472b844e8f3a861c1d661d"
+            },
+            {
+              "path": "results/postop/sc_radius_2mm.npy",
+              "bytes": 80128,
+              "sha256": "2e563f3690b9a162264457523333d0532730170c02bb158b267798d0476e4ec8"
+            },
+            {
+              "path": "results/postop/sc_radius_4mm.npy",
+              "bytes": 80128,
+              "sha256": "bfb475ccfba4dceba8d6cad5e853c0930db8ec0bc9476fb34259070c3e9d9910"
+            },
+            {
+              "path": "results/postop/sc_radius_8mm.npy",
+              "bytes": 80128,
+              "sha256": "51a7e8a16c3822b8d03cfb53361e915c9ccb5f63fb1668a75869179f95f458ce"
+            },
+            {
+              "path": "results/postop/tractogram.tck",
+              "bytes": 31926115,
+              "sha256": "5a776955c1ac3c4c66b6da8d659c9b328691ba3dc72ec88443e648d76efe1676"
+            },
+            {
+              "path": "results/preop/correction/b0_AP_PA.nii.gz",
+              "bytes": 5096366,
+              "sha256": "02b49e78a2ce8ad7a60008cad46902abd41849a8f7e2ea1156cd3489badfc38d"
+            },
+            {
+              "path": "results/preop/correction/b0_unwarped.nii.gz",
+              "bytes": 15358076,
+              "sha256": "56931ccaf6fd299b1df8e7f2e583909608d6fa9a6f838cd5133862bf3590747e"
+            },
+            {
+              "path": "results/preop/correction/brain_mask.nii.gz",
+              "bytes": 15578,
+              "sha256": "c3e2a657e6da5cf0cf6e5c55cf47d718989260560b924997209fd9d092767ba6"
+            },
+            {
+              "path": "results/preop/correction/field_Hz.nii.gz",
+              "bytes": 2042134,
+              "sha256": "eabfb27df06cf029b1ff8840f75d09bdda698394173d008f7d77719dd2170c89"
+            },
+            {
+              "path": "results/preop/sc_counts.npy",
+              "bytes": 80128,
+              "sha256": "2bdf92fcddb558460adf52a070d8f0ff7a83263da9dc41713517c89ce997c45f"
+            },
+            {
+              "path": "results/preop/sc_qc.json",
+              "bytes": 1050,
+              "sha256": "a2bbd63289c0c9a7b5f3ff06ec0197a66d9d157f9a12e1902729ad55cc509780"
+            },
+            {
+              "path": "results/preop/sc_radius_2mm.npy",
+              "bytes": 80128,
+              "sha256": "b7227c8793b2677bbc37f96c1307a8321fc2e6e42797ad0047919ccb5166f1e8"
+            },
+            {
+              "path": "results/preop/sc_radius_4mm.npy",
+              "bytes": 80128,
+              "sha256": "49300c87a53638449bcf396335a17be9bd08ba37526010280e0f227d7216a2b0"
+            },
+            {
+              "path": "results/preop/sc_radius_8mm.npy",
+              "bytes": 80128,
+              "sha256": "cfc1fd5d9dcae24d2950d221907aff270c2c9aed8e1bc678b7fcfc1ae6047eff"
+            },
+            {
+              "path": "results/preop/tractogram.tck",
+              "bytes": 29913187,
+              "sha256": "0f24498be62afd686528272bb957743ae4ddb46b8e4935fd37ab4d8c3a36e5b6"
+            },
+            {
+              "path": "results/primary_sc/postop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "63c6611ad6d547265d4c25ce43adb082504394db2247928b4199f430f5c98330"
+            },
+            {
+              "path": "results/primary_sc/preop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "f7360281689461adf9ea4bd61bae373cb153f179a17891edf4cba93de4d93710"
+            },
+            {
+              "path": "results/sensitivity.csv",
+              "bytes": 1268,
+              "sha256": "cf02f77e5d74d89f9b738ed78b52a1e17826a86c01163639ca49e777510cae97"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-01-results.tar.gz",
+              "bytes": 102181385,
+              "sha256": "544c04fadf5e2b4c372e156e82065bd2d8fa46bbea169ccedda2b318287d4cf4",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-01-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "02": {
+      "notebook": "02_bold_functional_connectivity.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/bold_correction_qc.csv",
+              "bytes": 392,
+              "sha256": "c5d3de3d66a65fbcfd79834c9229fb4b9d9cdfa7d94a949dd5b67e23f01b7667"
+            },
+            {
+              "path": "results/bold_nuisance_sensitivity.csv",
+              "bytes": 857,
+              "sha256": "ae8b740826e37691aad94b520ac3b80f2bda3975a81bdc70c51d440865c1b590"
+            },
+            {
+              "path": "results/bold_uncorrected/postop/func_reference.nii.gz",
+              "bytes": 409348,
+              "sha256": "c88c2fa8c2ec680f20cfcdb92ad21d76e6e33a89dc8bb7c9b933b8c73f7a5bd6"
+            },
+            {
+              "path": "results/bold_uncorrected/preop/func_reference.nii.gz",
+              "bytes": 401111,
+              "sha256": "694a1d2eb5a043f8f8e04e64984b8a8a107d16763249349fb24b357136e2379b"
+            },
+            {
+              "path": "results/figures/bold_distortion_qc.png",
+              "bytes": 714778,
+              "sha256": "be4a2b49ef04252f30899f6f5a5cb0abb3b3d2fdb2ba72255f2d29cdf195cc11"
+            },
+            {
+              "path": "results/figures/primary_sc_bold.png",
+              "bytes": 157619,
+              "sha256": "5eb1f627274eab7d1592a8c9bbd7b7b04c5fd42e80e9136d96eddf6acada17c0"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/segmentation.json",
+              "bytes": 1333,
+              "sha256": "29757f46d3d2392a046159d901a6b0f3e6de3fa6c77993671b66f31791d75dc1"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/tissue_pve_0.nii.gz",
+              "bytes": 689203,
+              "sha256": "60f7e25b49c324848cdd9c00a1118fe5ef9c8eb000dbd59257012ad7f4a810c0"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/tissue_pve_1.nii.gz",
+              "bytes": 1241909,
+              "sha256": "ca0f94e2dc90fe357a7a0e892483bb1dde757cf70fa0e80282751da93dc3a320"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/tissue_pve_2.nii.gz",
+              "bytes": 733974,
+              "sha256": "7bcbce2126294fcf19564adad95550347cb86c496a011bf352e8326d4dfce752"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/segmentation.json",
+              "bytes": 1329,
+              "sha256": "db13210e1ab338ef1d6370a9d410b4e6c6bb61631b4666e956b6c4e7696112b2"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/tissue_pve_0.nii.gz",
+              "bytes": 688589,
+              "sha256": "3f4ae0b3374101c737ee0cacc26d55029f26536c3df8f60927085ccb880abaab"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/tissue_pve_1.nii.gz",
+              "bytes": 1233927,
+              "sha256": "144616aaa632392cae08d7e4c6b347c0da17f347ff4472164b46805f7771c0be"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/tissue_pve_2.nii.gz",
+              "bytes": 721343,
+              "sha256": "f76a062881da09caa1d149660b095e60b9a789aaff848221fdbf69061ff857b4"
+            },
+            {
+              "path": "results/postop/bold_sdc/bold_to_b0_pull.tfm",
+              "bytes": 291,
+              "sha256": "1617c1e5dca10af54ddffc19c4fe88ea5807c4c87272dcd1b1f449f6665c7e6a"
+            },
+            {
+              "path": "results/postop/bold_shift_vox.nii.gz",
+              "bytes": 1101999,
+              "sha256": "a4e3cff535b4c0354f6f3f3baab23c5147782b113accaf7af7f5d02269b9d4b0"
+            },
+            {
+              "path": "results/postop/bold_valid_mask.nii.gz",
+              "bytes": 8107,
+              "sha256": "b29292150dc533007b6aed4fc09472dd731074f31f0bf854b469710e57cbde14"
+            },
+            {
+              "path": "results/postop/brain_mask_func.nii.gz",
+              "bytes": 7162,
+              "sha256": "89a995c368cba9cef4b8402b0150b118debd3a764b3de080932bde27acddafc4"
+            },
+            {
+              "path": "results/postop/dwi_reference.nii.gz",
+              "bytes": 1935620,
+              "sha256": "08dabca5332ca315d42eac3af00d8381ae747a99a7c2e7f42f099ab4f539938f"
+            },
+            {
+              "path": "results/postop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "a431f5204dc39a0f34de27129a94913ddc8a557506c06e9f8efdf40d7d293eb1"
+            },
+            {
+              "path": "results/postop/fc_qc.json",
+              "bytes": 4575,
+              "sha256": "8250b914f1e9bfa06aeb5c6cc10296193453bcf8f655654d21edb1860c9a982d"
+            },
+            {
+              "path": "results/postop/fc_roi_coverage.csv",
+              "bytes": 2705,
+              "sha256": "b220cb149a8ade3f55dd709304826e11d2853efc87ab673fc077dfb9f87a5c4e"
+            },
+            {
+              "path": "results/postop/fd.npy",
+              "bytes": 1568,
+              "sha256": "d8400a10a32c46a85ba1da593c9ff8dd486ac050c1d0c4fa775bb4bd9b814b3a"
+            },
+            {
+              "path": "results/postop/func_motion.tsv",
+              "bytes": 27262,
+              "sha256": "f375f2b89fede0f9ec3327c1be1b49759be48c502159affc310f8298bf74c15f"
+            },
+            {
+              "path": "results/postop/func_reference.nii.gz",
+              "bytes": 613754,
+              "sha256": "7a303e741c5fce88623fbea11e826cfc8e908358147763934b81cf954c5dd3f2"
+            },
+            {
+              "path": "results/postop/func_sdc.nii.gz",
+              "bytes": 107460190,
+              "sha256": "7a33eeed7beec74845fcc36b61c1408a35755843bd9ce40e1ee4c7ffca481322"
+            },
+            {
+              "path": "results/postop/preop_lesion_footprint_func.nii.gz",
+              "bytes": 1601,
+              "sha256": "5c0256e1458159bb5f9a39ce17aa2db441670f4e78aae9042ae68edddb3d313c"
+            },
+            {
+              "path": "results/postop/primary_global_signal.npy",
+              "bytes": 848,
+              "sha256": "ed2e564b010a2a1e6b8c042397e99b01c8d0d9e4b9757c03452f8f047b3d4e8c"
+            },
+            {
+              "path": "results/postop/primary_pcs_bandpass.npy",
+              "bytes": 7328,
+              "sha256": "d260081374e73649eb855d2e58f8729c3e684a52f5f43bc5aa8c68d384a5b07e"
+            },
+            {
+              "path": "results/postop/primary_pcs_fd03.npy",
+              "bytes": 7328,
+              "sha256": "276082341b812757e3e960dc26c023f39d794bde9ecca78e2274dc59362c6a19"
+            },
+            {
+              "path": "results/postop/primary_pcs_fd10.npy",
+              "bytes": 7328,
+              "sha256": "614ded96010b17f9b2ec9014f419d40af47947ef2145462bf30ef9f95db61a64"
+            },
+            {
+              "path": "results/postop/primary_pcs_gsr.npy",
+              "bytes": 7328,
+              "sha256": "d260081374e73649eb855d2e58f8729c3e684a52f5f43bc5aa8c68d384a5b07e"
+            },
+            {
+              "path": "results/postop/primary_pcs_primary.npy",
+              "bytes": 7328,
+              "sha256": "d260081374e73649eb855d2e58f8729c3e684a52f5f43bc5aa8c68d384a5b07e"
+            },
+            {
+              "path": "results/postop/roi_timeseries_raw.npy",
+              "bytes": 144128,
+              "sha256": "24c0f01e8b915ec9aad9b77944d12df952d3380660e016a8aca2fbde596e69fb"
+            },
+            {
+              "path": "results/postop/t1_to_func_pull.tfm",
+              "bytes": 290,
+              "sha256": "d1181c7d0d34e3c236cdabb8f29007c54dab1da25ac5ccc00bcf55ae701a0656"
+            },
+            {
+              "path": "results/preop/bold_sdc/bold_to_b0_pull.tfm",
+              "bytes": 291,
+              "sha256": "5a2c3542c2db33180bd8a47257049d34d7d5ceda3993aeb9b5dd8f8e68580e2e"
+            },
+            {
+              "path": "results/preop/bold_shift_vox.nii.gz",
+              "bytes": 1102626,
+              "sha256": "18fd61911320b9979843ba4a664048b502377d26eb418b503f4167c66dd3854f"
+            },
+            {
+              "path": "results/preop/bold_valid_mask.nii.gz",
+              "bytes": 7587,
+              "sha256": "05cdc2fcd4a8b5e7923d0d4b18c777f194f5776070f0b401570055b3577c010c"
+            },
+            {
+              "path": "results/preop/brain_mask_func.nii.gz",
+              "bytes": 7175,
+              "sha256": "668e88eeb64fce7b9ec0b688e23a54608580bcedb720be9e5e3037e888df3928"
+            },
+            {
+              "path": "results/preop/dwi_reference.nii.gz",
+              "bytes": 1926525,
+              "sha256": "6aed281c1437eaeef19162d5df13d9c0171536a211f264b2bb18b45adf54a1f9"
+            },
+            {
+              "path": "results/preop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "e16dc32ee64f2c26ce8e668b782b735c56b4ff2eca5b38a8eee03db2dd684014"
+            },
+            {
+              "path": "results/preop/fc_qc.json",
+              "bytes": 4256,
+              "sha256": "79b1403f2493566f96c571541634d35544e8f0f029bcbcc519f9f422170b7cbd"
+            },
+            {
+              "path": "results/preop/fc_roi_coverage.csv",
+              "bytes": 2717,
+              "sha256": "64f794201fdc79eb8ce2548dcae823ba96a212366f3559a458017067ae55a9e8"
+            },
+            {
+              "path": "results/preop/fd.npy",
+              "bytes": 1568,
+              "sha256": "6147ea3c49c2e2b250807c27bc56780f2c24a0288ba1987d6b1326d38af63ea9"
+            },
+            {
+              "path": "results/preop/func_motion.tsv",
+              "bytes": 27742,
+              "sha256": "e326bc2d06254bb2f9214a71b57b9c077f3379e0977383fdd0e0a31430897edf"
+            },
+            {
+              "path": "results/preop/func_reference.nii.gz",
+              "bytes": 616636,
+              "sha256": "4c977ca5fa27a005e291a57e6d7c3dd5229a614b7d52de977489458b429b04ec"
+            },
+            {
+              "path": "results/preop/func_sdc.nii.gz",
+              "bytes": 107720699,
+              "sha256": "299c890fafc428ae2213094f540c1d8394892fa3ab48545dcfe8637ca9cc27e5"
+            },
+            {
+              "path": "results/preop/preop_lesion_footprint_func.nii.gz",
+              "bytes": 1611,
+              "sha256": "b1d90cd2ca931a20bae866ac80e7d4f17f2a15873cf2599c36ba8205dc24d486"
+            },
+            {
+              "path": "results/preop/primary_global_signal.npy",
+              "bytes": 848,
+              "sha256": "6435cc081dbb7cf08cd2f05e5f05aa19419132f26fcc23643a7fe51c3847991a"
+            },
+            {
+              "path": "results/preop/primary_pcs_fd03.npy",
+              "bytes": 7328,
+              "sha256": "c73b7d7dc901c2fbd23edaa182cca57c5c593277876908c26d1fdc1373cad296"
+            },
+            {
+              "path": "results/preop/primary_pcs_fd10.npy",
+              "bytes": 7328,
+              "sha256": "e2bd94124583be107530fb757d1e7cf73ba83406040616420be1e5ef9eb305a7"
+            },
+            {
+              "path": "results/preop/primary_pcs_gsr.npy",
+              "bytes": 7328,
+              "sha256": "2680c382513ca5317bcf3b827bcfbd2a4617fd9f75d6ccfccab016ed4b552bca"
+            },
+            {
+              "path": "results/preop/primary_pcs_primary.npy",
+              "bytes": 7328,
+              "sha256": "2680c382513ca5317bcf3b827bcfbd2a4617fd9f75d6ccfccab016ed4b552bca"
+            },
+            {
+              "path": "results/preop/roi_timeseries_raw.npy",
+              "bytes": 144128,
+              "sha256": "d25a06c3c9d47e809ef7a459354b36338f1579cabc3a1208254ff5714cec2f34"
+            },
+            {
+              "path": "results/preop/t1_to_func_pull.tfm",
+              "bytes": 291,
+              "sha256": "f7d86ab7268ff5516a9f247f8415180f6289971998c7c2bb8196b5fd4ccf21aa"
+            },
+            {
+              "path": "results/primary_sc/bold_comparison.csv",
+              "bytes": 1728,
+              "sha256": "99076401afc6e125930a24d5e5526d4b0ae0c5af56ef9da81d6d630fa3b9e0fd"
+            },
+            {
+              "path": "results/sensitivity.csv",
+              "bytes": 1268,
+              "sha256": "cf02f77e5d74d89f9b738ed78b52a1e17826a86c01163639ca49e777510cae97"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-02-results.tar.gz",
+              "bytes": 229476129,
+              "sha256": "262afb2d1aa1d205bb18a1cf167c14958dc94527b8bb6ed72af2fc05d9b64421",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-02-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "03": {
+      "notebook": "03_longitudinal_graphs_and_networks.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/common_fc_nodes.npy",
+              "bytes": 228,
+              "sha256": "273b05611b070e0f3d4cb0d91e1890574a88241d4ad9aabbb19ac3ef9a20281d"
+            },
+            {
+              "path": "results/figures/connectomes.png",
+              "bytes": 284691,
+              "sha256": "f83dac5a977b3f76135da2ef1c488433ff3da44306066ac9357fd32d9d8d3846"
+            },
+            {
+              "path": "results/figures/primary_fc_network_sessions.png",
+              "bytes": 87400,
+              "sha256": "7a7ebd1d81b1b808f832f35810fbb718a440d5230831969dfa85d4cd48939554"
+            },
+            {
+              "path": "results/figures/primary_sc_choice.png",
+              "bytes": 81425,
+              "sha256": "f1263a92ebfbe54972eb6ba299d596b94a3c970c592b9ab171356e37dca299d3"
+            },
+            {
+              "path": "results/figures/threshold_sensitivity.png",
+              "bytes": 99261,
+              "sha256": "00e86ac95ee5ab76222ea6b79e1e1be8e226848581a41ef6b56346c7d4e84c7a"
+            },
+            {
+              "path": "results/graph_metrics.csv",
+              "bytes": 2698,
+              "sha256": "8844df737c3ab66f3a3777f0886968475addc47b120f9ba037133af531c49f91"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "e5025dce5345b9a19b6c2c78f5d2fbbd23a4bbf543113393780858b716476ee4"
+            },
+            {
+              "path": "results/preop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "32a194b7d0c005fef1757dc0ce5a12f62c740064da71d1f7008cfeeb8f3be3a1"
+            },
+            {
+              "path": "results/primary_sc/coupling_sensitivity.csv",
+              "bytes": 13123,
+              "sha256": "54600ab94e67ddfd6fff4097b11285521c0c84fea2ffb9fdc9d58c2a01c55185"
+            },
+            {
+              "path": "results/primary_sc/denoising_comparison.csv",
+              "bytes": 7853,
+              "sha256": "5fb75cbeb07f0dd444fe15f8fa9533337c5a2211e19e0de4b58f93382ca3f40c"
+            },
+            {
+              "path": "results/primary_sc/graph_sensitivity.csv",
+              "bytes": 108640,
+              "sha256": "175a6bc69d4ddefe7317f805118e4c5431ef3c28ce9c9e3809bb5d9be6a1f1cd"
+            },
+            {
+              "path": "results/primary_sc/policy.json",
+              "bytes": 1472,
+              "sha256": "a1597bed36e5631c1ad06a2f38cd6a66f413b8b1380f62669ace417a46d5166a"
+            },
+            {
+              "path": "results/primary_sc/postop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "63c6611ad6d547265d4c25ce43adb082504394db2247928b4199f430f5c98330"
+            },
+            {
+              "path": "results/primary_sc/preop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "f7360281689461adf9ea4bd61bae373cb153f179a17891edf4cba93de4d93710"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-03-results.tar.gz",
+              "bytes": 683279,
+              "sha256": "db1aaf521363350727664f85063f2e444e92552f772058f7d3e5c376c4dc653e",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-03-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "04": {
+      "notebook": "04_cognition_and_lived_experience.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/assessments_all.csv",
+              "bytes": 29774,
+              "sha256": "14eded19fe103d01127a9f7042dfdb778911766a79877d73d2d4fc54e280afb8"
+            },
+            {
+              "path": "results/cantab_all.csv",
+              "bytes": 18033,
+              "sha256": "7c1636bc245929580b8673ad3647b91126d872f504245635faf45dceb191b0f3"
+            },
+            {
+              "path": "results/figures/cognition.png",
+              "bytes": 86171,
+              "sha256": "b9d748aa987e042fa7dc28c57dc8d8cbfb642d332a7a28d6131ead88d34fa98e"
+            },
+            {
+              "path": "results/figures/psychosocial.png",
+              "bytes": 77033,
+              "sha256": "849ca81baf23341e0d0ebcbf89a01b11eadd8b0dd6f37e38f4644db76d99184f"
+            },
+            {
+              "path": "results/network_summary.csv",
+              "bytes": 1976,
+              "sha256": "a0b433794f7c800698fa9bf6fbe882b304a88b680f232f2dc670c7713ad2bfca"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/primary_fc/network_uncertainty.csv",
+              "bytes": 43190,
+              "sha256": "7052e0bfc86b23101f847b5bf9b5a4f2a943dc74cbc453e0863018b3cdc067b7"
+            },
+            {
+              "path": "results/psychosocial_all.csv",
+              "bytes": 11954,
+              "sha256": "998eec522d56872349b036c665c06e32eaa010b51dd2266170e15064f155a10a"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-04-results.tar.gz",
+              "bytes": 177010,
+              "sha256": "11c11d045f18d757bbd0d6206dc7a4deab4ddf217bb72ea3363ecb8053657cef",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-04-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "05": {
+      "notebook": "05_simulations_growth_surgery_and_dynamics.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/simulations.png",
+              "bytes": 144970,
+              "sha256": "7384b69eb4bf2f8f8d1b51a940c2d7848e6b57d71c3022600a090acdf5294538"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/primary_sc/postop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "63c6611ad6d547265d4c25ce43adb082504394db2247928b4199f430f5c98330"
+            },
+            {
+              "path": "results/primary_sc/preop/own_per_10000_seeds.npy",
+              "bytes": 80128,
+              "sha256": "f7360281689461adf9ea4bd61bae373cb153f179a17891edf4cba93de4d93710"
+            },
+            {
+              "path": "results/simulation_lesion_sweep.csv",
+              "bytes": 1023,
+              "sha256": "10225e46365e6553d0af42a47cbd97b46c278485773a6d4fa6a3633c01fd1ab9"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-05-results.tar.gz",
+              "bytes": 168611,
+              "sha256": "fb7d65e64e31fd7bf0ade9faf578f041848092db96a727b8d6477d58f505e6ea",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-05-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "06": {
+      "notebook": "06_nuisance_refitting_and_anatomical_denoising.ipynb",
+      "bundles": [
+        {
+          "prefix": "data",
+          "members": [
+            {
+              "path": "data/bids/sub-PAT16/ses-postop/anat/sub-PAT16_ses-postop_T1w.nii.gz",
+              "bytes": 8053984,
+              "sha256": "efed4644008adb7f5fbd83579c080aa42208b6d73293bceb5d0b89c81f78078b"
+            },
+            {
+              "path": "data/bids/sub-PAT16/ses-preop/anat/sub-PAT16_ses-preop_T1w.nii.gz",
+              "bytes": 7708650,
+              "sha256": "709b3ea19596ff6a0cb963ebeaeede247b0ddd6c605f12aa350df2cb04500c3e"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-06-data.tar.gz",
+              "bytes": 15719913,
+              "sha256": "741123673d175ceb2f4d6e7b9314b831ec04d14a45ded0fd1dc291c93628da93",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-06-data.tar.gz"
+            }
+          ]
+        },
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/nuisance_pc_mechanism.png",
+              "bytes": 214959,
+              "sha256": "5fbac716513cb34f75645914a42f9a0a2f157b2f482372878b9771dbdfda5ea7"
+            },
+            {
+              "path": "results/figures/primary_sc_denoising.png",
+              "bytes": 118809,
+              "sha256": "ea59e6c67098aba92df1aa16ff458714616eb1fb566b181ed00f2a22622b1ddf"
+            },
+            {
+              "path": "results/figures/primary_sc_pc_count.png",
+              "bytes": 104889,
+              "sha256": "b429df93d6a101073a0a1cf1798db9d5468cca90e05f9df49a1db5c3ffb95c8d"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/nuisance_anatomical_sensitivity.csv",
+              "bytes": 3417,
+              "sha256": "f3c6cc549fb15875ed628160454c44fc2cea0257dae79782d204f47257c0d77d"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/csf_mask_p95.nii.gz",
+              "bytes": 4708,
+              "sha256": "063ee18064af17f067ae7c10fa2c7525f10f7dadfa1af473b053ef76688ed93a"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_anatomical5.npy",
+              "bytes": 80128,
+              "sha256": "e5025dce5345b9a19b6c2c78f5d2fbbd23a4bbf543113393780858b716476ee4"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_anatomical5_raw.npy",
+              "bytes": 80128,
+              "sha256": "045faa65bc712ce63f7bd77bd79a87706c472e43b03e8d7b729ca46187a04559"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_motion_dct.npy",
+              "bytes": 80128,
+              "sha256": "6779ca7527edc606f506e19b210b83c94717d4fbc430a5e01306468f183d5eff"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_original5.npy",
+              "bytes": 80128,
+              "sha256": "f89ffbbfb0040fcaf677ec0ecdf88d5d1b949ceeeb36c33ba7b54561a142e434"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_wm5_csf5.npy",
+              "bytes": 80128,
+              "sha256": "2dda6bf2d9d401068d804f1806541cb7f8dde761d99381cd81df122454e43803"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/fc_wm_csf_means.npy",
+              "bytes": 80128,
+              "sha256": "2d8ae360318b9da63dac6b0e7b1f344fb24e2a46b75fd60b781fbcd0a6c99260"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/original_noncortical_mask.nii.gz",
+              "bytes": 7334,
+              "sha256": "e9daf57d40c38d4e129a1c66e099678884bd350b793e68976a8c33aa7a7b9a02"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/corrected/wm_mask_p95.nii.gz",
+              "bytes": 9431,
+              "sha256": "0898fc9f68aa1b4d8b3ca3a2f978151d7f71458d94a78bf536863fb573949cbf"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/csf_T1_core_p95.nii.gz",
+              "bytes": 113353,
+              "sha256": "2431909d574efb9864ce051d5eb55cf881f4efec5f2a79a7dba0243d0925572e"
+            },
+            {
+              "path": "results/nuisance_investigation/postop/wm_T1_core_p95.nii.gz",
+              "bytes": 181292,
+              "sha256": "677cf6c19e3f4432751c688caa09171b24d39c8dda7cbb74f2822cb163787a39"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/csf_mask_p95.nii.gz",
+              "bytes": 4406,
+              "sha256": "199b493134f8e3d4262c3473aae817d56dccb170ce0a4ee48b5140c539055ce5"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_anatomical5.npy",
+              "bytes": 80128,
+              "sha256": "32a194b7d0c005fef1757dc0ce5a12f62c740064da71d1f7008cfeeb8f3be3a1"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_anatomical5_raw.npy",
+              "bytes": 80128,
+              "sha256": "11dd930789148107f2d261e4999d1f1fde6da91392872d8250e7d4345f922d67"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_motion_dct.npy",
+              "bytes": 80128,
+              "sha256": "378a8ca4db2b5f0da73000e80cadb469cc8b5828c424cd8f1669a8679254fab7"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_original5.npy",
+              "bytes": 80128,
+              "sha256": "6dd10a074bd7d7113202da69d7e8df87e968ed8f0f7595109a79b5bd639ff5ad"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_wm5_csf5.npy",
+              "bytes": 80128,
+              "sha256": "b554fbbdaaec1bd0c89f4ddcf4dd0f2a24c71d8a60d6814fc7dc3d8ff6c39688"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/fc_wm_csf_means.npy",
+              "bytes": 80128,
+              "sha256": "cdd54c520a0559b3a187968ee962d466be75456b2f63b32fa4543213d62ddd89"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/original_noncortical_mask.nii.gz",
+              "bytes": 7194,
+              "sha256": "13affd13996c2a0f44fc0c8d1539e1705e798d281e71e13cce765d616bc95eb4"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/corrected/wm_mask_p95.nii.gz",
+              "bytes": 9224,
+              "sha256": "a970f1f92ebaff96957972f9e4f5e2b3ee28d374a9dd27abeb836b68629f6eab"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/csf_T1_core_p95.nii.gz",
+              "bytes": 107135,
+              "sha256": "521206c9f782591ae87bd87d050baac3c4e48fa7673bfc7ac249cccc91037b8b"
+            },
+            {
+              "path": "results/nuisance_investigation/preop/wm_T1_core_p95.nii.gz",
+              "bytes": 175983,
+              "sha256": "73e0e377ee9f2b731b7524ffe065d2b5d1c8d4419c95cb26d3c9c9425eb4e136"
+            },
+            {
+              "path": "results/nuisance_investigation/summary.json",
+              "bytes": 2095,
+              "sha256": "3206038e246743f6ba58fedcf8288407ebbd6a353c8998d4b0e0982039302311"
+            },
+            {
+              "path": "results/nuisance_mask_composition.csv",
+              "bytes": 1311,
+              "sha256": "a314d91d805a55c71f4a78a6c1f35b4c341c20b78144f34a663bad4684517036"
+            },
+            {
+              "path": "results/nuisance_mask_data_factorial.csv",
+              "bytes": 1928,
+              "sha256": "50589cfb45c8b849b4ec291f4d378eb86c0d5d13dc8383de2cbb112b65300741"
+            },
+            {
+              "path": "results/nuisance_network_summary.csv",
+              "bytes": 9490,
+              "sha256": "8b33b14853300fd9f581f7fb03828ff3ed9a9c2e719a52cd6cade100b8778bb4"
+            },
+            {
+              "path": "results/nuisance_pc_cutoff.csv",
+              "bytes": 8620,
+              "sha256": "8edab95be446aa5a15e7d27c308bf7f042ca8b6d9ae569c1a3b80a756300b8e5"
+            },
+            {
+              "path": "results/nuisance_sampling_audit.csv",
+              "bytes": 332,
+              "sha256": "cabcee57fc7c56e7d739f653a9976c266ba9fd31c3f13f9933e9dc2e9bca81b5"
+            },
+            {
+              "path": "results/postop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "e5025dce5345b9a19b6c2c78f5d2fbbd23a4bbf543113393780858b716476ee4"
+            },
+            {
+              "path": "results/postop/t1_to_func_pull.tfm",
+              "bytes": 290,
+              "sha256": "d1181c7d0d34e3c236cdabb8f29007c54dab1da25ac5ccc00bcf55ae701a0656"
+            },
+            {
+              "path": "results/preop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "32a194b7d0c005fef1757dc0ce5a12f62c740064da71d1f7008cfeeb8f3be3a1"
+            },
+            {
+              "path": "results/preop/t1_to_func_pull.tfm",
+              "bytes": 291,
+              "sha256": "f7d86ab7268ff5516a9f247f8415180f6289971998c7c2bb8196b5fd4ccf21aa"
+            },
+            {
+              "path": "results/primary_sc/denoising_comparison.csv",
+              "bytes": 7853,
+              "sha256": "5fb75cbeb07f0dd444fe15f8fa9533337c5a2211e19e0de4b58f93382ca3f40c"
+            },
+            {
+              "path": "results/primary_sc/pc_sensitivity.csv",
+              "bytes": 10710,
+              "sha256": "18962a8c643d1990d0ba3c296db63f7f391afa1caf9a4318b9d5c808f09235e0"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-06-results.tar.gz",
+              "bytes": 1774861,
+              "sha256": "e0a7a130a49ea8c8f863258698932af9245ce7055b436f4a9afc1a36050972bf",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-06-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "07": {
+      "notebook": "07_censoring_motion_duration_and_coupling.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/censoring_investigation/decomposition.csv",
+              "bytes": 2754,
+              "sha256": "7fb2193fb5c863151ca97b7f503b4e860aed38d714849a663b278a3241b4834c"
+            },
+            {
+              "path": "results/censoring_investigation/design.json",
+              "bytes": 3159,
+              "sha256": "e7b7b397b0463ea450ea00e1a18333ca1ef8215a9052f1e6dcfbede0ce32242f"
+            },
+            {
+              "path": "results/censoring_investigation/frame_qc.csv",
+              "bytes": 620,
+              "sha256": "191a8f07387d1245b28bfcba3249378e5af131913c8e28c9b8a5504f2085d721"
+            },
+            {
+              "path": "results/censoring_investigation/matched_masks.npz",
+              "bytes": 53148,
+              "sha256": "604d92cc9e009536ecee52137fe6852d66583c7cdafedab3590eb56ca4d239b7"
+            },
+            {
+              "path": "results/censoring_investigation/matched_replicates.csv",
+              "bytes": 1648064,
+              "sha256": "a4faa2a1c96fba5da6c8989db4d5bf1517517ad9e5a98bb04c7474eb5911e66b"
+            },
+            {
+              "path": "results/censoring_investigation/matched_summary.csv",
+              "bytes": 9147,
+              "sha256": "83064f55a53d83f865ec7a14f0092191c1cc124be9a8ca88f7fda0dfac54990e"
+            },
+            {
+              "path": "results/censoring_investigation/pc_subspaces.json",
+              "bytes": 543,
+              "sha256": "1c9e98c4d3daa184e5a3e5f50b7a33888e5d7be9651d9b44f8ca58fe821e3199"
+            },
+            {
+              "path": "results/censoring_investigation/postop/tissue_timeseries.npy",
+              "bytes": 8153408,
+              "sha256": "17c23f389491b747753e4c6292b35f478cbe8deed0616e23ddc4197d6a92c9e6"
+            },
+            {
+              "path": "results/censoring_investigation/preop/tissue_timeseries.npy",
+              "bytes": 8262848,
+              "sha256": "29496314e9164fc83f229ed487cb93ea407bf8eb52279f59444c59451a2bfea9"
+            },
+            {
+              "path": "results/figures/censoring_decomposition.png",
+              "bytes": 105614,
+              "sha256": "f3f462385d06cc7e9f81973c540400fc3d646f5888bab2aac720e21ecfd2ff87"
+            },
+            {
+              "path": "results/figures/censoring_frame_qc.png",
+              "bytes": 166857,
+              "sha256": "205eb27dc2f221fa0071a2b5ec3748448f60301b3ae057321a55fdf3e85ae963"
+            },
+            {
+              "path": "results/figures/censoring_matching.png",
+              "bytes": 88461,
+              "sha256": "d6227561a8c94f7cd38c52a0ba2b66995151fa4416fdc09bec35e301dccfd17b"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/fc_fd03_keep.npy",
+              "bytes": 308,
+              "sha256": "d77989a245a55cf72a3a93c4552502ab078b64768798eb353063b009a7e08ab8"
+            },
+            {
+              "path": "results/postop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "a431f5204dc39a0f34de27129a94913ddc8a557506c06e9f8efdf40d7d293eb1"
+            },
+            {
+              "path": "results/postop/fd.npy",
+              "bytes": 1568,
+              "sha256": "d8400a10a32c46a85ba1da593c9ff8dd486ac050c1d0c4fa775bb4bd9b814b3a"
+            },
+            {
+              "path": "results/postop/func_motion.tsv",
+              "bytes": 27262,
+              "sha256": "f375f2b89fede0f9ec3327c1be1b49759be48c502159affc310f8298bf74c15f"
+            },
+            {
+              "path": "results/postop/primary_nuisance_pcs.npy",
+              "bytes": 7328,
+              "sha256": "d260081374e73649eb855d2e58f8729c3e684a52f5f43bc5aa8c68d384a5b07e"
+            },
+            {
+              "path": "results/postop/roi_timeseries_clean.npy",
+              "bytes": 144128,
+              "sha256": "27e380d8ae35da29ddca3d472f0489b74bdefbf4e4975644be48fc8394309458"
+            },
+            {
+              "path": "results/postop/roi_timeseries_raw.npy",
+              "bytes": 144128,
+              "sha256": "24c0f01e8b915ec9aad9b77944d12df952d3380660e016a8aca2fbde596e69fb"
+            },
+            {
+              "path": "results/postop/sc_fraction.npy",
+              "bytes": 80128,
+              "sha256": "423238e533120f6ba4e402b5dfbaa072c0b4b37a148c0b6c326d721aeaa10da3"
+            },
+            {
+              "path": "results/preop/fc_fd03_keep.npy",
+              "bytes": 308,
+              "sha256": "9c20df545706896f95293c70f227b952e5934f8ee89dd2e6cd5610fb5122505b"
+            },
+            {
+              "path": "results/preop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "e16dc32ee64f2c26ce8e668b782b735c56b4ff2eca5b38a8eee03db2dd684014"
+            },
+            {
+              "path": "results/preop/fd.npy",
+              "bytes": 1568,
+              "sha256": "6147ea3c49c2e2b250807c27bc56780f2c24a0288ba1987d6b1326d38af63ea9"
+            },
+            {
+              "path": "results/preop/func_motion.tsv",
+              "bytes": 27742,
+              "sha256": "e326bc2d06254bb2f9214a71b57b9c077f3379e0977383fdd0e0a31430897edf"
+            },
+            {
+              "path": "results/preop/primary_nuisance_pcs.npy",
+              "bytes": 7328,
+              "sha256": "2680c382513ca5317bcf3b827bcfbd2a4617fd9f75d6ccfccab016ed4b552bca"
+            },
+            {
+              "path": "results/preop/roi_timeseries_clean.npy",
+              "bytes": 144128,
+              "sha256": "fa1d37e673400858f04189475c6745e661badda5d4a581072cf77a5d46567787"
+            },
+            {
+              "path": "results/preop/roi_timeseries_raw.npy",
+              "bytes": 144128,
+              "sha256": "d25a06c3c9d47e809ef7a459354b36338f1579cabc3a1208254ff5714cec2f34"
+            },
+            {
+              "path": "results/preop/sc_fraction.npy",
+              "bytes": 80128,
+              "sha256": "877d9980064de0f8feb72df842136a9bbd7330e79175fa3ea6b19bf1653405d5"
+            },
+            {
+              "path": "results/primary_sc/censoring_decomposition.csv",
+              "bytes": 330,
+              "sha256": "d2d3c2afd8dd0c3eae9db090208e22514c4929d81806a571e23d33a88f4143a5"
+            },
+            {
+              "path": "results/primary_sc/matched_coupling_summary.csv",
+              "bytes": 684,
+              "sha256": "dd0dfd6ff201d7003bf0156dc094ec4ff9f77aee449a4f039d8d473d08c5e666"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-07-results.tar.gz",
+              "bytes": 15214784,
+              "sha256": "31977bb68a3f196ac4743a41dffe626d5d4de42491cccb6019e34cbf3ed19475",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-07-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "08": {
+      "notebook": "08_edges_networks_and_coupling_reversal.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/coupling_edge_drivers/deletions.csv",
+              "bytes": 10013,
+              "sha256": "1a1bd2c769e5e2b2da31794d977cc63d49a6295c1c0d71e9129459f792facd2b"
+            },
+            {
+              "path": "results/coupling_edge_drivers/edges.csv",
+              "bytes": 1655446,
+              "sha256": "ff61e497a5da51aa33bdb45199e97afb16e10f0a28dd4538b41009ebee315f7d"
+            },
+            {
+              "path": "results/coupling_edge_drivers/matched_group_summary.csv",
+              "bytes": 102112,
+              "sha256": "99715932e2aca49be73f3afba328140350b8c38344407811860f610629bf47b4"
+            },
+            {
+              "path": "results/coupling_edge_drivers/matched_reproduction.csv",
+              "bytes": 168747,
+              "sha256": "d648a81c95328345fa0bb09b9a161857958d4048733557e1193dfe89fffe8303"
+            },
+            {
+              "path": "results/coupling_edge_drivers/network_pairs.csv",
+              "bytes": 9455,
+              "sha256": "0301a92fd1c30077bb31fe255a11c1c755b86753eec9feebcc96b48e0d86c4ec"
+            },
+            {
+              "path": "results/coupling_edge_drivers/rank_context.csv",
+              "bytes": 2552,
+              "sha256": "0c5ecc9ebde118404f24bf437e4ebc9bac46f633382947ba1651b70753eee687"
+            },
+            {
+              "path": "results/coupling_edge_drivers/support_summary.csv",
+              "bytes": 1268,
+              "sha256": "a733977aa79c1714690dd1a649f98150bf1e3dc7d0b617c678900e059bfbbdb1"
+            },
+            {
+              "path": "results/figures/edge_driver_deletions.png",
+              "bytes": 62546,
+              "sha256": "879078b9a5e09b513fd5dca5f49f96a7fb8733b7d8497ab7f836c803f4a53a27"
+            },
+            {
+              "path": "results/figures/edge_driver_networks.png",
+              "bytes": 234449,
+              "sha256": "97f10f59261f3ee722f25d81f9abd35e4607f19be9c7091227bb5e83a132507e"
+            },
+            {
+              "path": "results/figures/edge_driver_support.png",
+              "bytes": 79953,
+              "sha256": "15924d29f3bc1958262838e9fc0f91a2e6042f49c514c9097bfb5271060ae549"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/primary_sc/network_contributions.csv",
+              "bytes": 2469,
+              "sha256": "76ceb612009d58e08461de8ed5b0480dbed0d6143fd68e465638fd09460c76d5"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-08-results.tar.gz",
+              "bytes": 1048539,
+              "sha256": "4d572feb9cbd64c5c787d9d35731bfd9b2e7d8791748ee011883ff45bff47adf",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-08-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "09": {
+      "notebook": "09_structural_edge_reliability.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/sc_repeat_consensus.png",
+              "bytes": 124448,
+              "sha256": "4abd25aca082423bdb1d06da2be0b4a776b159d66c8d67d1c302b5fe7b142158"
+            },
+            {
+              "path": "results/figures/sc_repeat_counts.png",
+              "bytes": 120021,
+              "sha256": "26ea98ab457a37beb7c1895c554a17a9fd33dd0ca30f7963ed47620374b81db3"
+            },
+            {
+              "path": "results/figures/sc_repeat_coupling.png",
+              "bytes": 214318,
+              "sha256": "07cbab1e943c3c38c720210b58d65f745a8fec9f8dc16a8627c49d833846c54a"
+            },
+            {
+              "path": "results/figures/sc_repeat_detection.png",
+              "bytes": 67695,
+              "sha256": "e8a8dec6c63b75ea214d1119122053d0890995e8006d2a3cda0d8a0a865df578"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/fc_fd03.npy",
+              "bytes": 80128,
+              "sha256": "ae130fc3332f47102f1bb373345035d395eeaaea79e65baa3d72f289d594b47f"
+            },
+            {
+              "path": "results/postop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "e5025dce5345b9a19b6c2c78f5d2fbbd23a4bbf543113393780858b716476ee4"
+            },
+            {
+              "path": "results/postop/sc_counts.npy",
+              "bytes": 80128,
+              "sha256": "dcda61a64b4905b0d2ed9f8ede1f9177c7688faf54ed603e1ce24f6b65ec5fd6"
+            },
+            {
+              "path": "results/preop/fc_fd03.npy",
+              "bytes": 80128,
+              "sha256": "6649a5663520cd65e0b05c1866e20a1b29d64dc66d01c653ddfbc7bdce196187"
+            },
+            {
+              "path": "results/preop/fc_primary.npy",
+              "bytes": 80128,
+              "sha256": "32a194b7d0c005fef1757dc0ce5a12f62c740064da71d1f7008cfeeb8f3be3a1"
+            },
+            {
+              "path": "results/preop/sc_counts.npy",
+              "bytes": 80128,
+              "sha256": "2bdf92fcddb558460adf52a070d8f0ff7a83263da9dc41713517c89ce997c45f"
+            },
+            {
+              "path": "results/sc_reliability/coupling_contributions.csv",
+              "bytes": 157625,
+              "sha256": "d3cffb2cc8089630879224a6f9bbc80623d6bb22094a32fdf1c60cf4f5dad1a2"
+            },
+            {
+              "path": "results/sc_reliability/edge_reliability_summary.csv",
+              "bytes": 2717,
+              "sha256": "4c902ab3e9c81753cab6d12aa7f138365ac9d73565f37299fe0b54f26ddb692b"
+            },
+            {
+              "path": "results/sc_reliability/edges.csv",
+              "bytes": 1200648,
+              "sha256": "db99ebcb5c9f030788422d2f8f52a7419d5878bb5cc38b02f4643e2e9687ca73"
+            },
+            {
+              "path": "results/sc_reliability/fixed_coupling.csv",
+              "bytes": 11105,
+              "sha256": "db0d314c81a4218e7bd14e83e762effe2dd399789ea630e089fc76406684cd9c"
+            },
+            {
+              "path": "results/sc_reliability/matched_coupling_summary.csv",
+              "bytes": 3170,
+              "sha256": "16980273ef2cb6df7217ca614a45bae7fa7a5341cd38bc841fff74dc45f0774b"
+            },
+            {
+              "path": "results/sc_reliability/original_reversal_by_reliability.csv",
+              "bytes": 684,
+              "sha256": "dc14b0616e02315326aaa6da43cc01305f5dd0745d96da9f7bd63344ff9a502a"
+            },
+            {
+              "path": "results/sc_reliability/postop/baseline_replay.json",
+              "bytes": 284,
+              "sha256": "b9abb601ffe94dc9abf8195571cc5832dc2b8e562d27409395a90baca44b60dc"
+            },
+            {
+              "path": "results/sc_reliability/postop/counts.npy",
+              "bytes": 1600128,
+              "sha256": "e7cfbdb0c2a7c097528747b0a704c0da86883b7ef7f147c684833bb3f11c7fd9"
+            },
+            {
+              "path": "results/sc_reliability/preop/baseline_replay.json",
+              "bytes": 282,
+              "sha256": "de976218b52bb7560f2fbdebaee96ab3954092132fa27f7e5d5d77dbb9635dbe"
+            },
+            {
+              "path": "results/sc_reliability/preop/counts.npy",
+              "bytes": 1600128,
+              "sha256": "e133768fbd5dc16040d1b75501bb764f6e879f636b3cf864e6aa1bbf24924502"
+            },
+            {
+              "path": "results/sc_reliability/repeat_coupling_summary.csv",
+              "bytes": 3573,
+              "sha256": "6826154f602ad4d7522f87f9574f3000c30f37b8dd16049e5a1c89b12bc25af3"
+            },
+            {
+              "path": "results/sc_reliability/split_half.csv",
+              "bytes": 1149,
+              "sha256": "7601b083a39564b50e321c54836c56292450e7f9300f81c9c49b516c74920cb5"
+            },
+            {
+              "path": "results/sc_reliability/summary.json",
+              "bytes": 518,
+              "sha256": "f632fc4c410ccc0dafc68ced8a1f91d2c624097d5248bb911432e772dc2a2318"
+            },
+            {
+              "path": "results/sc_reliability/within_session_overlap.csv",
+              "bytes": 137019,
+              "sha256": "c437635742f7275e7a09b44efa86eab3809fb8bde0eca06fae0853b0374a394d"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-09-results.tar.gz",
+              "bytes": 1251517,
+              "sha256": "c5147ae4b8e8af53747c583afdcab4d0d95814eaa9b1e37850c0282ab3fac28e",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-09-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "notebook": "10_joint_sampling_uncertainty.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/joint_sampling_components.png",
+              "bytes": 86573,
+              "sha256": "72d44aaa23ef8f020a1513e547be9d644b34a9edd63eb794de505cd0504cff38"
+            },
+            {
+              "path": "results/figures/joint_sampling_ranges.png",
+              "bytes": 107784,
+              "sha256": "db50f33f12e5b599b068b34a7261e3aa4c5b6980b66b3caef6b19ef205edc288"
+            },
+            {
+              "path": "results/joint_sampling/block_indices.npz",
+              "bytes": 116990,
+              "sha256": "56f00d06ec4c4f9db0b9c369d7f1340feec69079d2973df10fbe5fb61640a377"
+            },
+            {
+              "path": "results/joint_sampling/design.json",
+              "bytes": 7784,
+              "sha256": "6e8a2711328e6e60d4b93293f7c4517961300bb76ac7e399c4016c192ed7721b"
+            },
+            {
+              "path": "results/joint_sampling/edge_selection.csv",
+              "bytes": 78624,
+              "sha256": "b8ba197e1bfd124a9165743a2d151d5499e837cb655ee514aeea128f4775cfcd"
+            },
+            {
+              "path": "results/joint_sampling/fc_draws.npy",
+              "bytes": 190080128,
+              "sha256": "ec162d7fd866629bdd4ea14bfeea38351d9e9b02ebc96d3927a25805bb90571d"
+            },
+            {
+              "path": "results/joint_sampling/fc_qc.csv",
+              "bytes": 333099,
+              "sha256": "f0a1b9a431cb72ea458d3350fec3cd98be2061bfed581d7754fb69088caa5a80"
+            },
+            {
+              "path": "results/joint_sampling/matched_masks.npz",
+              "bytes": 53148,
+              "sha256": "604d92cc9e009536ecee52137fe6852d66583c7cdafedab3590eb56ca4d239b7"
+            },
+            {
+              "path": "results/joint_sampling/monte_carlo_halves.csv",
+              "bytes": 15943,
+              "sha256": "0870d9bc5acb06c20c8ebadc9b41571b5adb83a0dcf3317ef15d9aa2ba6ed26a"
+            },
+            {
+              "path": "results/joint_sampling/primary_block10_fixed.npz",
+              "bytes": 2255264,
+              "sha256": "2b008efe256c135ccb9218764cc2947803f0b1688599ceb6c6261acf1046a57c"
+            },
+            {
+              "path": "results/joint_sampling/primary_block10_reselected.npz",
+              "bytes": 2256337,
+              "sha256": "a3eba0fba9fc3b43f84d524c9696afc84cae80b27b25afce3d9cec7e06628aec"
+            },
+            {
+              "path": "results/joint_sampling/primary_block20_fixed.npz",
+              "bytes": 2249421,
+              "sha256": "d9f9717a312120c05d6cc06dbd5bf94bee3ade1aa0b221e44b70619e2be7251e"
+            },
+            {
+              "path": "results/joint_sampling/primary_block20_reselected.npz",
+              "bytes": 2251928,
+              "sha256": "78568c6ee726dbccc7d9e3298c6c511fdd0567f8dec8839441a47914c6a27b09"
+            },
+            {
+              "path": "results/joint_sampling/primary_block5_fixed.npz",
+              "bytes": 2248103,
+              "sha256": "7cafbd32556aef8a47be7b303ce4a31a8192ab60259374ff1a73d765aa163c9e"
+            },
+            {
+              "path": "results/joint_sampling/primary_block5_reselected.npz",
+              "bytes": 2251902,
+              "sha256": "092d1b4365300729dee9dcced683c977dde2d407a10412e77cf0bc834550aa9d"
+            },
+            {
+              "path": "results/joint_sampling/primary_duration_fixed.npz",
+              "bytes": 2270932,
+              "sha256": "8fecac97b558a46a045322e5368781c16a0ada10eefb8e1c67cb5d4b569435c1"
+            },
+            {
+              "path": "results/joint_sampling/primary_duration_reselected.npz",
+              "bytes": 2270726,
+              "sha256": "01dfdee2b9249117490a53f159a9362299849a5fcb56c7344598e9a2f8c5010b"
+            },
+            {
+              "path": "results/joint_sampling/primary_motion_fixed.npz",
+              "bytes": 2271715,
+              "sha256": "640aa8facdf85f7834cb693c47e78c8b87a9b6ecdf03d9a1c0dbb9c28a893b6b"
+            },
+            {
+              "path": "results/joint_sampling/primary_motion_reselected.npz",
+              "bytes": 2271176,
+              "sha256": "c9d183cea2689d6bcdc78932adac04fcd05af01800e8e9bb775fdd4ae7e1d212"
+            },
+            {
+              "path": "results/joint_sampling/primary_motion_time_fixed.npz",
+              "bytes": 2269074,
+              "sha256": "823cb5734cccbe0430e03edf63b09f1584a7628b0f58daaacb600284c6bec719"
+            },
+            {
+              "path": "results/joint_sampling/primary_motion_time_reselected.npz",
+              "bytes": 2269336,
+              "sha256": "5ce23a5c9f9b930616e05b66846fe55e272ff7e32117fc8321e1478d4e44affd"
+            },
+            {
+              "path": "results/joint_sampling/sc_selected_support.npy",
+              "bytes": 2475128,
+              "sha256": "f048da0d43ffc3514d3f6198633e70488c1bacf35c0a97781644f547c817faf2"
+            },
+            {
+              "path": "results/joint_sampling/sc_weights.npy",
+              "bytes": 39600128,
+              "sha256": "6e15e557fbbd6b56e34e3a2f0dc231a3f73edf7e984a3987342a40e5fb7ddb95"
+            },
+            {
+              "path": "results/joint_sampling/session_coupling.csv",
+              "bytes": 26416,
+              "sha256": "1b276734cb96c75b93850c1e57b99340e035721b594310636728563eef76e7ac"
+            },
+            {
+              "path": "results/joint_sampling/strict_block10_fixed.npz",
+              "bytes": 2266729,
+              "sha256": "0540ab3d87ad7d6400b89827f6f9c6bab96c1cbeafc5609d430438584633efdf"
+            },
+            {
+              "path": "results/joint_sampling/strict_block10_reselected.npz",
+              "bytes": 2267885,
+              "sha256": "18f52ee9808c10c429d3739291690bc2a4f55ff56995480efde843865d992e30"
+            },
+            {
+              "path": "results/joint_sampling/strict_block20_fixed.npz",
+              "bytes": 2268916,
+              "sha256": "eefec41dd0f7f60e35a8e716bfc2eae19318bff295679017f0442e9d9bdfe3ca"
+            },
+            {
+              "path": "results/joint_sampling/strict_block20_reselected.npz",
+              "bytes": 2270075,
+              "sha256": "73001ff292bccde8a4511d5dda1541836a19195cc182577977a3d51b388eb76b"
+            },
+            {
+              "path": "results/joint_sampling/strict_block5_fixed.npz",
+              "bytes": 2263901,
+              "sha256": "2199939c55c371c63e4e00c74b2ff9067c526bcf9508df366913aaca8cb62249"
+            },
+            {
+              "path": "results/joint_sampling/strict_block5_reselected.npz",
+              "bytes": 2266887,
+              "sha256": "3c670ed9965f763db85d14347ec5f91297a99fc1c5ecaef3b1c610562d627b12"
+            },
+            {
+              "path": "results/joint_sampling/strict_duration_fixed.npz",
+              "bytes": 1518501,
+              "sha256": "05499829b6f9c8082f38e25840105fedd7ac757529c86960c8f55c651239c54e"
+            },
+            {
+              "path": "results/joint_sampling/strict_duration_reselected.npz",
+              "bytes": 1521327,
+              "sha256": "e11b40700f1113d01d2a89aeefa652e7175a00f446746ed37e6af46e5bf59d74"
+            },
+            {
+              "path": "results/joint_sampling/strict_motion_fixed.npz",
+              "bytes": 1515508,
+              "sha256": "cdc94591b74a8cb8599e985e9c8aabd77b442acab7650698c79d219e6e171a8e"
+            },
+            {
+              "path": "results/joint_sampling/strict_motion_reselected.npz",
+              "bytes": 1518544,
+              "sha256": "5d280af447c2e0dbcd49b13dc2af02025f0896da9f74ce1135aa507c3654d0ad"
+            },
+            {
+              "path": "results/joint_sampling/strict_motion_time_fixed.npz",
+              "bytes": 1513387,
+              "sha256": "0303bca767c8a2c5a622cd3aaedc433900a1e8c72b26778af69311c536fcaa88"
+            },
+            {
+              "path": "results/joint_sampling/strict_motion_time_reselected.npz",
+              "bytes": 1518512,
+              "sha256": "2cd25a9f831640bc56114a90b3edc0fdf0dbe70865cb71f3e39d35f470a509ee"
+            },
+            {
+              "path": "results/joint_sampling/summary.csv",
+              "bytes": 15747,
+              "sha256": "c3a06facaa50ed4188c3549d9fd9b36b0a69c26ca5fe63429a322adec689f98f"
+            },
+            {
+              "path": "results/joint_sampling/support_qc.csv",
+              "bytes": 21389,
+              "sha256": "d0fb96b469702700fd197acb9ee312e5b46f091c3ff0f468f937916943f744b3"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/primary_sc/postop/common_support.npy",
+              "bytes": 10128,
+              "sha256": "ba80e914f9060f49b4f4bfd82d257f963e9cfae2f0acd285a7deb1bc4b723eca"
+            },
+            {
+              "path": "results/primary_sc/preop/common_support.npy",
+              "bytes": 10128,
+              "sha256": "ba80e914f9060f49b4f4bfd82d257f963e9cfae2f0acd285a7deb1bc4b723eca"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-10-results.tar.gz",
+              "bytes": 238614468,
+              "sha256": "f33c630ce8140f2ef7e4f4eff11728c5dfceea2a887b12d80e651b7d99a0094c",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-10-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "notebook": "11_full_run_nuisance_refit.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/joint_refit_feasibility.png",
+              "bytes": 42819,
+              "sha256": "fdeaacdaeba97571513a61f3c112d5775fc90fee8d5fd6ba3ea83680212376b3"
+            },
+            {
+              "path": "results/figures/joint_refit_ranges.png",
+              "bytes": 86836,
+              "sha256": "5f07f29d4f6b8eb77f1902aabf9c6b7fe65c777d2770f8c44d39e0776ca881e3"
+            },
+            {
+              "path": "results/joint_refit/design.json",
+              "bytes": 8403,
+              "sha256": "0a20e452cf2e49bc85affcb61c6accb7b08cf45c13ecee6ce4ba7cc46cc588b5"
+            },
+            {
+              "path": "results/joint_refit/fc_draws.npy",
+              "bytes": 285120128,
+              "sha256": "b2e110d37104029a8269e721b896db0cafd3f080e1c3db4c06a67b852e55b4c5"
+            },
+            {
+              "path": "results/joint_refit/feasibility.csv",
+              "bytes": 585,
+              "sha256": "02a4479a77ad189f357c370ebf25dd6270336bd23b7eb356152161e71638838d"
+            },
+            {
+              "path": "results/joint_refit/fit_qc.csv",
+              "bytes": 827598,
+              "sha256": "8da1af407984f08c61fa63d7435f790ccba9580f9bfc77d7e9fda2988179cf0f"
+            },
+            {
+              "path": "results/joint_refit/monte_carlo_halves.csv",
+              "bytes": 10363,
+              "sha256": "63dfa18edd08a7d7dae540497047b9964a627369e48cd312c081c3706f20b56b"
+            },
+            {
+              "path": "results/joint_refit/paired_shifts.csv",
+              "bytes": 2555,
+              "sha256": "6977b08430776fe3fbd06140cc0d72520287d9e1f4276134addfc2332bd38510"
+            },
+            {
+              "path": "results/joint_refit/summary.csv",
+              "bytes": 5241,
+              "sha256": "3e4fd3fdac424bc7e3b3f58a1458cebad51e4682eb27cc5e070718553f474093"
+            },
+            {
+              "path": "results/joint_sampling/sc_weights.npy",
+              "bytes": 39600128,
+              "sha256": "6e15e557fbbd6b56e34e3a2f0dc231a3f73edf7e984a3987342a40e5fb7ddb95"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/primary_sc/postop/common_support.npy",
+              "bytes": 10128,
+              "sha256": "ba80e914f9060f49b4f4bfd82d257f963e9cfae2f0acd285a7deb1bc4b723eca"
+            },
+            {
+              "path": "results/primary_sc/preop/common_support.npy",
+              "bytes": 10128,
+              "sha256": "ba80e914f9060f49b4f4bfd82d257f963e9cfae2f0acd285a7deb1bc4b723eca"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-11-results.tar.gz",
+              "bytes": 218171768,
+              "sha256": "51e430808e2d61f36f8b3ba78057f0494fc358f205253e1b29a4a40ca5521e4b",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-11-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "notebook": "12_connectivity_cognition_context.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/evidence_integration/task_network_hypotheses.csv",
+              "bytes": 652,
+              "sha256": "82b48ec460eba671c69274a48cb55c41b6fe72eaa64a40455b27cd8c63a0a7ac"
+            },
+            {
+              "path": "results/figures/primary_fc_network_changes.png",
+              "bytes": 98594,
+              "sha256": "770c4f6145cfa03fb8a2b9852a306ef4b12ca4b62088d6c65d601becf8eca5e4"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/pc_sampling/network_ranges.csv",
+              "bytes": 47691,
+              "sha256": "1e41487a760b5e3e8c69a79008db586c7c804ed983920e92955170e502bf4f11"
+            },
+            {
+              "path": "results/primary_fc/clinical_evidence_ledger.csv",
+              "bytes": 56770,
+              "sha256": "78dd2bfcf4750bfd45bb76cca5b9c3849e4876b648435083bf4ca7353ad7054a"
+            },
+            {
+              "path": "results/primary_fc/network_uncertainty.csv",
+              "bytes": 43190,
+              "sha256": "7052e0bfc86b23101f847b5bf9b5a4f2a943dc74cbc453e0863018b3cdc067b7"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-12-results.tar.gz",
+              "bytes": 132049,
+              "sha256": "fa7471b1ecbbacbb46aa4a3ae1e43b11f9871b49e93335e172f62910eb06b79a",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-12-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "13": {
+      "notebook": "13_pc_sampling_mechanisms.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/pc_sampling_mechanism.png",
+              "bytes": 104936,
+              "sha256": "a66f8364d1134c490e4297112fb3e886b9b243c1ec452be2b449b6eff3c89ff2"
+            },
+            {
+              "path": "results/figures/pc_sampling_networks.png",
+              "bytes": 128607,
+              "sha256": "7bbe28a88a511a05b9282f151275ae9af89e581ebe146958c87282ad74f887c2"
+            },
+            {
+              "path": "results/figures/pc_sampling_ranges.png",
+              "bytes": 78341,
+              "sha256": "8d097e4cc1afa7c14310782550cd914f968684c408d54c6c9da591c8c785328e"
+            },
+            {
+              "path": "results/figures/pc_sampling_stability.png",
+              "bytes": 70367,
+              "sha256": "34546cd2c891306d296351f0e6695152891abc8dfee25e5ed7ff8388074df2c0"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/pc_sampling/block80_block10_fixed_coefficients.npz",
+              "bytes": 2233124,
+              "sha256": "238c40449409254d1d9f1be7464ea43b8717ab1e59627fe27714fbac44cda888"
+            },
+            {
+              "path": "results/pc_sampling/block80_block10_fixed_frozen.npz",
+              "bytes": 2216098,
+              "sha256": "38238c18b4f1b559ea7ce65b0475b99eb3633b84f75c159007226da2760b52a4"
+            },
+            {
+              "path": "results/pc_sampling/block80_block10_fixed_full_refit.npz",
+              "bytes": 2234981,
+              "sha256": "88c937e2f09e018e6fa90facd5a47ff3aa3e82a7910a14a86f7ffeff157ed95a"
+            },
+            {
+              "path": "results/pc_sampling/block80_block10_reselected_full_refit.npz",
+              "bytes": 2237909,
+              "sha256": "145702dbac953ff308ec2a84002c2f9bacce0155c8e190ca9e77a05464bc8cc9"
+            },
+            {
+              "path": "results/pc_sampling/block80_block20_fixed_coefficients.npz",
+              "bytes": 2153933,
+              "sha256": "0778a04ec8cdade73d6a5970e9d2199acd3899df4770dfbff5353b23b0e49235"
+            },
+            {
+              "path": "results/pc_sampling/block80_block20_fixed_frozen.npz",
+              "bytes": 2138603,
+              "sha256": "ac0e9747697c51c747c0c00c6edb7fd964d408f017f53113abb2b3358c4116dd"
+            },
+            {
+              "path": "results/pc_sampling/block80_block20_fixed_full_refit.npz",
+              "bytes": 2155236,
+              "sha256": "c1c9cbf27e7da2b2f5779ab8da8ac286db19c700296055f80879a15c7740a9a4"
+            },
+            {
+              "path": "results/pc_sampling/block80_block5_fixed_coefficients.npz",
+              "bytes": 2232446,
+              "sha256": "493a6373b07419f658a2ef7b44e14272e029d5571d49caf803d950c42023f8a5"
+            },
+            {
+              "path": "results/pc_sampling/block80_block5_fixed_frozen.npz",
+              "bytes": 2217051,
+              "sha256": "c98c4664b1931609462ee775fe09a7e46bd3d24060868fdbb7057053ca4c5e0f"
+            },
+            {
+              "path": "results/pc_sampling/block80_block5_fixed_full_refit.npz",
+              "bytes": 2234381,
+              "sha256": "d5d18331891a7c1b87cb451fbce6971189937d46c48f4635fb6c72173e86eb54"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block10_fixed_coefficients.npz",
+              "bytes": 2253169,
+              "sha256": "cb5cecdb7fddaf6def4a439f04c52c351fd59aa781d4ce6694f566989d5c99fd"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block10_fixed_frozen.npz",
+              "bytes": 2234950,
+              "sha256": "0aae4396d0828ddb230bb74cdd529c66583e82d7c79ac90272fcd7c322583ad8"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block10_fixed_full_refit.npz",
+              "bytes": 2253986,
+              "sha256": "1022354cceb18cafd27485daf56370786a46361a04012a343557bc57ed7a8314"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block10_reselected_full_refit.npz",
+              "bytes": 2254441,
+              "sha256": "6063d603cd89d89f4d6b99522813ea7f8cedabadb27036c4032110cf142c3b88"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block20_fixed_coefficients.npz",
+              "bytes": 2253181,
+              "sha256": "dacb15caa58f8a85fadede7cc70337c6e3db684e2142a470e6de4c3184d9e612"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block20_fixed_frozen.npz",
+              "bytes": 2231796,
+              "sha256": "751f5c930f45e5f742d33d5d4fe189a5116ec601701ae48ea35a645956300c4e"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block20_fixed_full_refit.npz",
+              "bytes": 2254645,
+              "sha256": "da8d655fd476772629cb8b4f0b97652ed2ceb710db93965eb5d5597d0aa006cf"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block5_fixed_coefficients.npz",
+              "bytes": 2251705,
+              "sha256": "af8810e0d281ddcb456d8109e254ffdb329ac57fa105ec032f49543f90c9e2b1"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block5_fixed_frozen.npz",
+              "bytes": 2232547,
+              "sha256": "b41d83d2fb209847dfe8d598c2b26fe9b90db420d56454fa913e7c59ac5985c2"
+            },
+            {
+              "path": "results/pc_sampling/block_unique_block5_fixed_full_refit.npz",
+              "bytes": 2253034,
+              "sha256": "4193e77dcc1566bf095df9b8613a53cb45275d6058a3a0229ddbdc68f12f0b3e"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block10_fixed_coefficients.npz",
+              "bytes": 2256454,
+              "sha256": "f94e66701ac33a7b4b8e923e167252f12df0fc73b565c5b5111e5634619dad90"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block10_fixed_frozen.npz",
+              "bytes": 2248153,
+              "sha256": "a9fe770388ef4794ca5643f081f6a6e6a30ff31d2034745a15f3c8886ddebe12"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block10_fixed_full_refit.npz",
+              "bytes": 2264799,
+              "sha256": "a5b2fa93700707a22b704b98219ab395c826ab38b52d0d1a6c9e2fe0527001e9"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block20_fixed_coefficients.npz",
+              "bytes": 2255085,
+              "sha256": "5588979708cf2b44761504d3765d3d6c4b2324edbfde247f7b7df084b22bdbdc"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block20_fixed_frozen.npz",
+              "bytes": 2242310,
+              "sha256": "edf269fa4f9c30fa99f8e039c729adcdddc3b8d0e149ac6f44eb3c01b428cf83"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block20_fixed_full_refit.npz",
+              "bytes": 2261536,
+              "sha256": "ac4cd25e50d4e80c0028420529a2991bbc12d225b3fa27a355303baac45b9eb0"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block5_fixed_coefficients.npz",
+              "bytes": 2253208,
+              "sha256": "32a4c5db0fa9c330501456e83a070beaad911a2049905d5aeaabc7bc1948c55b"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block5_fixed_frozen.npz",
+              "bytes": 2240992,
+              "sha256": "c2c2f705740e2afb08017dd741f84cff469bbb0dc1be8beec8d75d52849c86d4"
+            },
+            {
+              "path": "results/pc_sampling/bootstrap_block5_fixed_full_refit.npz",
+              "bytes": 2260671,
+              "sha256": "8421ea99e4e7cda42c4aec86d050597eac64c5054f33b9c903b75783db5d7abf"
+            },
+            {
+              "path": "results/pc_sampling/clinical_field_links.csv",
+              "bytes": 56438,
+              "sha256": "58e380d7a3dcbeaa919ee908f23d2cfc494c0522ea08f0833a8ff3be599d63d6"
+            },
+            {
+              "path": "results/pc_sampling/design.json",
+              "bytes": 12642,
+              "sha256": "d49bf58081438c29eb1ddc93d2741617b5e5874f15302f234d27db717dd4ad0e"
+            },
+            {
+              "path": "results/pc_sampling/fc_metrics.csv",
+              "bytes": 8191652,
+              "sha256": "4e5f705463f945c6aec34c1b70be098b17c8e07d00c195d247c7dc386202cb61"
+            },
+            {
+              "path": "results/pc_sampling/feasibility.csv",
+              "bytes": 436,
+              "sha256": "48dafa8ec79b5da5aa9fba83c74378b6f5892e4b0af880b06c2a30107ca2efb4"
+            },
+            {
+              "path": "results/pc_sampling/frame_weights.npy",
+              "bytes": 1728128,
+              "sha256": "642424ca9668ab7dee75849788f072b7bba9075c6c35c8c2f7f0d565dd8b4d39"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_coefficients.npz",
+              "bytes": 2252681,
+              "sha256": "4961a94583fbe324f08a4c58f08f195d35a1b965429be28553af4f84ac7254e0"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_fc.npy",
+              "bytes": 79200128,
+              "sha256": "a888cd5d1145cdcc3081c3b0a5dc51015219b11e393ced918d458cc4cd1a9c39"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_full_refit.npz",
+              "bytes": 2261017,
+              "sha256": "4aa1e697635e3f77328004b4eaf98b55d4ca95d746844cf44653d012a523eace"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_metrics.csv",
+              "bytes": 1195653,
+              "sha256": "e474f9afa93eb1acd403ad0177d72dadc93f0bac2d170bde90384a408fbd4a7c"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_pca_only.npz",
+              "bytes": 2260547,
+              "sha256": "6f95ac35add8ea37e49c29307bd3e8cc289c55ae8f68b6afb0688c8ff04fb4e8"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_preprocessing_only.npz",
+              "bytes": 2252613,
+              "sha256": "23f6358ce38e8c2e215878a16546621b3d2b8ff48cbd1f9666b65b3098b4f9f4"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_shifts.csv",
+              "bytes": 675,
+              "sha256": "3cfe2c3efcad0910b4c3c7d8f75010bc402bcafb93ff9526d162b8a4d0c35229"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_shifts.npz",
+              "bytes": 3757127,
+              "sha256": "e627ef5c6767ba4e31a80a2ceeb3dcd9075c469150447dc85e730fd6e6e152f6"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_summary.csv",
+              "bytes": 1402,
+              "sha256": "788598f6fd3c757d4e9e8677aca2f50bc2c59d9020ed2b599b32f941ef37ec4c"
+            },
+            {
+              "path": "results/pc_sampling/mechanism_temporal_only.npz",
+              "bytes": 2252681,
+              "sha256": "4961a94583fbe324f08a4c58f08f195d35a1b965429be28553af4f84ac7254e0"
+            },
+            {
+              "path": "results/pc_sampling/monte_carlo_halves.csv",
+              "bytes": 22614,
+              "sha256": "374265a2a77f207ae632a4fb31b684641216244cfa8a51acce1a1e0664b11f99"
+            },
+            {
+              "path": "results/pc_sampling/network_ranges.csv",
+              "bytes": 47691,
+              "sha256": "1e41487a760b5e3e8c69a79008db586c7c804ed983920e92955170e502bf4f11"
+            },
+            {
+              "path": "results/pc_sampling/sampling_qc.csv",
+              "bytes": 530085,
+              "sha256": "9840695911c1ae0cf2c4d5a4dda548999eed0e3c06ac78303eadf2476328fefc"
+            },
+            {
+              "path": "results/pc_sampling/summary.csv",
+              "bytes": 11292,
+              "sha256": "6ae6be8f51c87c0dab3949ce3b2337d0ac1846a0f2ee6d45b9d4c0b7afa0e576"
+            },
+            {
+              "path": "results/pc_sampling/tile_draws.npz",
+              "bytes": 62197,
+              "sha256": "f08a1379cbf34a6af501a2a9c7c569ff548776990ecb67c21d093676aaa38037"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block10_fixed_coefficients.npz",
+              "bytes": 2253612,
+              "sha256": "93e1c063419fd50918a020187377a1d8ce912d517736b901a94e5461f7871546"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block10_fixed_frozen.npz",
+              "bytes": 2235618,
+              "sha256": "99a878ff0331ce9b3c43619631732219fc40ad2cee673aee9accb8f8ff8b9169"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block10_fixed_full_refit.npz",
+              "bytes": 2254803,
+              "sha256": "35acaf00321cef9ac28567b163432bda1966a6ba793f824e235f2bfe93ea676e"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block10_reselected_full_refit.npz",
+              "bytes": 2254428,
+              "sha256": "4d1a7eccb98660e75d3b1b5397b3b8048512e67cfcbadbe05fad4e4ba2f2c37a"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block20_fixed_coefficients.npz",
+              "bytes": 2253096,
+              "sha256": "1093e8b23784fe66d9a5cffde595a1c8a4aac18b7170410f7dbf742933701411"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block20_fixed_frozen.npz",
+              "bytes": 2231195,
+              "sha256": "84646ad2adf26dd251cd04f4b6a1bed403771b7cafa99a9667557c5a427c9ec8"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block20_fixed_full_refit.npz",
+              "bytes": 2253921,
+              "sha256": "36c897b96175023b983847dfad58f24976c4b114d195cc64aad3b5d8ae437d22"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block5_fixed_coefficients.npz",
+              "bytes": 2252134,
+              "sha256": "9c2dc4acff0b6826d1a62bae11cb25f9c86343308ca3d146bb286b9efda79c5a"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block5_fixed_frozen.npz",
+              "bytes": 2231272,
+              "sha256": "c12b92d0eb63a587a1d8a706cac2a9edee625938e9cb25ded20fbb73fa948d20"
+            },
+            {
+              "path": "results/pc_sampling/unit_coverage_block5_fixed_full_refit.npz",
+              "bytes": 2252435,
+              "sha256": "c8ad4e434c7c935a252ccb74a0acc4fd909547852b8c2eba249f1efbf7cb0cfa"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-13-results.tar.gz",
+              "bytes": 182212718,
+              "sha256": "232b5b306843b16e544050224cd7e1a6d4a5b368b018bd7861c1a7d587071ed8",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-13-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    },
+    "14": {
+      "notebook": "14_primary_fc_resampling.ipynb",
+      "bundles": [
+        {
+          "prefix": "results",
+          "members": [
+            {
+              "path": "results/figures/primary_fc_joint.png",
+              "bytes": 93107,
+              "sha256": "4e94a094baf5b3e7f45b18d5d15bd115212ad31459c460cfbae821de8ec17636"
+            },
+            {
+              "path": "results/figures/primary_fc_network_changes.png",
+              "bytes": 98594,
+              "sha256": "770c4f6145cfa03fb8a2b9852a306ef4b12ca4b62088d6c65d601becf8eca5e4"
+            },
+            {
+              "path": "results/nodes.csv",
+              "bytes": 13933,
+              "sha256": "bf42e6f9268ffb35845233556eb8ff367cf028e26fdc484f51aa80461c6ca991"
+            },
+            {
+              "path": "results/postop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "a431f5204dc39a0f34de27129a94913ddc8a557506c06e9f8efdf40d7d293eb1"
+            },
+            {
+              "path": "results/postop/fd.npy",
+              "bytes": 1568,
+              "sha256": "d8400a10a32c46a85ba1da593c9ff8dd486ac050c1d0c4fa775bb4bd9b814b3a"
+            },
+            {
+              "path": "results/preop/fc_primary_keep.npy",
+              "bytes": 308,
+              "sha256": "e16dc32ee64f2c26ce8e668b782b735c56b4ff2eca5b38a8eee03db2dd684014"
+            },
+            {
+              "path": "results/preop/fd.npy",
+              "bytes": 1568,
+              "sha256": "6147ea3c49c2e2b250807c27bc56780f2c24a0288ba1987d6b1326d38af63ea9"
+            },
+            {
+              "path": "results/primary_fc/clinical_evidence_ledger.csv",
+              "bytes": 56770,
+              "sha256": "78dd2bfcf4750bfd45bb76cca5b9c3849e4876b648435083bf4ca7353ad7054a"
+            },
+            {
+              "path": "results/primary_fc/fit_metrics.csv",
+              "bytes": 5959237,
+              "sha256": "7c9bdc7991122b805b293f43c648a845b7c2ec3563f6f3c0eb36e921c8e53fc0"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block10_fixed_coefficients.npz",
+              "bytes": 2234573,
+              "sha256": "f899e2332de9989eda30e086fa6b1fe9bbb0434c3ddde1d5cb664d543464525a"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block10_fixed_frozen.npz",
+              "bytes": 2218987,
+              "sha256": "e6e58185b6c4988f8608881ba29b5d882092743c9cee3d921d3e03d0a7d22446"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block10_fixed_full_refit.npz",
+              "bytes": 2234482,
+              "sha256": "2ec686aa831100ce4f3c3e803ebbcfeca48465778ca760a0485e385d0ae1cdd5"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block10_paired_shifts.npz",
+              "bytes": 2258440,
+              "sha256": "6da963f11dd5e9485df12b13e691fa347bb54d9455b374c61169d5b061b9098b"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block20_fixed_coefficients.npz",
+              "bytes": 2190346,
+              "sha256": "8a29a042a177c2d2302ffd906c1215a53b09e4e5bcce1cf2da12496f3f801b09"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block20_fixed_frozen.npz",
+              "bytes": 2171482,
+              "sha256": "31e6e9eaa5c64160bb9461ffa05a1210cde739fa994355d7829996ee13426024"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block20_fixed_full_refit.npz",
+              "bytes": 2192433,
+              "sha256": "5b58ce129e35deaf02e1fb5ffa9ceb6f7a0006c9afcb7171b971115ff1186b01"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block20_paired_shifts.npz",
+              "bytes": 2265354,
+              "sha256": "87c5f53226e18177bd73279262fbf15a598f4a97fcebc730fb590f6bbe144931"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block5_fixed_coefficients.npz",
+              "bytes": 2240549,
+              "sha256": "8bd66e34a40fb75b8577d6f9886c2d94af0b8b04d7bc2aac9ebf000882893dc8"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block5_fixed_frozen.npz",
+              "bytes": 2219551,
+              "sha256": "076e1afb48cf7c4bcb18089c43af40d5840e99ba91cf8e9fe9796f49126d337a"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block5_fixed_full_refit.npz",
+              "bytes": 2241661,
+              "sha256": "fba1b0396fd1fda7156732570279a6ecbef039fcc978cc179ba0186e78e44086"
+            },
+            {
+              "path": "results/primary_fc/four_fifths_block5_paired_shifts.npz",
+              "bytes": 2259884,
+              "sha256": "6965832181e460a96f17acb733fe7c8f1df650046c37a0873056f238759ff199"
+            },
+            {
+              "path": "results/primary_fc/frame_weights.npy",
+              "bytes": 648128,
+              "sha256": "e69e02f869f2baa9174059a88a6771ca6ff96c38c6f9053529f4257fab952ee1"
+            },
+            {
+              "path": "results/primary_fc/half_block10_fixed_coefficients.npz",
+              "bytes": 2261938,
+              "sha256": "fde43518f33f32856286c444a437d22ead50c7805df3bbdc1ab592628c82bea2"
+            },
+            {
+              "path": "results/primary_fc/half_block10_fixed_frozen.npz",
+              "bytes": 2245462,
+              "sha256": "2188f7b40e8df4d6e0ee66beefcd932ab48a1f6efd4e16d3a7a613e379331ff7"
+            },
+            {
+              "path": "results/primary_fc/half_block10_fixed_full_refit.npz",
+              "bytes": 2263942,
+              "sha256": "a6f6c50ae1c858b7907c54dbc313b61726c2cc674f0ae72286fa75319457051d"
+            },
+            {
+              "path": "results/primary_fc/half_block10_paired_shifts.npz",
+              "bytes": 2286822,
+              "sha256": "4f7b3d42a970a5ae474472b65b83d1ce69fad664f07ea144a3d886f2cf276d41"
+            },
+            {
+              "path": "results/primary_fc/half_block20_fixed_coefficients.npz",
+              "bytes": 2245336,
+              "sha256": "ae7755d04519a7296b7006ddbd6cdf59a07d7c5423e6bc913ac82addd95623b5"
+            },
+            {
+              "path": "results/primary_fc/half_block20_fixed_frozen.npz",
+              "bytes": 2230343,
+              "sha256": "b922badcb1b139a4e90f7934ab0aa2257626464524598f216952e375ef9b0c11"
+            },
+            {
+              "path": "results/primary_fc/half_block20_fixed_full_refit.npz",
+              "bytes": 2250306,
+              "sha256": "6e9c4dd751cbd3918de2a226a02e6a8ce2268c24b4933762995c6ef3f7b47197"
+            },
+            {
+              "path": "results/primary_fc/half_block20_paired_shifts.npz",
+              "bytes": 2284686,
+              "sha256": "64ea3cf01175a0fcee1a710b21fbdae3d9428fcc5900805802d5edf2f961d547"
+            },
+            {
+              "path": "results/primary_fc/half_block5_fixed_coefficients.npz",
+              "bytes": 2260923,
+              "sha256": "9bc376a9322d427005235f71d9c888bd003de31f07e67640f3a15c64f142b50c"
+            },
+            {
+              "path": "results/primary_fc/half_block5_fixed_frozen.npz",
+              "bytes": 2244860,
+              "sha256": "34be39fa19d5d425e3a9140d742e02d67d6fce53ba661480e5fe53f3f829d275"
+            },
+            {
+              "path": "results/primary_fc/half_block5_fixed_full_refit.npz",
+              "bytes": 2261571,
+              "sha256": "085676c916bb777256b9fb8a54e9188aeb3ea4d80651c01c31f8e206d7e2035c"
+            },
+            {
+              "path": "results/primary_fc/half_block5_paired_shifts.npz",
+              "bytes": 2284541,
+              "sha256": "47c07cf3042a5f40a0f2e28e4b41ba57beb5922f0d90bf2086192d4bf8bcaf7f"
+            },
+            {
+              "path": "results/primary_fc/main_summary.json",
+              "bytes": 2112,
+              "sha256": "78f5049b48bd5a1b90d87df124ec18192aa776a1c21c60e1b74027a4024537a2"
+            },
+            {
+              "path": "results/primary_fc/network_uncertainty.csv",
+              "bytes": 43190,
+              "sha256": "7052e0bfc86b23101f847b5bf9b5a4f2a943dc74cbc453e0863018b3cdc067b7"
+            },
+            {
+              "path": "results/primary_fc/primary_network_draws.npz",
+              "bytes": 51875,
+              "sha256": "5beef25427017a0d53d55979c799f1799c3d7f889776de72bd29e22b608f11d0"
+            },
+            {
+              "path": "results/primary_fc/sensitivity_catalog.csv",
+              "bytes": 27707,
+              "sha256": "832020ec96c2ce240fc821f3ea7c7b0db838e97738584ac9226698a9f595682d"
+            },
+            {
+              "path": "results/primary_fc/summary.csv",
+              "bytes": 8428,
+              "sha256": "5b57583e8564ebaa3e69e47edd7d61a50564d617abec4f94e7bbbaf14f653920"
+            },
+            {
+              "path": "results/primary_fc/tile_draws.npz",
+              "bytes": 93123,
+              "sha256": "4bf5faf44229c32b92aefd74826641d513c7e518d24e45b51c69d9b9a0aeabfe"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block10_fixed_coefficients.npz",
+              "bytes": 2250833,
+              "sha256": "164e07f69c5643e4a3c149b5a05d6b92b69c8b88ef5655487b7a781dd67e80f0"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block10_fixed_frozen.npz",
+              "bytes": 2231482,
+              "sha256": "9d66f407cfbaeeccf37fda89c7c94634557ebcee62a4efdfdfb3a0da52187672"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block10_fixed_full_refit.npz",
+              "bytes": 2249386,
+              "sha256": "9a3f1efa89765558d5d6545525333a34e3424326699950295ad0c34230ccfca7"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block10_paired_shifts.npz",
+              "bytes": 2272826,
+              "sha256": "7853ed3584ca48b210b47117c27714619dd24d310ca63882e13ac0d67cea7930"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block10_reselected_full_refit.npz",
+              "bytes": 2249921,
+              "sha256": "98239b2d47abcb9c8863aefdc32beff0c9f67ece95079cdce0c0fd016753f4dc"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block20_fixed_coefficients.npz",
+              "bytes": 2234661,
+              "sha256": "042c573a6f43c8533c423674fa1242889cad22c50c4ca2129bab73268205c7a0"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block20_fixed_frozen.npz",
+              "bytes": 2214669,
+              "sha256": "2feb3d206058d2539518c1d00997b9cdd7511e791eb719120e8da4b5152b7f1e"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block20_fixed_full_refit.npz",
+              "bytes": 2236560,
+              "sha256": "038c3797545a33c2312def108d2cee7fe80f74541af4bfdf4f2f1c1c14aee242"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block20_paired_shifts.npz",
+              "bytes": 2272812,
+              "sha256": "f177a7dfbf1e9deb5a918e9b39578cbe2e3d81474ae1bd88abba514248a797b1"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block5_fixed_coefficients.npz",
+              "bytes": 2249535,
+              "sha256": "046f4101aef8cab59da4555a9dddebb1158d8d295df1ea98cee273adb95119c0"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block5_fixed_frozen.npz",
+              "bytes": 2229670,
+              "sha256": "9460434720fdc9d268284958427ff02b4347df7fbcc1a54ca8655db8cfdb2b24"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block5_fixed_full_refit.npz",
+              "bytes": 2249918,
+              "sha256": "a8cdb7b0ff49338bb11017a4f1dc79093b168c6f9182bb0abf25dce39a28faaf"
+            },
+            {
+              "path": "results/primary_fc/two_thirds_block5_paired_shifts.npz",
+              "bytes": 2271016,
+              "sha256": "82e37f6bc79b1244470511a288aee604ef83df2f5d00f1cb5c9cfbe937b30d87"
+            },
+            {
+              "path": "results/summary.json",
+              "bytes": 31612,
+              "sha256": "46e4a2c5cf61e801e1f449436dae63f82139694da5c166c16ca99ac45bb89f2a"
+            }
+          ],
+          "parts": [
+            {
+              "name": "pat16-notebook-14-results.tar.gz",
+              "bytes": 85687866,
+              "sha256": "ebc7e92686807b4b819238e20974eabb68d9cc8d2d7bb84746c573ba0202a80c",
+              "url": "https://github.com/arvidl/glioma-connectivity-and-cognition/releases/download/v0.1.1-notebooks/pat16-notebook-14-results.tar.gz"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

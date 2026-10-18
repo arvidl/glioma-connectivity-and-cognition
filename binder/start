@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export MPLCONFIGDIR="$PWD/.cache/matplotlib"
+# Let the repo2docker server discover the locked environment's widget extensions.
+export JUPYTER_PATH="$PWD/.venv/share/jupyter${JUPYTER_PATH:+:$JUPYTER_PATH}"
+exec "$@"

@@ -2,7 +2,7 @@
 install:
 	uv sync --frozen
 unit:
-	uv run pytest -q tests/test_scientific_contracts.py tests/test_public_repository.py tests/test_pc_sampling.py::test_nonoverlapping_tiles_exact_censoring_targets_and_replay
+	uv run pytest -q tests/test_scientific_contracts.py tests/test_public_repository.py tests/test_notebook_assets.py tests/test_pc_sampling.py::test_nonoverlapping_tiles_exact_censoring_targets_and_replay
 data:
 	python3 scripts/fetch_data.py $(if $(ASSETS_DIR),--assets-dir "$(ASSETS_DIR)",)
 verify:
