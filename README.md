@@ -1,5 +1,8 @@
 # Glioma connectivity and cognition: PAT16
 
+[![Regular CI](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/ci.yml)
+[![Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml)
+
 A didactic, exploratory paired case study of glioma, structural/functional connectivity, CANTAB and psychosocial context. Python with **uv**, 15 interactive Jupyter notebooks, reproducible analyses and a LaTeX/BibTeX report with **`report/main.pdf` tracked by ordinary Git**. No sibling project, cloud service or GPU is needed after setup and runtime-asset restoration.
 
 **Public release:** [source repository](https://github.com/arvidl/glioma-connectivity-and-cognition), [tracked paper PDF](report/main.pdf) and [runtime assets v0.1.0-assets](https://github.com/arvidl/glioma-connectivity-and-cognition/releases/tag/v0.1.0-assets). Large inputs/checkpoints are seven checksummed release parts (about 4.9 GiB); `reproducibility/assets.json` records every part and restored file. A source clone can compile the paper and run portable tests immediately; the full experiments additionally require those assets. Publication verification is recorded in `reproducibility/public_validation.json`; the preceding local validation remains a dated preparation record.
@@ -35,6 +38,23 @@ uv run jupyter lab notebooks/
 A fresh clone must restore the runtime assets before running all tests/notebooks. [Complete reproduction instructions](docs/REPRODUCING.md) distinguish portable checks, saved-analysis replay and raw reconstruction; they cover FSL, TeX, disk use, checksums and public-clone verification. TeX is external to uv. FSL topup/eddy_cpu/FAST are required for raw reconstruction or new tissue segmentation, and are not redistributed.
 
 Regular CI runs portable tests and compiles the paper without downloading runtime assets. Use [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) → **Run workflow** to download/verify the public assets, run all tests and execute all 15 notebooks on Ubuntu. Logs, test results and executed notebooks are retained as a downloadable Actions artifact for seven days; see the [workflow instructions](docs/REPRODUCING.md#1-source-only-clone-portable-tests-and-paper).
+
+The badges link to their workflows and show results on `main`. The full runtime badge reflects the latest manual run, which can cover an earlier commit; it does not rerun automatically after each push.
+
+### Download executed notebooks
+
+1. Open [Full runtime validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/runtime-validation.yml) and select a successful run on `main`. Maintainers can choose **Run workflow** to create a fresh one.
+2. In the run summary, scroll to **Artifacts** and download **`runtime-validation-<run-id>-<attempt>`**. GitHub sign-in is required, and artifacts expire after seven days.
+3. Extract the ZIP and open its **`notebooks/`** folder for all 15 executed `.ipynb` files. Logs, `pytest.xml` and `notebook_execution.json` are included alongside them. Saved outputs can be viewed directly; rerunning cells or using live controls requires the local environment and runtime assets described above.
+
+With the authenticated [GitHub CLI](https://cli.github.com/), list successful runs, replace `RUN_ID` with the chosen ID, and download its artifacts:
+
+```sh
+gh run list --repo arvidl/glioma-connectivity-and-cognition --workflow runtime-validation.yml --branch main --status success --limit 5
+gh run download RUN_ID --repo arvidl/glioma-connectivity-and-cognition --dir downloaded-runtime
+```
+
+The CLI places each artifact in its own directory under `downloaded-runtime/`; the executed notebooks are inside that artifact's `notebooks/` folder. Failed runs retain available diagnostic logs, while executed notebooks are uploaded only after the complete notebook batch succeeds.
 
 ## Clinical interpretation
 
