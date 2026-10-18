@@ -102,3 +102,49 @@ def test_binder_hooks_override_generic_kernel_with_locked_interpreter(tmp_path):
     assert spec['argv'][0] == sys.executable
     assert spec['name'] == 'PAT16 (uv, Python 3.12.14)'
     assert Path(spec['directory']) == generic
+
+
+@pytest.fixture
+def image_probe():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location('binder_image_probe', ROOT/'scripts/validate_binder_image.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+class KernelSocket:
+    """Minimal protocol peer: keep errors and ordering independent of real data."""
+    def __init__(self, failure=None):
+        self.failure = failure
+
+    def send(self, raw):
+        mid = json.loads(raw)['header']['msg_id']
+        def event(kind, content, parent=mid):
+            return json.dumps(dict(msg_type=kind, parent_header={'msg_id': parent}, content=content))
+        if self.failure:
+            self.events = iter([event(self.failure, dict(status='error', ename='AssertionError', evalue='download check failed'))])
+        else:
+            self.events = iter([
+                event('error', dict(ename='OldError', evalue='unrelated'), parent='other-execution'),
+                b'widget buffer',
+                event('status', dict(execution_state='idle')),
+                event('execute_reply', dict(status='ok', user_expressions=dict(result=dict(
+                    status='ok', data={'text/plain': repr(json.dumps({'verified': True}))})))),
+            ])
+
+    def settimeout(self, value):
+        pass
+
+    def recv(self):
+        return next(self.events, '')
+
+
+def test_image_probe_waits_for_reply_and_idle_and_ignores_other_messages(image_probe):
+    assert image_probe.run_code(KernelSocket(), 'probe') == {'verified': True}
+
+
+@pytest.mark.parametrize('kind', ['error', 'execute_reply'])
+def test_image_probe_propagates_execution_errors(image_probe, kind):
+    with pytest.raises(RuntimeError, match='AssertionError.*download check failed'):
+        image_probe.run_code(KernelSocket(failure=kind), 'probe')

@@ -26,6 +26,7 @@ def main():
     parser.add_argument('--assets-dir', type=Path)
     parser.add_argument('--notebook', action='append')
     parser.add_argument('--output', type=Path, default=ROOT/'tmp/binder-validation.json')
+    parser.add_argument('--executed-dir', type=Path, help='Save successfully executed study notebooks')
     args = parser.parse_args()
     os.environ.update(OMP_NUM_THREADS='1', OPENBLAS_NUM_THREADS='1', MKL_NUM_THREADS='1', MPLBACKEND='Agg')
     records = []
@@ -45,6 +46,11 @@ def main():
             (specs/'kernel.json').write_text(json.dumps(dict(argv=[sys.executable, '-m', 'ipykernel_launcher', '-f', '{connection_file}'], display_name='PAT16 test', language='python')))
             os.environ.update(JUPYTER_RUNTIME_DIR=str(runtime), JUPYTER_PATH=str(root/'.cache/jupyter-data'), IPYTHONDIR=str(root/'.cache/ipython'))
             nb = nbformat.read(path, as_version=4)
+            for cell in nb.cells:
+                if cell.cell_type == 'code':
+                    cell.outputs = []
+                    cell.execution_count = None
+            code_cells = sum(cell.cell_type == 'code' for cell in nb.cells)
             setup = f'''import sys, os
 sys.path.insert(0, {str(root/'src')!r})
 os.environ['MPLCONFIGDIR'] = {str(root/'.cache/matplotlib')!r}
@@ -85,7 +91,12 @@ _root.joinpath('.cache/validation.json').write_text(json.dumps(dict(widget_calls
             nb.cells.append(nbformat.v4.new_code_cell(checks))
             Client(nb, timeout=600, kernel_name='pat16-test', resources={'metadata': {'path': str(root/'notebooks')}}, store_widget_state=False, iopub_timeout=60).execute()
             record = json.loads((root/'.cache/validation.json').read_text())
-            record.update(notebook=path.name, errors=0)
+            record.update(notebook=path.name, code_cells=code_cells, errors=0,
+                          max_rss_units='bytes' if sys.platform == 'darwin' else 'KiB')
+            if args.executed_dir:
+                args.executed_dir.mkdir(parents=True, exist_ok=True)
+                nb.cells = nb.cells[1:-1]  # exclude setup and callback test cells
+                nbformat.write(nb, args.executed_dir/path.name)
             records.append(record)
             args.output.parent.mkdir(parents=True, exist_ok=True)
             args.output.write_text(json.dumps(records, indent=2)+'\n')

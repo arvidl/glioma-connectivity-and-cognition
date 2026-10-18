@@ -1,0 +1,165 @@
+name: Binder image validation (manual)
+
+# Image builds and public runtime downloads are opt-in. ci.yml stays lightweight.
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: Notebooks to execute from isolated on-demand runtime packs
+        type: choice
+        options: ['all', '04']
+        default: 'all'
+      binder_ref:
+        description: 'Image code branch/tag/SHA (blank = selected workflow commit; published launch = v0.1.2-binder)'
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: binder-validation-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  binder:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check out pristine image source separately from the test harness
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.binder_ref || github.sha }}
+          path: tmp/binder-source
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: '0.13.1'
+          enable-cache: false
+      - name: Record exact image and harness sources
+        env:
+          REQUESTED_REF: ${{ inputs.binder_ref }}
+          SCOPE: ${{ inputs.scope }}
+        run: |
+          mkdir -p tmp/binder-ci
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          source = 'tmp/binder-source'
+          commit = subprocess.check_output(['git', '-C', source, 'rev-parse', 'HEAD'], text=True).strip()
+          files = subprocess.check_output(['git', '-C', source, 'ls-files', '-z']).decode().split('\0')
+          Path('tmp/binder-ci/tracked-files.json').write_text(json.dumps([p for p in files if p]))
+          Path('tmp/binder-ci/source.json').write_text(json.dumps(dict(
+              harness_commit=os.environ['GITHUB_SHA'], image_commit=commit,
+              requested_ref=os.environ['REQUESTED_REF'], scope=os.environ['SCOPE'],
+              repo2docker='2026.4.0', runner='ubuntu-24.04', memory_limit='4 GiB'), indent=2)+'\n')
+          PY
+      - name: Build the Binder image with pinned repo2docker
+        id: build
+        run: |
+          uvx --python 3.12 --from jupyter-repo2docker==2026.4.0 jupyter-repo2docker \
+            --no-run --user-name jovyan --user-id 1000 \
+            --image-name pat16-binder:validation tmp/binder-source \
+            2>&1 | tee tmp/binder-ci/build.log
+          docker image inspect pat16-binder:validation > tmp/binder-ci/image.json
+      - name: Start the image's Jupyter server
+        id: server
+        run: |
+          binder_token="$(python3 -c 'import secrets; print(secrets.token_hex(24))')"
+          echo "::add-mask::$binder_token"
+          echo "BINDER_TEST_TOKEN=$binder_token" >> "$GITHUB_ENV"
+          # Bind only to runner loopback. Pass no GitHub credentials or patient-data mounts.
+          docker run -d --name pat16-binder-validation \
+            --publish 127.0.0.1:8888:8888 --memory 4g --cpus 2 \
+            --env JUPYTER_TOKEN="$binder_token" --env MPLBACKEND=Agg --env PYTHONUNBUFFERED=1 \
+            --mount "type=bind,src=$PWD/scripts,dst=/tmp/pat16-validation,readonly" \
+            pat16-binder:validation jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
+      - name: Test server kernel, launcher, public download and notebook 04
+        id: launcher
+        run: |
+          uv run --no-project --python 3.12 --with websocket-client==1.9.2 \
+            python scripts/validate_binder_image.py \
+            --tracked-files tmp/binder-ci/tracked-files.json \
+            --output tmp/binder-ci/launcher.json \
+            2>&1 | tee tmp/binder-ci/launcher.log
+      - name: Execute isolated notebook packs inside the built image
+        id: notebooks
+        env:
+          SCOPE: ${{ inputs.scope }}
+        run: |
+          notebook_args=()
+          if [[ "$SCOPE" == '04' ]]; then notebook_args=(--notebook 04); fi
+          # No --assets-dir: every selected pack is downloaded publicly, without an asset cache.
+          docker exec pat16-binder-validation .venv/bin/python \
+            /tmp/pat16-validation/validate_binder.py "${notebook_args[@]}" \
+            --output /tmp/pat16-binder-validation/notebooks.json \
+            --executed-dir /tmp/pat16-binder-validation/notebooks \
+            2>&1 | tee tmp/binder-ci/notebooks.log
+      - name: Collect container diagnostics and shut down
+        if: always()
+        env:
+          NOTEBOOKS_OUTCOME: ${{ steps.notebooks.outcome }}
+        run: |
+          mkdir -p tmp/binder-ci
+          if docker container inspect pat16-binder-validation > /dev/null 2>&1; then
+            trap 'docker rm -f pat16-binder-validation > /dev/null 2>&1 || true' EXIT
+            docker logs pat16-binder-validation 2>&1 | python3 -c \
+              'import os,sys; s=sys.stdin.read(); t=os.environ.get("BINDER_TEST_TOKEN"); print(s.replace(t,"[redacted]") if t else s)' \
+              > tmp/binder-ci/server.log
+            docker inspect --format '{{json .State}}' pat16-binder-validation > tmp/binder-ci/container-state.json
+            if [[ "$NOTEBOOKS_OUTCOME" == 'success' ]]; then
+              docker cp pat16-binder-validation:/tmp/pat16-binder-validation/. tmp/binder-ci/
+            else
+              docker cp pat16-binder-validation:/tmp/pat16-binder-validation/. tmp/binder-ci/ || true
+            fi
+          fi
+      - name: Summarize Binder validation
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          SERVER_OUTCOME: ${{ steps.server.outcome }}
+          LAUNCHER_OUTCOME: ${{ steps.launcher.outcome }}
+          NOTEBOOKS_OUTCOME: ${{ steps.notebooks.outcome }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          root = Path('tmp/binder-ci')
+          lines = ['## Binder image validation', '']
+          if (root/'source.json').exists():
+              source = json.loads((root/'source.json').read_text())
+              lines += [f"Harness commit: `{source['harness_commit']}`",
+                        f"Image commit: `{source['image_commit']}`; scope: `{source['scope']}`.", '']
+          for label in ['build', 'server', 'launcher', 'notebooks']:
+              lines.append(f"- {label}: **{os.environ[label.upper() + '_OUTCOME']}**")
+          if (root/'launcher.json').exists():
+              report = json.loads((root/'launcher.json').read_text())
+              lines.append(f"\nJupyter API launcher test: **{report['status']}**.")
+          if (root/'notebooks.json').exists():
+              records = json.loads((root/'notebooks.json').read_text())
+              lines.append(f"\n{len(records)} isolated notebooks / {sum(r['code_cells'] for r in records)} "
+                           f"code cells / {sum(r['widget_calls'] for r in records)} direct callback checks completed.")
+          lines.append('\nLogs, source/image metadata, JSON results and successful executed notebooks '
+                       'are retained for 7 days. This builds and runs locally on the Actions runner; '
+                       'it does not publish an image or test public Binder scheduling/browser rendering. '
+                       'The container limit is 4 GiB; this is not a public Binder memory-limit test.')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as output:
+              output.write('\n'.join(lines)+'\n')
+          PY
+      - name: Upload Binder logs, results and executed notebooks
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: binder-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: tmp/binder-ci/
+          if-no-files-found: warn
+          retention-days: 7

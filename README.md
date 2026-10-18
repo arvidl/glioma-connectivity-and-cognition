@@ -28,6 +28,8 @@ All alternatives remain sensitivities: 73/97/116 common frames, 5/10/20-frame bl
 
 The per-notebook packs contain exact subsets of the original real-data release, with archive and extracted-file SHA256 checks. The launcher shows download sizes; imaging and resampling notebooks need much larger packs and may download slowly. Binder has [limited memory and temporary sessions](https://mybinder.readthedocs.io/en/latest/about/user-guidelines.html): shut down previous notebook kernels and download edits you want to keep. Local reproduction below supplies full regression tests, raw FSL processing and paper compilation. See [Binder setup, asset provenance and testing](docs/BINDER.md).
 
+Maintainers can run [Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml) to build the image, test the live Jupyter launcher and public downloads, and execute all 15 notebooks from isolated runtime packs. A notebook-04 smoke option and an optional image-code ref are available. Results, logs and executed notebooks are retained for seven days; see the [workflow instructions](docs/BINDER.md#manual-github-actions-validation). This workflow runs only when dispatched.
+
 ## Run locally
 
 ```sh

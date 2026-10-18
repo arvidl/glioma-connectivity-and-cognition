@@ -55,3 +55,29 @@ The Binder configuration follows the official [repo2docker configuration](https:
 The checked [validation record](../reproducibility/binder_validation.json) records the tested platform, manifest hash, test totals and isolated notebook/control checks, with their scope and memory-measurement limits.
 
 Validation on 2026-10-18: 82 tests passed; all 15 notebooks (90 original code cells) and 551 direct widget callback calls passed in isolated runtime subsets. All 17 complete public archive downloads matched their sizes and SHA256 hashes. The versioned public Binder image built and launched on the GESIS federation host; Jupyter REST/WebSocket checks verified the pinned kernel, launcher download action, public notebook-04 runtime restoration and notebook execution. Browser frontend rendering was not automated. The temporary test kernel and server were shut down.
+
+## Manual GitHub Actions validation
+
+Open [Binder image validation (manual)](https://github.com/arvidl/glioma-connectivity-and-cognition/actions/workflows/binder-validation.yml) and select **Run workflow**. The workflow has no push, pull-request or scheduled trigger. Regular CI keeps its portable tests and paper compilation; image builds and runtime downloads run only on request.
+
+- **scope:** `all` (default) executes all 15 notebooks with per-control callback checks; `04` runs the small cognition smoke case.
+- **binder_ref:** leave blank to build the selected workflow commit. Enter `v0.1.2-binder` to test the published launch environment, or another branch/tag/SHA in this repository. The summary and `source.json` distinguish the image commit from the workflow/test-harness commit.
+
+For example, with the authenticated GitHub CLI:
+
+```sh
+gh workflow run binder-validation.yml --ref main -f scope=all
+gh workflow run binder-validation.yml --ref main -f scope=04 -f binder_ref=v0.1.2-binder
+gh run list --workflow binder-validation.yml --limit 5
+gh run download RUN_ID --dir downloaded-binder
+```
+
+The workflow uses Ubuntu 24.04 and [repo2docker 2026.4.0](https://repo2docker.readthedocs.io/en/2026.04.0/cli/). A separate pristine checkout supplies the image source, so local runtime caches and the external test harness cannot enter the build context. No image is published. The runner starts the normal image entrypoint and JupyterLab on loopback, with a temporary test token and no GitHub credentials in the container.
+
+`scripts/validate_binder_image.py` checks the server's registered `python3` kernel and the actual interpreter/version through Jupyter REST/WebSocket APIs. It rejects untracked runtime members already present in the image, executes the welcome notebook, and checks that initialization downloads nothing. It invokes the real download callback for notebook 04, checks the exact public URLs requested, verifies archive/member checksums, rejects restoration of unselected runtime members, and confirms that repeating the request causes no download. It then executes notebook 04 in that server kernel.
+
+Next, `scripts/validate_binder.py` runs inside the image's locked environment. Each selected notebook gets a separate temporary project containing only its assigned packs, freshly downloaded without authentication or an asset cache. It executes all original cells and checks widget defaults and each control's choices/endpoints, with other controls at defaults. Its optional `--executed-dir` saves successful study notebooks, excluding test setup/check cells and clearing historical outputs before execution.
+
+Download **`binder-validation-<run-id>-<attempt>`** from the run's **Artifacts** section, or use `gh run download` above. GitHub sign-in is required; retention is seven days. The artifact contains build/server/download logs, exact source/image metadata, `launcher.json`, incremental `notebooks.json` and successfully executed notebooks under `notebooks/`. Failure logs and any earlier successful notebooks are retained, and the container is removed even after test failure. The temporary token is redacted from collected server logs.
+
+This checks an actual image on the Actions runner. It does not test public Binder scheduling or automate browser frontend rendering. The container has a 4 GiB limit to accommodate the validation harness and nested notebook kernels; passing does not establish compliance with public Binder's 1–2 GB limit. Full regression tests and raw reconstruction use the separate full-runtime workflow/local route.
